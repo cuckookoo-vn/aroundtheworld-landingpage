@@ -1,17 +1,20 @@
 import './header.scss'
 import {useState} from "react";
-
+import { useTranslation } from 'react-i18next';
+import i18next from "i18next";
 const Header = () =>{
+    const { t } = useTranslation();
+
     const [statusDocs, setStatusDoc] = useState(false);
     const [statusLang, setStatusLang] = useState(false);
     const [textLang, setTextLang] = useState('Eng');
 
     const images = {
-        bgHeader: process.env.PUBLIC_URL + '/images/bg-header.png',
-        titleHeader : process.env.PUBLIC_URL + "/images/title-header.png",
-        logoHeader : process.env.PUBLIC_URL + "/images/logo-ckk-header.png",
-        comingSoonButton : process.env.PUBLIC_URL + "/images/coming-soon-button.png",
-        iconSelect : process.env.PUBLIC_URL + "/images/icon-select-header.png",
+        bgHeader: process.env.PUBLIC_URL + '/images/header/bg-header.png',
+        titleHeader : process.env.PUBLIC_URL + "/images/header/title-header.png",
+        logoHeader : process.env.PUBLIC_URL + "/images/header/logo-ckk-header.png",
+        comingSoonButton : process.env.PUBLIC_URL + "/images/header/coming-soon-button.png",
+        iconSelect : process.env.PUBLIC_URL + "/images/header/icon-select-header.png",
     };
 
     const setStatusMenu = (status, name) =>{
@@ -28,6 +31,7 @@ const Header = () =>{
     const changeLang = (name) =>{
         setTextLang(name);
         setStatusLang(false);
+        i18next.changeLanguage(name);
     }
 
     window.onclick = (event) => {
@@ -54,8 +58,8 @@ const Header = () =>{
             <div className="dropdown dropdown-docs">
                 <button className="drop-btn drop-btn-docs"
                         onClick={()=>setStatusMenu(statusDocs, 'docs')}>
-                    Docs
-                    <img className="icon-select-header"
+                    {t('menu.docs')}
+                    <img className={"icon-select-header" + (statusDocs ? " rotate": "")}
                          src={images.iconSelect} alt="icon-select"/>
                 </button>
 
@@ -69,18 +73,18 @@ const Header = () =>{
                 <button className="drop-btn drop-btn-lang"
                         onClick={()=>setStatusMenu(statusLang, 'lang')}>
                     {textLang}
-                    <img className="icon-select-header"
+                    <img className={"icon-select-header" + (statusLang ? " rotate": "")}
                          src={images.iconSelect} alt="icon-select"/>
                 </button>
 
                 <div className={"dropdown-content dropdown-content-lang" + (statusLang ? " show": "")}>
-                    <button onClick={()=>changeLang('Vn')}
+                    <button onClick={()=>changeLang('vn')}
                             className="drop-option">Vietnamese</button>
 
-                    <button onClick={()=>changeLang('Ko')}
+                    <button onClick={()=>changeLang('ko')}
                             className="drop-option">Korean</button>
 
-                    <button onClick={()=>changeLang('En')}
+                    <button onClick={()=>changeLang('en')}
                             className="drop-option">English</button>
                 </div>
             </div>

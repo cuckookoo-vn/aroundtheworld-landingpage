@@ -33,13 +33,17 @@
       font-size: 1.2vw;
       border: none;
       cursor: pointer;
-      width: 4vw;
+      width: fit-content;
       background: rgba(0, 0, 0, 0);
       img{
         position: absolute;
         width: 1vw;
         bottom: 0.3vw;
-        margin-left: 1vw;
+        margin-left: 0.7vw;
+        transition: transform 0.2s;
+        &.rotate{
+          transform: rotate(180deg);
+        }
       }
     }
 
