@@ -1,0 +1,33 @@
+@import "src/scss/variables";
+
+.core-team-member{
+  position: relative;
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 17.2vw;
+  height: 19.5vw;
+  .image-member{
+    width: 14.5vw;
+    position: absolute;
+    left: 50%;
+    top: 1.3vw;
+    transform: translate(-50%, 0);
+  }
+  .name-member{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 0.9vw;
+    color: $color-title-main;
+    font-size: 1.2vw;
+  }
+  .position-member{
+    color: $color-title-main;
+    font-size: 1vw;
+    position: absolute;
+    bottom: -1.5vw;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+}
