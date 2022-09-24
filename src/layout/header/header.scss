@@ -2,7 +2,7 @@
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 6vw;
   left: 0;
@@ -26,11 +26,14 @@
     position: relative;
     display: inline-block;
     line-height: 0;
+    top: 2.1vw;
     .drop-btn{
+      padding: 0;
       color: #FFFFFF;
       font-size: 1.2vw;
       border: none;
       cursor: pointer;
+      width: 4vw;
       background: rgba(0, 0, 0, 0);
       img{
         position: absolute;
@@ -69,14 +72,12 @@
 
   .dropdown-docs{
     position: absolute;
-    right: 42vw;
-    top: 2vw;
+    right: 39.5vw;
   }
 
-  .dropdown-eng{
+  .dropdown-lang{
     position: absolute;
-    right: 33vw;
-    top: 2vw;
+    right: 31vw;
   }
 
   .logo-coming-soon{
@@ -101,6 +102,4 @@
       transform: translate(-50%, -55%);
     }
   }
-  .dropdown-docs:hover .dropdown-content-docs {display: block;}
-  .dropdown-eng:hover .dropdown-content-eng {display: block;}
 }
