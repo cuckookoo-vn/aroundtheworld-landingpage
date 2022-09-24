@@ -2,17 +2,20 @@ import './footer.scss';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Container} from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
 const Footer = () =>{
+    const { t } = useTranslation();
+
     const images = {
-        bgFooter: process.env.PUBLIC_URL + '/images/bg-footer.png',
-        MIconFooter: process.env.PUBLIC_URL + '/images/m-footer.png',
-        RIconFooter: process.env.PUBLIC_URL + '/images/r-footer.png',
-        PIconFooter: process.env.PUBLIC_URL + '/images/p-footer.png',
-        BIconFooter: process.env.PUBLIC_URL + '/images/b-footer.png',
-        YIconFooter: process.env.PUBLIC_URL + '/images/y-footer.png',
-        CIconFooter: process.env.PUBLIC_URL + '/images/c-footer.png',
-        FIconFooter: process.env.PUBLIC_URL + '/images/f-footer.png',
-        FFIconFooter: process.env.PUBLIC_URL + '/images/ff-footer.png',
+        bgFooter: process.env.PUBLIC_URL + '/images/footer/bg-footer.png',
+        MIconFooter: process.env.PUBLIC_URL + '/images/footer/m-footer.png',
+        RIconFooter: process.env.PUBLIC_URL + '/images/footer/r-footer.png',
+        PIconFooter: process.env.PUBLIC_URL + '/images/footer/p-footer.png',
+        BIconFooter: process.env.PUBLIC_URL + '/images/footer/b-footer.png',
+        YIconFooter: process.env.PUBLIC_URL + '/images/footer/y-footer.png',
+        CIconFooter: process.env.PUBLIC_URL + '/images/footer/c-footer.png',
+        FIconFooter: process.env.PUBLIC_URL + '/images/footer/f-footer.png',
+        FFIconFooter: process.env.PUBLIC_URL + '/images/footer/ff-footer.png',
     }
 
     return(
@@ -21,7 +24,7 @@ const Footer = () =>{
             <Container fluid>
                 <Row>
                     <Col lg="12">
-                        <span className="title-footer title-main-footer">Contact us</span>
+                        <span className="title-footer title-main-footer">{t('footer.contactUs')}</span>
                     </Col>
                     <Col lg="12">
                         <span className="title-footer email-footer">cuckookoo.@gmail.com</span>

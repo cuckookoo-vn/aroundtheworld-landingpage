@@ -35,10 +35,12 @@ const Header = () =>{
     }
 
     window.onclick = (event) => {
+        console.log(event.target)
         if (
             !event.target.matches('.drop-btn-docs') &&
             !event.target.matches('.icon-select-header') &&
             !event.target.matches('.drop-btn-lang')
+
         ){
             setStatusMenu(true,'full')
         }
