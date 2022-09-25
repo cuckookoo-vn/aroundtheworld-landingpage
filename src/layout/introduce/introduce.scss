@@ -1,0 +1,36 @@
+.introduce{
+  position: relative;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 56.5vw;
+  .introduce-content{
+    position: absolute;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 1vw;
+    top: 15%;
+    width: 58vw;
+    height: 37vw;
+    font-size: 1.5vw;
+    .introduce-text{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-47%, -50%);
+      width: 47vw;
+      display: block;
+      font-size: 1.5vw;
+      color: #FFFFFF;
+      font-weight: inherit;
+      line-height: initial;
+      &-main{
+        font-size: 2.3vw;
+        font-weight: 600;
+      }
+    }
+
+  }
+}

@@ -1,8 +1,10 @@
 import {Container} from "react-bootstrap";
 import CoreTeamMember from "../../components/core-team-member/core-team-member";
+import {useTranslation} from "react-i18next";
 import './core-team.scss';
 
 const CoreTeam = () =>{
+    const {t} = useTranslation();
     const memberTeam = [
         {
             name: 'Paul Pham',
@@ -91,7 +93,7 @@ const CoreTeam = () =>{
             <Container fluid>
                 <div>
                     <span className="title-main">
-                        Core Team
+                        {t("coreTeam.titleMain")}
                     </span>
                     <div className="box-member">
                         {memberTeam.map((element, index) =>
