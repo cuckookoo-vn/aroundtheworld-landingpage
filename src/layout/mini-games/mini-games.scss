@@ -1,0 +1,12 @@
+@import "src/scss/variables";
+
+.mini-games{
+  background-color: $bg-color;
+  width: 100%;
+  .title-main{
+    margin-top: 5.5vw;
+  }
+  .video{
+    width: 100%;
+  }
+}
