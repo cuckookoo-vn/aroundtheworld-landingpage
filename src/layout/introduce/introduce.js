@@ -6,7 +6,7 @@ const Introduce = () =>{
 
     const images = {
         bgIntroduce: process.env.PUBLIC_URL + '/images/introduce/bg-introduce.png',
-        introduceFrame: process.env.PUBLIC_URL + '/images/introduce/box-key-features.png'
+        introduceFrame: process.env.PUBLIC_URL + '/images/introduce/introduce-frame.png'
     }
     return(
         <div className="introduce" style={{backgroundImage: `url(${images.bgIntroduce})`}}>

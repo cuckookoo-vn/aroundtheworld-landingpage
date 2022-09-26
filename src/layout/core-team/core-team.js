@@ -90,10 +90,11 @@ const CoreTeam = () =>{
 
     return(
         <div className="core-team">
-            <Container fluid>
-                <span className="title-main">
-                    {t("coreTeam.titleMain")}
-                </span>
+            <span className="title-main">
+                {t("coreTeam.titleMain")}
+            </span>
+
+            <Container>
                 <div className="box-member">
                     {memberTeam.map((element, index) =>
                         <CoreTeamMember

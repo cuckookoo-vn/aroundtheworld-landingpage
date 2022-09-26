@@ -1,3 +1,5 @@
+@import "src/scss/variables";
+
 .introduce{
   position: relative;
   background-position: left;
@@ -10,25 +12,35 @@
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
-    left: 1vw;
-    top: 15%;
+    transform: translate(-50%, -50%);
+    left: 30%;
+    top: 50%;
     width: 58vw;
     height: 37vw;
-    font-size: 1.5vw;
+    max-width: 720px;
+    max-height: 460px;
+
     .introduce-text{
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-47%, -50%);
-      width: 47vw;
+      width: 80%;
+      max-width: 530px;
       display: block;
-      font-size: 1.5vw;
       color: #FFFFFF;
       font-weight: inherit;
       line-height: initial;
+      font-size: 18px;
+      @media #{$info-tablet-horizontal} {
+        font-size: 1.5vw;
+      }
       &-main{
-        font-size: 2.3vw;
+        font-size: 25px;
         font-weight: 600;
+        @media #{$info-tablet-horizontal} {
+          font-size: 2.3vw;
+        }
       }
     }
 

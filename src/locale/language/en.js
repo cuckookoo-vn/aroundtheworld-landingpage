@@ -51,6 +51,51 @@ const en = {
                 title: "ARTW is the platform to develop 3D advertising."
             },
         },
+        character: {
+            titleMain: "Character"
+        },
+        airports: {
+            titleMain: "Airports"
+        },
+        roadMap:{
+            titleMain: "Road map",
+            rm11:{
+                title1: "Ideas for ARTW",
+                title2: "Finalize Design in Phase 1 (Alpha)",
+                title3: "Arrange resources and kick-off"
+            },
+            rm12:{
+                title1: "Decide the art for phase 1",
+                title2: "Develop ARTW phase 1 (iOS, Android)",
+                title3: "Develop P2P (~10.000 players)",
+                title4: "Apply AI",
+                title5: "Website debut",
+                title6: "Prepare for phase 2 (Beta)",
+            },
+            rm21:{
+                title1: "Release 1st version (Alpha)",
+                title2: "Decide art for phase 2",
+                title3: "Develop ARTW phase 2 (Metaverse)",
+                title4: "Upgrade server (~10.000.000 players)",
+                title5: "Develop Blockchain in ARTW",
+                title6: "Prepare for phase 3",
+                title7: "Implement 3D billboard Advertising",
+                title8: "Call for capital investment"
+            },
+            rm22:{
+                title1: "Test and Release 2nd version (Beta)",
+                title2: "Finish art for phase 3",
+                title3: "Develop phase 3",
+                title4: "Run advertising in app (focus F&B)",
+                title5: "Build the ecosystem",
+                title6: "Continue the communication and market campaigns",
+            },
+            rm31:{
+                title1: "Upgrade AI, Blockchain and UI",
+                title2: "Test and Release 3rd version",
+                title3: "Go live app (1st version on Metaverse)"
+            }
+        }
     }
 }
 export default en;

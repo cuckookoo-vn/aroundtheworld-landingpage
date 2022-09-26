@@ -5,16 +5,26 @@
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 56vw;
+  height: 800px;
+  @media #{$info-tablet-horizontal} {
+    height: 56vw;
+  }
   .title-main{
-    margin-top: 2.95vw;
+    margin-top: 62px;
+    @media #{$info-tablet-horizontal} {
+      margin-top: 2.7vw;
+    }
   }
   .key-features-box{
-    margin-top: 5.1vw;
-    display: grid;
-    padding: 0 8.2vw;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 3.8vw;
-    grid-row-gap: 3vw;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: auto;
+    @media #{$info-tablet-horizontal} {
+      margin: auto;
+      width: 95%;
+    }
   }
 }

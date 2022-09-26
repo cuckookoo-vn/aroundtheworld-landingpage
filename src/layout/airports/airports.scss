@@ -1,0 +1,22 @@
+@import "src/scss/variables";
+
+.airports{
+  background-color: $bg-color;
+  .title-main{
+    margin: 62px 0 75px 0;
+    @media #{$info-tablet-horizontal} {
+      margin: 2.7vw 0 3.2vw 0;
+    }
+  }
+  .box-image{
+    padding-bottom: 114px;
+    @media #{$info-tablet-horizontal} {
+      padding-bottom: 6.4vw;
+    }
+    img{
+      width: 100%;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+}

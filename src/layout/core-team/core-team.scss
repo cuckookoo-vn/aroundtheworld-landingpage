@@ -3,14 +3,18 @@
   background-color: $bg-color;
   width: 100%;
   .title-main{
-    margin-top: 7.8vw;
+    margin-top: 120px;
+    margin-bottom: 132px;
+    @media #{$info-tablet-horizontal} {
+      margin-top: 7vw;
+      margin-bottom: 6vw;
+    }
   }
   .box-member{
-    margin-top: 7vw;
-    display: grid;
-    padding: 0 7.6vw 6.7vw 7.6vw;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 3.8vw;
-    grid-row-gap: 5vw;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    flex-wrap: wrap;
+    margin: auto;
   }
 }

@@ -1,0 +1,38 @@
+@import "src/scss/variables";
+
+.road-map{
+  width: 100%;
+  background-color: $bg-color;
+  .rm-box1{
+    position: relative;
+    .rm1{
+      margin-top: 190px;
+    }
+    .text-rm1-1{
+      left: 23%;
+      top: 112px;
+    }
+    .text-rm1-2{
+      left: 51%;
+      top: 39px;
+    }
+  }
+
+  .rm2{
+    margin-top: 240px;
+  }
+  .rm3{
+    margin-top: 145px;
+  }
+  .text-rm{
+    color: #00E0FF;
+    position: absolute;
+  }
+
+  img{
+    width: 100%;
+    &.rm3{
+      width: 30%;
+    }
+  }
+}

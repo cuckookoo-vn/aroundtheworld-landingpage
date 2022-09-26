@@ -2,22 +2,41 @@
 
 .key-features-item{
   position: relative;
-  background-position: left;
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 23.2vw;
-  height: 16.5vw;
+  width: 350px;
+  height: 250px;
+  margin: 25px 0 25px 0;
+  @media #{$info-tablet-horizontal} {
+    width: 30%;
+    height: 20vw;
+    margin: 2vw 0 1vw 0;
+  }
   .title-key{
-    position: absolute;
+    position: relative;
+    width: 85%;
+    display: block;
     color: $color-title-main;
-    font-size: 1.2vw;
+    font-size: 15px;
+    @media #{$info-tablet-horizontal} {
+      font-size: 1.4vw;
+    }
   }
   .title-main-key{
-    transform: translate(3vw,2.3vw);
+    padding: 45px 0 0 35px;
+    width: 85%;
+    @media #{$info-tablet-horizontal} {
+      padding: 0;
+      margin: 3vw 0 0 3vw;
+    }
   }
   .title{
-    transform: translate(3.2vw, 5vw);
-    width: 78%;
+    padding: 15px 0 0 35px;
     color: #FFFFFF;
+    @media #{$info-tablet-horizontal} {
+      padding: 0;
+      margin: 0.5vw 0 0 3.2vw;
+    }
   }
 }
