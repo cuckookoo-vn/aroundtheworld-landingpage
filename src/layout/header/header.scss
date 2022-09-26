@@ -28,17 +28,19 @@
     line-height: 0;
     top: 2.1vw;
     .drop-btn{
-      padding: 0;
       color: #FFFFFF;
       font-size: 1.2vw;
+      padding: 0 1vw 0 0;
       border: none;
       cursor: pointer;
+      width: -moz-fit-content;
       width: fit-content;
+      height: 1vw;
       background: rgba(0, 0, 0, 0);
       img{
         position: absolute;
         width: 1vw;
-        bottom: 0.3vw;
+        bottom: 0;
         margin-left: 0.7vw;
         transition: transform 0.2s;
         &.rotate{
@@ -63,7 +65,7 @@
         font-size: 1.2vw;
         cursor: pointer;
         text-decoration: none;
-        width: 7.5vw;
+        width:fit-content;
         display: block;
         padding: 1vw;
         border: none;
@@ -76,12 +78,12 @@
 
   .dropdown-docs{
     position: absolute;
-    right: 39.5vw;
+    right: 38.5vw;
   }
 
   .dropdown-lang{
     position: absolute;
-    right: 31vw;
+    right: 30vw;
   }
 
   .logo-coming-soon{
