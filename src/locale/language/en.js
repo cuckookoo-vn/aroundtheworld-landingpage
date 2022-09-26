@@ -22,7 +22,35 @@ const en = {
         },
         miniGames: {
             titleMain: "Mini games"
-        }
+        },
+        keyFeatures: {
+            titleMain: "Key features",
+            items1: {
+                titleMain : "TRAVELING",
+                title: "Gives players the experience of traveling around the world."
+            },
+            items2: {
+                titleMain : "GLOBAL CONNECT",
+                title: "Make friends & connect with friends all over the  world (Play together, chat, …)."
+            },
+            items3: {
+                titleMain : "BRILLIANT GRAPHICS",
+                title: "Impress players with 3D graphics."
+            },
+            items4: {
+                titleMain : "DIVERSE REWARDS",
+                title: "Foods, badges, costumes, vouchers, …\n" +
+                    "Use these rewards in Cuckookoo & Chaino’s metaverse ecosystem."
+            },
+            items5: {
+                titleMain : "SIMPLE & FUNNY GAMEPLAY",
+                title: "Solve mini games: jigsaw puzzle, hidden objects, quiz,…"
+            },
+            items6: {
+                titleMain : "3D ADVERTISING",
+                title: "ARTW is the platform to develop 3D advertising."
+            },
+        },
     }
 }
 export default en;

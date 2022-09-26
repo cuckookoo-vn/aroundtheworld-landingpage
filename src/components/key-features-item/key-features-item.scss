@@ -1,0 +1,23 @@
+@import "src/scss/variables";
+
+.key-features-item{
+  position: relative;
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 23.2vw;
+  height: 16.5vw;
+  .title-key{
+    position: absolute;
+    color: $color-title-main;
+    font-size: 1.2vw;
+  }
+  .title-main-key{
+    transform: translate(3vw,2.3vw);
+  }
+  .title{
+    transform: translate(3.2vw, 5vw);
+    width: 78%;
+    color: #FFFFFF;
+  }
+}

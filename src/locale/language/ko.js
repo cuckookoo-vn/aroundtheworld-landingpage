@@ -20,6 +20,34 @@ const ko ={
         },
         miniGames: {
             titleMain: "미니 게임"
+        },
+        keyFeatures: {
+            titleMain: "주요 특징들",
+            items1: {
+                titleMain : "여행",
+                title: "플레이어에게 전 세계를 여행하는 경험을 제공합니다."
+            },
+            items2: {
+                titleMain : "글로벌 커넥트",
+                title: "친구를 만들고 전 세계의 친구들과 연결하십시오(함께 플레이하고, 채팅하고, ...)."
+            },
+            items3: {
+                titleMain : "화려한 그래픽",
+                title: "3D 그래픽으로 플레이어에게 깊은 인상을 남깁니다."
+            },
+            items4: {
+                titleMain : "다양한 보상",
+                title: "음식, 배지, 의상, 상품권, …\n" +
+                    "Cuckookoo & Chaino's 메타버스 생태계에서 이러한 보상을 사용하십시오."
+            },
+            items5: {
+                titleMain : "간단하고 재미있는 게임 플레이",
+                title: "미니 게임 풀기: 직소 퍼즐, 숨겨진 물건, 퀴즈,…"
+            },
+            items6: {
+                titleMain : "3D 광고",
+                title: "ARTW는 3D 광고를 개발하는 플랫폼입니다."
+            },
         }
     }
 }
