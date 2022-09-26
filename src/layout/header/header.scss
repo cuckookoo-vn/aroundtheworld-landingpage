@@ -7,6 +7,7 @@
   height: 6vw;
   left: 0;
   top: 0;
+  z-index: 1000;
   .title-header{
     position: absolute;
     top: 1.3vw;
@@ -69,6 +70,7 @@
         display: block;
         padding: 1vw;
         border: none;
+        height: 4vw;
         &:first-child{
           margin-top: 2.5vw;
         }

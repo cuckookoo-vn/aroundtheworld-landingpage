@@ -1,0 +1,16 @@
+@import "src/scss/variables";
+.core-team{
+  background-color: $bg-color;
+  width: 100%;
+  .title-main{
+    margin-top: 7.8vw;
+  }
+  .box-member{
+    margin-top: 7vw;
+    display: grid;
+    padding: 0 7.6vw 6.7vw 7.6vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3.8vw;
+    grid-row-gap: 5vw;
+  }
+}
