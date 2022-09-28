@@ -1,0 +1,134 @@
+@import "src/scss/variables";
+
+.header{
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  z-index: 1000;
+  @media #{$info-tablet-1399} {
+    height: 50px;
+  }
+  .title-header{
+    position: absolute;
+    left: 10px;
+    top: 11px;
+    width: 318px;
+    @media #{$info-tablet-1399} {
+      top: 5px;
+      width: 290px;
+    }
+  }
+
+  .dropdown{
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+    margin-top: 21px;
+    float: right;
+    margin-right: 40px;
+    @media #{$info-tablet-1399} {
+      margin-top: 16px;
+    }
+    .drop-btn{
+      text-align: left;
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      padding: 5px 25px 5px 0;
+      width: fit-content;
+      height: 25px;
+      background: rgba(0, 0, 0, 0);
+      @media #{$info-tablet-1399} {
+        font-size: 12px;
+        padding: 5px 17px 5px 0;
+      }
+      img{
+        position: absolute;
+        width: 15px;
+        bottom: 7px;
+        @media #{$info-tablet-1399} {
+          width: 10px;
+        }
+        right: 0;
+        transition: transform 0.2s;
+        &.rotate{
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(0,0,0,0);
+      min-width: 73px;
+      z-index: 1;
+      &.show{
+        display: block;
+      }
+      .drop-option{
+        background: rgba(0, 0, 0, 0);
+        color: #FFFFFF;
+        text-align: left;
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        width: 150px;
+        padding: 22px 14px;
+        border: none;
+        @media #{$info-tablet-1399} {
+          font-size: 12px;
+          width: 100px;
+          padding: 15px 10px;
+        }
+        &:first-child{
+          margin-top: 17px;
+          @media #{$info-tablet-1399} {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-lang{
+    position: relative;
+    text-align: right;
+  }
+
+  .logo-coming-soon{
+    position: relative;
+    float: right;
+    cursor: pointer;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 165px;
+    height: 72px;
+    margin: 8px 0 0 0;
+    @media #{$info-tablet-1399} {
+      width: 145px;
+      height: 57px;
+      margin: 5px 0 0 0;
+    }
+    span{
+      font-size: 1.2rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-weight: 600;
+      color: #FFED77;
+      text-align: center;
+      width: max-content;
+      transform: translate(-50%, -55%);
+      @media #{$info-tablet-1399} {
+        font-size: 12px;
+      }
+    }
+  }
+}
