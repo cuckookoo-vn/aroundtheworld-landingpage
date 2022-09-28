@@ -38,7 +38,7 @@ const KeyFeatures = () =>{
 
     return(
         <div className="key-features" style={{backgroundImage: `url(${images.bgKeyFeatures})`}}>
-            <Container fluid>
+            <Container>
                 <span className="title-main">{t("keyFeatures.titleMain")}</span>
                 <div className="key-features-box">
                     {featuresItem.map((element, index)=>

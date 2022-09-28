@@ -2,12 +2,11 @@ import './header.scss'
 import {useState} from "react";
 import { useTranslation } from 'react-i18next';
 import i18next from "i18next";
+import {Container} from "react-bootstrap";
 const Header = () =>{
     const { t } = useTranslation();
-
-    const [statusDocs, setStatusDoc] = useState(false);
     const [statusLang, setStatusLang] = useState(false);
-    const [textLang, setTextLang] = useState('Eng');
+    const [textLang, setTextLang] = useState('ENGLISH');
 
     const images = {
         bgHeader: process.env.PUBLIC_URL + '/images/header/bg-header.png',
@@ -17,84 +16,60 @@ const Header = () =>{
         iconSelect : process.env.PUBLIC_URL + "/images/header/icon-select-header.png",
     };
 
-    const setStatusMenu = (status, name) =>{
-        if(name === 'docs'){
-            setStatusDoc(!status);
-        }else if(name === 'lang'){
-            setStatusLang(!status);
-        }else{
-            setStatusDoc(!status);
-            setStatusLang(!status);
-        }
+    const setStatusMenu = (status) =>{
+        setStatusLang(!status);
     };
 
     const changeLang = (name) =>{
-        setTextLang(name);
-        setStatusLang(false);
         i18next.changeLanguage(name);
+        let lang = t("header."+ name);
+        setTextLang(lang);
+        setStatusLang(false);
     }
 
     window.onclick = (event) => {
-        console.log(event.target)
         if (
             !event.target.matches('.drop-btn-docs') &&
             !event.target.matches('.icon-select-header') &&
             !event.target.matches('.drop-btn-lang')
-
         ){
-            setStatusMenu(true,'full')
+            setStatusMenu(true)
         }
     }
 
     return(
         <div className="header"
              style={{backgroundImage:`url(${images.bgHeader})`}}>
-
             <img className="title-header"
                  src={images.titleHeader}
                  alt="title-header"/>
-            <img className="logo-header"
-                 src={images.logoHeader}
-                 alt="logo-header"/>
-
-            <div className="dropdown dropdown-docs">
-                <button className="drop-btn drop-btn-docs"
-                        onClick={()=>setStatusMenu(statusDocs, 'docs')}>
-                    {t('menu.docs')}
-                    <img className={"icon-select-header" + (statusDocs ? " rotate": "")}
-                         src={images.iconSelect} alt="icon-select"/>
-                </button>
-
-                <div className={"dropdown-content dropdown-content-docs" + (statusDocs ? " show": "")}>
-                    <a className="drop-option"
-                       href={"https://www.youtube.com/"} >Pitch Deck</a>
+            <Container>
+                <div className="logo-coming-soon"
+                     style={{backgroundImage:`url(${images.comingSoonButton}`}}>
+                    <span>{t("header.button")}</span>
                 </div>
-            </div>
 
-            <div className="dropdown dropdown-lang">
-                <button className="drop-btn drop-btn-lang"
-                        onClick={()=>setStatusMenu(statusLang, 'lang')}>
-                    {textLang}
-                    <img className={"icon-select-header" + (statusLang ? " rotate": "")}
-                         src={images.iconSelect} alt="icon-select"/>
-                </button>
+                <div className="dropdown dropdown-lang">
+                    <button className="drop-btn drop-btn-lang"
+                            onClick={()=>setStatusMenu(statusLang)}>
+                        {textLang}
+                        <img className={"icon-select-header" + (statusLang ? " rotate": "")}
+                             src={images.iconSelect} alt="icon-select"/>
+                    </button>
 
-                <div className={"dropdown-content dropdown-content-lang" + (statusLang ? " show": "")}>
-                    <button onClick={()=>changeLang('vn')}
-                            className="drop-option">Vietnamese</button>
+                    <div className={"dropdown-content dropdown-content-lang" + (statusLang ? " show": "")}>
+                        <button onClick={()=>changeLang('vn')}
+                                className="drop-option">{t("header.vn")}</button>
 
-                    <button onClick={()=>changeLang('ko')}
-                            className="drop-option">Korean</button>
+                        <button onClick={()=>changeLang('ko')}
+                                className="drop-option">{t("header.ko")}</button>
 
-                    <button onClick={()=>changeLang('en')}
-                            className="drop-option">English</button>
+                        <button onClick={()=>changeLang('en')}
+                                className="drop-option">{t("header.en")}</button>
+                    </div>
                 </div>
-            </div>
 
-            <div className="logo-coming-soon"
-                 style={{backgroundImage:`url(${images.comingSoonButton}`}}>
-                <span>COMING SOON</span>
-            </div>
+            </Container>
         </div>
     )
 }

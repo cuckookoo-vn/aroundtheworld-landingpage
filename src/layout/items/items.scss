@@ -1,0 +1,16 @@
+@import "src/scss/variables";
+
+.items{
+  position: relative;
+  background-color: $bg-color;
+  width: 100%;
+  .title-main{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 1vw;
+  }
+  .video{
+    width: 100%;
+  }
+}

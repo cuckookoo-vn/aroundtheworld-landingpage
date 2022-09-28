@@ -1,6 +1,12 @@
+import {useRef} from "react";
+
 import {Container} from "react-bootstrap";
 import CoreTeamMember from "../../components/core-team-member/core-team-member";
 import {useTranslation} from "react-i18next";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+
 import './core-team.scss';
 
 const CoreTeam = () =>{
@@ -87,6 +93,13 @@ const CoreTeam = () =>{
             image: process.env.PUBLIC_URL + '/images/core-team/hany.png'
         },
     ]
+    const images = {
+        next: process.env.PUBLIC_URL + '/images/template/next.png',
+        pre: process.env.PUBLIC_URL + '/images/template/pre.png'
+    }
+
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
 
     return(
         <div className="core-team">
@@ -95,15 +108,48 @@ const CoreTeam = () =>{
             </span>
 
             <Container>
-                <div className="box-member">
-                    {memberTeam.map((element, index) =>
-                        <CoreTeamMember
-                            key={index}
-                            image={element.image}
-                            name={element.name}
-                            position={element.position}
-                        />
-                    )}
+                <div className="box-slide">
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={30}
+                        slidesPerGroup={4}
+                        autoplay={true}
+                        loop={true}
+                        loopFillGroupWithBlank={true}
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true,
+                        }}
+                        modules={[Pagination, Navigation]}
+                        className="mySwiper"
+                        onInit={(swiper) => {
+                            swiper.params.navigation.prevEl = prevRef.current;
+                            swiper.params.navigation.nextEl = nextRef.current;
+                            swiper.navigation.init();
+                            swiper.navigation.update();
+                        }}
+                    >
+                        <div className="box-member">
+                            {memberTeam.map((element, index) =>
+                                <SwiperSlide key={index}>
+                                    <CoreTeamMember
+                                        key={index}
+                                        image={element.image}
+                                        name={element.name}
+                                        position={element.position}
+                                    />
+                                </SwiperSlide>
+                            )}
+
+                        </div>
+                        <div ref={prevRef} className="icon-slide icon-next">
+                            <img className="icon-next" src={images.pre} alt="pre"/>
+                        </div>
+                        <div ref={nextRef} className="icon-slide icon-pre">
+                            <img src={images.next} alt="next"/>
+                        </div>
+                    </Swiper>
+
                 </div>
             </Container>
         </div>

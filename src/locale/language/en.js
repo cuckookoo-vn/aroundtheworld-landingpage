@@ -1,14 +1,20 @@
 const en = {
     translation: {
+        header:{
+            vn: "VIETNAME",
+            en: "ENGLISH",
+            ko: "KOREAN",
+            button: "DOWNLOAD"
+        },
         menu: {
             docs: 'docs'
         },
         footer: {
-            contactUs: 'Contact us'
+            contactUs: 'Contact Us'
         },
         introduce: {
             titleMain: `"Around the world"`,
-            title1: "is a game that gives you the experience of traveling around the world. " +
+            title1: " is a game that gives you the experience of traveling around the world. " +
                 "The game is extremely suitable for those who have a passion to learn the typical cultural " +
                 "features of countries and regions. Over and above that, this is not just a game, it is also " +
                 "a way of educating children about the diverse and colorful world out there.",
@@ -21,34 +27,38 @@ const en = {
             titleMain: "Core Team"
         },
         miniGames: {
-            titleMain: "Mini games"
+            titleMain: "Mini Games",
+            buttonObject: "HIDDEN OBJECT",
+            buttonPuzzle: "JIGSAW PUZZLE",
+            buttonQuiz: "QUIZ"
         },
         keyFeatures: {
-            titleMain: "Key features",
+            titleMain: "Key Features",
             items1: {
                 titleMain : "TRAVELING",
                 title: "Gives players the experience of traveling around the world."
             },
             items2: {
                 titleMain : "GLOBAL CONNECT",
-                title: "Make friends & connect with friends all over the  world (Play together, chat, …)."
+                title: "Make friends & connect with friends all over the world (Play together, chat, …)"
             },
             items3: {
                 titleMain : "BRILLIANT GRAPHICS",
-                title: "Impress players with 3D graphics."
+                title: "Impress players with 3D graphics"
             },
             items4: {
                 titleMain : "DIVERSE REWARDS",
-                title: "Foods, badges, costumes, vouchers, …\n" +
-                    "Use these rewards in Cuckookoo & Chaino’s metaverse ecosystem."
+                title: "Foods, badges, costumes, vouchers, … \n" +
+                    "Use these rewards in Cuckookoo & Chaino’s metaverse ecosystem"
             },
             items5: {
                 titleMain : "SIMPLE & FUNNY GAMEPLAY",
-                title: "Solve mini games: jigsaw puzzle, hidden objects, quiz,…"
+                title: "Solve mini-games: jigsaw puzzle, hidden objects, quiz, …"
             },
             items6: {
                 titleMain : "3D ADVERTISING",
-                title: "ARTW is the platform to develop 3D advertising."
+                title: "ARTW is the platform to develop 3D billboard advertising. " +
+                    "Enable users to interact with 3D ads (including interaction, emotion of subjects in 3D ads and users)."
             },
         },
         character: {
@@ -58,7 +68,7 @@ const en = {
             titleMain: "Airports"
         },
         roadMap:{
-            titleMain: "Road map",
+            titleMain: "Roadmap",
             rm11:{
                 title1: "Ideas for ARTW",
                 title2: "Finalize Design in Phase 1 (Alpha)",
@@ -95,6 +105,9 @@ const en = {
                 title2: "Test and Release 3rd version",
                 title3: "Go live app (1st version on Metaverse)"
             }
+        },
+        items:{
+            titleMain: "Items",
         }
     }
 }
