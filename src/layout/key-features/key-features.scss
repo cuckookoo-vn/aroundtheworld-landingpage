@@ -1,0 +1,37 @@
+@import "src/scss/variables";
+
+.key-features{
+  position: relative;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px;
+  @media #{$info-tablet-1399}{
+    height: 680px;
+  }
+  @media #{$info-tablet-horizontal} {
+    height: 56vw;
+  }
+  @media #{$info-tablet-991}{
+    height: 450px;
+  }
+  .title-main{
+    margin: 62px 0 40px 0;
+    @media #{$info-tablet-1399} {
+      margin: 62px 0 40px 0;
+    }
+    @media #{$info-tablet-horizontal} {
+      margin: 2.7vw 0 1.4vw 0;
+    }
+  }
+  .key-features-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    @media #{$info-tablet-horizontal} {
+      margin: auto;
+      width: 95%;
+    }
+  }
+}

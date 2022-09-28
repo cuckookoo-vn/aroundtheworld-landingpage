@@ -1,0 +1,20 @@
+@import "src/scss/variables";
+
+.character{
+  position: relative;
+  background-color: $bg-color;
+  width: 100%;
+  .title-main{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -38px;
+    margin-top: 5.5vw;
+  }
+  .video{
+    width: 100%;
+    &.hidden{
+      display: none;
+    }
+  }
+}

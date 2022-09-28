@@ -1,12 +1,48 @@
 @import "src/scss/variables";
 
 .mini-games{
+  position: relative;
   background-color: $bg-color;
   width: 100%;
   .title-main{
-    margin-top: 5.5vw;
+    margin-top: 3.5vw;
   }
   .video{
     width: 100%;
   }
+  .button{
+    position: absolute;
+    cursor: pointer;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 19vw;
+    height: 7vw;
+    span{
+      font-size: 1.6vw;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-weight: 600;
+      color: #FFED77;
+      text-align: center;
+      width: 19vw;
+      transform: translate(-50%, -55%);
+    }
+
+    &.button-hidden{
+      left: 50%;
+      top: 11vw;
+      transform: translate(-50%, 0);
+    }
+    &.button-jigsaw{
+      bottom: 3vw;
+      left: 10vw;
+    }
+    &.button-quiz{
+      bottom: 3vw;
+      right: 10vw;
+    }
+  }
+
 }
