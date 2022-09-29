@@ -20,6 +20,10 @@
       top: 5px;
       width: 290px;
     }
+    @media #{$info-phone} {
+      top: 13px;
+      width: 195px;
+    }
   }
 
   .dropdown{
@@ -44,6 +48,10 @@
       background: rgba(0, 0, 0, 0);
       @media #{$info-tablet-1399} {
         font-size: 12px;
+        padding: 5px 17px 5px 0;
+      }
+      @media #{$info-phone} {
+        font-size: 0.6rem;
         padding: 5px 17px 5px 0;
       }
       img{
@@ -86,6 +94,9 @@
           width: 100px;
           padding: 15px 10px;
         }
+        @media #{$info-tablet-1399} {
+          font-size: 0.6rem;
+        }
         &:first-child{
           margin-top: 17px;
           @media #{$info-tablet-1399} {
@@ -115,6 +126,9 @@
       width: 145px;
       height: 57px;
       margin: 5px 0 0 0;
+    }
+    @media #{$info-phone} {
+      display: none;
     }
     span{
       font-size: 1.2rem;

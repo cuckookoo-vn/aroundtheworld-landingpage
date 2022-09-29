@@ -2,13 +2,20 @@
 
 .airports{
   background-color: $bg-color;
+  @media #{$info-phone} {
+    padding-bottom: 6vw;
+  }
   .title-main{
     margin: 62px 0 75px 0;
     @media #{$info-tablet-horizontal} {
       margin: 2.7vw 0 3.2vw 0;
     }
+    @media #{$info-phone} {
+      margin: 20px 0 15px 0;
+    }
   }
   .box-image{
+    position: relative;
     padding-bottom: 114px;
     @media #{$info-tablet-horizontal} {
       padding-bottom: 6.4vw;
@@ -16,6 +23,9 @@
     img{
       width: 100%;
       margin-bottom: 1.4rem;
+      @media #{$info-phone} {
+        margin-bottom: 0;
+      }
     }
   }
 

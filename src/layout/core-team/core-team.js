@@ -1,4 +1,4 @@
-import {useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import {Container} from "react-bootstrap";
 import CoreTeamMember from "../../components/core-team-member/core-team-member";
@@ -7,10 +7,24 @@ import {useTranslation} from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 
+import {getWindowDimensions} from "../../mixins/window-dimensions";
 import './core-team.scss';
 
 const CoreTeam = () =>{
     const {t} = useTranslation();
+    const [windowDimensions, setWindowDimensions] = useState(
+        getWindowDimensions()
+    );
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const memberTeam = [
         {
             name: 'Paul Pham',
@@ -110,12 +124,12 @@ const CoreTeam = () =>{
             <Container>
                 <div className="box-slide">
                     <Swiper
-                        slidesPerView={4}
-                        spaceBetween={30}
-                        slidesPerGroup={4}
+                        slidesPerView={windowDimensions.width >767 ? 4 : 3}
+                        spaceBetween={windowDimensions.width >767 ? 30 : 5}
+                        slidesPerGroup={windowDimensions.width >767 ? 4 : 3}
                         autoplay={true}
                         loop={true}
-                        loopFillGroupWithBlank={true}
+                        loopFillGroupWithBlank={false}
                         pagination={{
                             clickable: true,
                             dynamicBullets: true,
@@ -133,19 +147,17 @@ const CoreTeam = () =>{
                             {memberTeam.map((element, index) =>
                                 <SwiperSlide key={index}>
                                     <CoreTeamMember
-                                        key={index}
                                         image={element.image}
                                         name={element.name}
                                         position={element.position}
                                     />
                                 </SwiperSlide>
                             )}
-
                         </div>
-                        <div ref={prevRef} className="icon-slide icon-next">
+                        <div ref={prevRef} className="icon-slide icon-next hidden-mobile">
                             <img className="icon-next" src={images.pre} alt="pre"/>
                         </div>
-                        <div ref={nextRef} className="icon-slide icon-pre">
+                        <div ref={nextRef} className="icon-slide icon-pre hidden-mobile">
                             <img src={images.next} alt="next"/>
                         </div>
                     </Swiper>

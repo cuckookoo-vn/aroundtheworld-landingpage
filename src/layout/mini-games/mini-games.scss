@@ -6,6 +6,9 @@
   width: 100%;
   .title-main{
     margin-top: 3.5vw;
+    @media #{$info-phone} {
+      margin-top: 20px;
+    }
   }
   .video{
     width: 100%;
@@ -42,6 +45,22 @@
     &.button-quiz{
       bottom: 3vw;
       right: 10vw;
+    }
+  }
+
+  .mobile-box{
+    position: relative;
+    .button{
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 200px;
+      height: 70px;
+      z-index: 1;
+      span{
+        width: 90%;
+        font-size: 15px;
+      }
     }
   }
 

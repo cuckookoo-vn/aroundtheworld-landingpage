@@ -4,6 +4,8 @@ import {useTranslation} from "react-i18next";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import {useEffect, useRef, useState} from "react";
+import {Navigation, Pagination} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 const Airports = () =>{
     const {t} = useTranslation();
@@ -74,13 +76,43 @@ const Airports = () =>{
         <div className="airports">
             <Container>
                 <div className="title-main">{t('airports.titleMain')}</div>
-                <div className="box-image">
+                <div className="box-image hidden-mobile">
                     <Row>
                         <Col xs={6} lg={6}><img src={incheon} alt="chales"/></Col>
                         <Col xs={6} lg={6}><img src={kansai} alt="ap2"/></Col>
                         <Col xs={6} lg={6}><img src={changi} alt="ap3"/></Col>
                         <Col xs={6} lg={6}><img src={chales} alt="ap4"/></Col>
                     </Row>
+                </div>
+                <div className="box-image hidden-pc">
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        slidesPerGroup={1}
+                        autoplay={true}
+                        loop={true}
+                        loopFillGroupWithBlank={true}
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true,
+                        }}
+                        modules={[Pagination, Navigation]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <img src={incheon} alt="chales"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={kansai} alt="ap2"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={changi} alt="ap3"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={chales} alt="ap4"/>
+                        </SwiperSlide>
+
+                    </Swiper>
                 </div>
             </Container>
         </div>

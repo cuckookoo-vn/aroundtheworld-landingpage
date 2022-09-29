@@ -2,6 +2,8 @@ import "./key-features.scss";
 import {Container} from "react-bootstrap";
 import {useTranslation} from "react-i18next";
 import KeyFeaturesItem from "../../components/key-features-item/key-features-item";
+import {Navigation, Pagination} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 const KeyFeatures = () =>{
     const {t} = useTranslation();
@@ -40,11 +42,34 @@ const KeyFeatures = () =>{
         <div className="key-features" style={{backgroundImage: `url(${images.bgKeyFeatures})`}}>
             <Container>
                 <span className="title-main">{t("keyFeatures.titleMain")}</span>
-                <div className="key-features-box">
+                <div className="key-features-box hidden-mobile">
                     {featuresItem.map((element, index)=>
                         <KeyFeaturesItem key={index}
                                          titleMain={element.titleMain} title={element.title}/>
                     )}
+                </div>
+                <div className="key-features-box hidden-pc">
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        slidesPerGroup={1}
+                        autoplay={true}
+                        loop={true}
+                        loopFillGroupWithBlank={true}
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true,
+                        }}
+                        modules={[Pagination, Navigation]}
+                        className="mySwiper"
+                    >
+
+                        {featuresItem.map((element, index)=>
+                            <SwiperSlide key={index}>
+                                <KeyFeaturesItem titleMain={element.titleMain} title={element.title}/>
+                            </SwiperSlide>
+                        )}
+                    </Swiper>
                 </div>
             </Container>
         </div>

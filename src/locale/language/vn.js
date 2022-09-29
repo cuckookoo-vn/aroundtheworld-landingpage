@@ -2,8 +2,8 @@ const vn = {
     translation: {
         header:{
             vn: "VIỆT NAM",
-            en: "ANH",
-            ko: "HÀN",
+            en: "ENGLISH",
+            ko: "한국어",
             button: "TẢI VỀ"
         },
         menu: {
@@ -21,7 +21,7 @@ const vn = {
             title2: "Chơi và thu thập các vật phẩm khi đến thăm các quốc gia khác nhau! Những vật phẩm này " +
                 "không chỉ giúp bạn tăng cơ hội chiến thắng, cản trở đối thủ mà còn có thể dùng để quy đổi " +
                 "thành lợi ích trong hệ sinh thái metaverse của Cuckookoo như giáo dục, y tế, thời trang, " +
-                "v.v. Hãy xách vali lên và đi du lịch Vòng quanh thế giới thôi nào!"
+                "v.v.\nHãy xách vali lên và đi du lịch Vòng quanh thế giới thôi nào!"
         },
         coreTeam: {
             titleMain: "ĐỘI NGŨ PHÁT TRIỂN"
@@ -49,7 +49,7 @@ const vn = {
             items4: {
                 titleMain : "PHẦN THƯỞNG ĐA DẠNG",
                 title: "Thực phẩm, huy hiệu, trang phục truyền thống, phiếu mua hàng,… Sử dụng những " +
-                    "phần thưởng này trong hệ sinh thái metaverse của Cuckookoo & Chainoss."
+                    "phần thưởng này trong hệ sinh thái metaverse của Cuckookoo & Chainos."
             },
             items5: {
                 titleMain : "TRÒ CHƠI ĐƠN GIẢN VÀ THÚ VỊ",

@@ -3,6 +3,8 @@ import {useState} from "react";
 import { useTranslation } from 'react-i18next';
 import i18next from "i18next";
 import {Container} from "react-bootstrap";
+import {Trans} from "react-i18next";
+
 const Header = () =>{
     const { t } = useTranslation();
     const [statusLang, setStatusLang] = useState(false);
@@ -58,14 +60,12 @@ const Header = () =>{
                     </button>
 
                     <div className={"dropdown-content dropdown-content-lang" + (statusLang ? " show": "")}>
-                        <button onClick={()=>changeLang('vn')}
-                                className="drop-option">{t("header.vn")}</button>
-
-                        <button onClick={()=>changeLang('ko')}
-                                className="drop-option">{t("header.ko")}</button>
-
                         <button onClick={()=>changeLang('en')}
                                 className="drop-option">{t("header.en")}</button>
+                        <button onClick={()=>changeLang('ko')}
+                                className="drop-option">{t("header.ko")}</button>
+                        <button onClick={()=>changeLang('vn')}
+                                className="drop-option">{t("header.vn")}</button>
                     </div>
                 </div>
 

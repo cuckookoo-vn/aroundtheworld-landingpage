@@ -7,8 +7,10 @@ const KeyFeaturesItem = ({titleMain, title}) =>{
     return(
         <div className="key-features-item"
              style={{backgroundImage: `url(${images.boxKeyFeatures})`}}>
-            <span className="title-key title-main-key">{titleMain}</span>
-            <span className="title-key title">{title}</span>
+            <div className="box-title">
+                <span className="title-key title-main-key">{titleMain}</span>
+                <span className="title-key title">{title}</span>
+            </div>
         </div>
     )
 }
