@@ -9,12 +9,14 @@ import Airports from "../../layout/airports/airports";
 import RoadMap from "../../layout/road-map/road-map";
 import VideoIntroduce from "../../layout/video-introduce/video-introduce";
 import Items from "../../layout/items/items";
+import DownloadMobile from "../../layout/download-mobile/download-mobile";
 
 const Home = () =>{
     return(
         <>
             <Header/>
             <VideoIntroduce/>
+            <DownloadMobile/>
             <Introduce/>
             <KeyFeatures/>
             <Airports/>

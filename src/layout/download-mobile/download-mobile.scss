@@ -1,0 +1,31 @@
+@import "src/scss/variables";
+
+.download-mobile{
+  width: 100%;
+  background-color:$bg-color;
+  height: fit-content;
+  display: flex;
+  text-align: center;
+  .logo-coming-soon{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 145px;
+    height: 56px;
+    margin: 8px 0 6px 0;
+    span{
+      font-size: 0.8rem;
+      position: absolute;
+      left: 50%;
+      top: 47%;
+      transform: translate(-50%,-50%);
+      font-weight: 600;
+      color: #FFED77;
+      text-align: center;
+      width: max-content;
+    }
+  }
+}

@@ -22,49 +22,69 @@
     width: 220px;
     height: 150px;
   }
-  .title-key{
-    position: relative;
-    width: 85%;
-    display: block;
-    color: $color-title-main;
-    font-size: 1.1rem;
-    line-height: 1.7rem;
-    @media #{$info-tablet-1399}{
-      line-height: 20px;
-      font-size: 12px;
-    }
-    @media #{$info-tablet-991}{
-      line-height: 16px;
-      font-size: 9px;
-    }
+  @media #{$info-phone} {
+    width: 100%;
+    height: 53vw;
+    transform: translateY(-10px);
+    margin: 0;
   }
-  .title-main-key{
-    padding: 45px 0 0 35px;
-    width: 85%;
-    @media #{$info-tablet-1399} {
-      padding: 0;
-      margin: 38px 0 0 27px;
+  .box-title{
+    @media #{$info-phone} {
+      position: relative;
+      width: 80%;
+      top: 23%;
+      left: 10%;
     }
-    @media #{$info-tablet-horizontal} {
-      padding: 0;
-      margin: 25px 0 0 27px;
+    .title-key{
+      position: relative;
+      width: 85%;
+      display: block;
+      color: $color-title-main;
+      font-size: 1.1rem;
+      line-height: 1.7rem;
+      @media #{$info-tablet-1399}{
+        line-height: 20px;
+        font-size: 12px;
+      }
+      @media #{$info-tablet-991}{
+        line-height: 16px;
+        font-size: 9px;
+      }
+      @media #{$info-phone}{
+        font-size: 0.62rem;
+      }
+      @media #{$info-nexus4}{
+        font-size: 0.5rem;
+      }
     }
-    @media #{$info-tablet-991}{
-      padding: 0;
-      margin: 20px 0 0 22px;
+    .title-main-key{
+      padding: 45px 0 0 35px;
+      width: 85%;
+      @media #{$info-tablet-1399} {
+        padding: 0;
+        margin: 38px 0 0 27px;
+      }
+      @media #{$info-tablet-horizontal} {
+        padding: 0;
+        margin: 25px 0 0 27px;
+      }
+      @media #{$info-tablet-991}{
+        padding: 0;
+        margin: 20px 0 0 22px;
+      }
     }
-  }
-  .title{
-    color: #FFFFFF;
-    margin: 5px 0 0 38px;
-    @media #{$info-tablet-1399} {
-      margin: 5px 0 0 27px;
-    }
-    @media #{$info-tablet-horizontal}{
-      margin: 5px 0 0 30px;
-    }
-    @media #{$info-tablet-991}{
-      margin: 5px 0 0 22px;
+    .title{
+      color: #FFFFFF;
+      margin: 5px 0 0 38px;
+      @media #{$info-tablet-1399} {
+        margin: 5px 0 0 27px;
+      }
+      @media #{$info-tablet-horizontal}{
+        margin: 5px 0 0 30px;
+      }
+      @media #{$info-tablet-991}{
+        margin: 5px 0 0 22px;
+      }
     }
   }
 }

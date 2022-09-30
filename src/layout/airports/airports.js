@@ -4,6 +4,8 @@ import {useTranslation} from "react-i18next";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import {useEffect, useRef, useState} from "react";
+import {Navigation, Pagination} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 const Airports = () =>{
     const {t} = useTranslation();
@@ -65,6 +67,7 @@ const Airports = () =>{
                 return;
             }
         }, 3000);
+
         return () => {
             clearInterval(image);
         };
@@ -74,13 +77,81 @@ const Airports = () =>{
         <div className="airports">
             <Container>
                 <div className="title-main">{t('airports.titleMain')}</div>
-                <div className="box-image">
+                <div className="box-image hidden-mobile">
                     <Row>
-                        <Col xs={6} lg={6}><img src={incheon} alt="chales"/></Col>
-                        <Col xs={6} lg={6}><img src={kansai} alt="ap2"/></Col>
-                        <Col xs={6} lg={6}><img src={changi} alt="ap3"/></Col>
-                        <Col xs={6} lg={6}><img src={chales} alt="ap4"/></Col>
+                        <Col xs={6} lg={6}>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportKorea")}</span>
+                                <img src={incheon} alt="chales"/>
+                            </div>
+
+                        </Col>
+                        <Col xs={6} lg={6}>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportJapan")}</span>
+                                <img src={kansai} alt="ap2"/>
+                            </div>
+                        </Col>
+                        <Col xs={6} lg={6}>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportSingapore")}</span>
+                                <img src={changi} alt="ap3"/>
+                            </div>
+
+                        </Col>
+                        <Col xs={6} lg={6}>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportFrance")}</span>
+                                <img src={chales} alt="ap4"/>
+                            </div>
+                        </Col>
                     </Row>
+                </div>
+                <div className="box-image hidden-pc">
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        slidesPerGroup={1}
+                        autoplay={{
+                            delay: 6000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true
+                        }}
+                        loop={true}
+                        loopFillGroupWithBlank={true}
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true,
+                        }}
+                        modules={[Pagination, Navigation]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportKorea")}</span>
+                                <img src={incheon} alt="chales"/>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportJapan")}</span>
+                                <img src={kansai} alt="ap2"/>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportSingapore")}</span>
+                                <img src={changi} alt="ap3"/>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportFrance")}</span>
+                                <img src={chales} alt="ap4"/>
+                            </div>
+                        </SwiperSlide>
+
+                    </Swiper>
                 </div>
             </Container>
         </div>

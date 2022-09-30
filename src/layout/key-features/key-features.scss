@@ -15,6 +15,9 @@
   @media #{$info-tablet-991}{
     height: 450px;
   }
+  @media #{$info-phone}{
+    height: 80vw;
+  }
   .title-main{
     margin: 62px 0 40px 0;
     @media #{$info-tablet-1399} {
@@ -23,15 +26,37 @@
     @media #{$info-tablet-horizontal} {
       margin: 2.7vw 0 1.4vw 0;
     }
+    @media #{$info-phone} {
+      margin: 20px 0 0 0;
+    }
   }
   .key-features-box{
     display: flex;
+    position: relative;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: auto;
     @media #{$info-tablet-horizontal} {
       margin: auto;
       width: 95%;
+    }
+  }
+}
+
+#root{
+  .key-features{
+    .swiper{
+      position: initial;
+      .swiper-pagination-bullet{
+        background: #00FFD1;
+      }
+      .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+      .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+        bottom: -30px;
+        @media #{$info-phone} {
+          bottom: 4px;
+        }
+      }
     }
   }
 }

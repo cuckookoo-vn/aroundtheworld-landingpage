@@ -14,7 +14,6 @@ const CoreTeamMember = ({image, name ,position}) =>{
             </div>
             <span className="position-member">{position}</span>
         </div>
-
     )
 }
 

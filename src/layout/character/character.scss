@@ -4,12 +4,17 @@
   position: relative;
   background-color: $bg-color;
   width: 100%;
+  @media #{$info-phone} {
+    padding-top: 25px;
+  }
   .title-main{
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
     top: -38px;
-    margin-top: 5.5vw;
+    @media #{$info-phone} {
+      top: 20px;
+    }
   }
   .video{
     width: 100%;

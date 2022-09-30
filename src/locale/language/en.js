@@ -1,9 +1,9 @@
 const en = {
     translation: {
         header:{
-            vn: "VIETNAME",
+            vn: "VIỆT NAM",
             en: "ENGLISH",
-            ko: "KOREAN",
+            ko: "한국어",
             button: "DOWNLOAD"
         },
         menu: {
@@ -21,14 +21,14 @@ const en = {
             title2: "Play the game and collect items when visiting different countries! These items not only " +
                 "help you increase your chances of winning, hindering your opponents, but also can be used to " +
                 "convert into benefits in Cuckookoo's metaverse ecosystem such as education, health, fashion, " +
-                "etc.Let's carry your suitcase and travel Around the world!"
+                "etc.\nLet's carry your suitcase and travel Around the world!"
         },
         coreTeam: {
             titleMain: "Core Team"
         },
         miniGames: {
             titleMain: "Mini Games",
-            buttonObject: "HIDDEN OBJECT",
+            buttonObject: "HIDDEN OBJECTS",
             buttonPuzzle: "JIGSAW PUZZLE",
             buttonQuiz: "QUIZ"
         },
@@ -36,7 +36,7 @@ const en = {
             titleMain: "Key Features",
             items1: {
                 titleMain : "TRAVELING",
-                title: "Gives players the experience of traveling around the world."
+                title: "Give players the experience of traveling around the world."
             },
             items2: {
                 titleMain : "GLOBAL CONNECT",
@@ -49,7 +49,7 @@ const en = {
             items4: {
                 titleMain : "DIVERSE REWARDS",
                 title: "Foods, badges, costumes, vouchers, … \n" +
-                    "Use these rewards in Cuckookoo & Chaino’s metaverse ecosystem"
+                    "Use these rewards in Cuckookoo & Chainos metaverse ecosystem"
             },
             items5: {
                 titleMain : "SIMPLE & FUNNY GAMEPLAY",
@@ -57,15 +57,20 @@ const en = {
             },
             items6: {
                 titleMain : "3D ADVERTISING",
-                title: "ARTW is the platform to develop 3D billboard advertising. " +
-                    "Enable users to interact with 3D ads (including interaction, emotion of subjects in 3D ads and users)."
+                title: "ARTW is the platform to develop 3D billboard advertising.\n" +
+                    "Enable users to interact with 3D ads by applying AI (including interaction, " +
+                    "emotion of subjects in 3D ads and users)."
             },
         },
         character: {
             titleMain: "Character"
         },
         airports: {
-            titleMain: "Airports"
+            titleMain: "Airports",
+            nameAirportKorea: "Incheon - Korea",
+            nameAirportJapan: "Kansai - Japan",
+            nameAirportSingapore: "Changi - Singapore",
+            nameAirportFrance: "Charles de Gaulle - France",
         },
         roadMap:{
             titleMain: "Roadmap",
