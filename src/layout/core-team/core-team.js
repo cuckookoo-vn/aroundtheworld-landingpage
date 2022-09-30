@@ -127,7 +127,11 @@ const CoreTeam = () =>{
                         slidesPerView={windowDimensions.width >767 ? 4 : 3}
                         spaceBetween={windowDimensions.width >767 ? 30 : 5}
                         slidesPerGroup={windowDimensions.width >767 ? 4 : 3}
-                        autoplay={true}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true
+                        }}
                         loop={true}
                         loopFillGroupWithBlank={false}
                         pagination={{

@@ -111,7 +111,11 @@ const Airports = () =>{
                         slidesPerView={1}
                         spaceBetween={30}
                         slidesPerGroup={1}
-                        autoplay={true}
+                        autoplay={{
+                            delay: 6000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true
+                        }}
                         loop={true}
                         loopFillGroupWithBlank={true}
                         pagination={{

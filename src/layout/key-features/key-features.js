@@ -53,7 +53,11 @@ const KeyFeatures = () =>{
                         slidesPerView={1}
                         spaceBetween={30}
                         slidesPerGroup={1}
-                        autoplay={true}
+                        autoplay={{
+                            delay: 8000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true
+                        }}
                         loop={true}
                         loopFillGroupWithBlank={true}
                         pagination={{
@@ -61,7 +65,6 @@ const KeyFeatures = () =>{
                             dynamicBullets: true,
                         }}
                         modules={[Pagination, Navigation]}
-                        className="mySwiper"
                     >
 
                         {featuresItem.map((element, index)=>
