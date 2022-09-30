@@ -67,6 +67,7 @@ const Airports = () =>{
                 return;
             }
         }, 3000);
+
         return () => {
             clearInterval(image);
         };
@@ -133,19 +134,19 @@ const Airports = () =>{
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="box-item">
-                                <span>{t("airports.nameAirportKorea")}</span>
+                                <span>{t("airports.nameAirportJapan")}</span>
                                 <img src={kansai} alt="ap2"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="box-item">
-                                <span>{t("airports.nameAirportKorea")}</span>
+                                <span>{t("airports.nameAirportSingapore")}</span>
                                 <img src={changi} alt="ap3"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="box-item">
-                                <span>{t("airports.nameAirportKorea")}</span>
+                                <span>{t("airports.nameAirportFrance")}</span>
                                 <img src={chales} alt="ap4"/>
                             </div>
                         </SwiperSlide>

@@ -49,7 +49,7 @@ const vn = {
             items4: {
                 titleMain : "PHẦN THƯỞNG ĐA DẠNG",
                 title: "Thực phẩm, huy hiệu, trang phục truyền thống, phiếu mua hàng,…\n" +
-                    "Sử dụng những phần thưởng này trong hệ sinh thái metaverse của Cuckookoo & Chainoss."
+                    "Sử dụng những phần thưởng này trong hệ sinh thái metaverse của Cuckookoo & Chainos."
             },
             items5: {
                 titleMain : "TRÒ CHƠI ĐƠN GIẢN VÀ THÚ VỊ",
@@ -67,10 +67,10 @@ const vn = {
         },
         airports: {
             titleMain: "Sân Bay",
-            nameAirportKorea: "Incheon - Korea",
-            nameAirportJapan: "Kansai - Japan",
+            nameAirportKorea: "Incheon - Hàn Quốc",
+            nameAirportJapan: "Kansai - Nhật Bản",
             nameAirportSingapore: "Changi - Singapore",
-            nameAirportFrance: "Chales de gaulex - France",
+            nameAirportFrance: "Charles de Gaulle - Pháp",
         },
         roadMap:{
             titleMain: "LỘ TRÌNH",

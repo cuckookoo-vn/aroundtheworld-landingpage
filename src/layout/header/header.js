@@ -12,7 +12,6 @@ const Header = () =>{
     const [textLang, setTextLang] = useState('ENGLISH');
     const [alert, setAlert] = useState(false);
     const [bgHeader , setBgHeader] = useState("");
-    const [statusBg, setStatusBg] = useState(false);
 
     const images = {
         bgHeader: process.env.PUBLIC_URL + '/images/header/bg-header.png',

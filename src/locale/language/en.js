@@ -49,7 +49,7 @@ const en = {
             items4: {
                 titleMain : "DIVERSE REWARDS",
                 title: "Foods, badges, costumes, vouchers, … \n" +
-                    "Use these rewards in Cuckookoo & Chaino’s metaverse ecosystem"
+                    "Use these rewards in Cuckookoo & Chainos metaverse ecosystem"
             },
             items5: {
                 titleMain : "SIMPLE & FUNNY GAMEPLAY",
@@ -70,7 +70,7 @@ const en = {
             nameAirportKorea: "Incheon - Korea",
             nameAirportJapan: "Kansai - Japan",
             nameAirportSingapore: "Changi - Singapore",
-            nameAirportFrance: "Chales de gaulex - France",
+            nameAirportFrance: "Charles de Gaulle - France",
         },
         roadMap:{
             titleMain: "Roadmap",

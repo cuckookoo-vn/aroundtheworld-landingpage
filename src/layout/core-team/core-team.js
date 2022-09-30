@@ -102,9 +102,9 @@ const CoreTeam = () =>{
             image: process.env.PUBLIC_URL + '/images/core-team/linklee.png'
         },
         {
-            name: 'Hany Tran',
+            name: 'Mr. Van',
             position: 'Blockchain',
-            image: process.env.PUBLIC_URL + '/images/core-team/hany.png'
+            image: process.env.PUBLIC_URL + '/images/core-team/van.png'
         },
     ]
     const images = {

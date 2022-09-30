@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import 'swiper/css/scrollbar';
+
 import SwiperCore, { Navigation,
   Pagination,
   Autoplay,

@@ -48,7 +48,7 @@ const ko ={
             },
             items4: {
                 titleMain : "다양한 보상",
-                title: "음식, 배지, 의상, 상품권 등은 Cuckookoo & Chaino’s 의 메타버스 생태계에서 활용됩니다."
+                title: "음식, 배지, 의상, 상품권 등은 Cuckookoo & Chainos 의 메타버스 생태계에서 활용됩니다."
             },
             items5: {
                 titleMain : "간단하고 재미 있는 게임 플레이",

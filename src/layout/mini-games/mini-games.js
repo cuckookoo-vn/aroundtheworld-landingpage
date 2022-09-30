@@ -3,12 +3,6 @@ import {useTranslation} from "react-i18next";
 
 const MiniGames = () =>{
     const {t} = useTranslation();
-    const videos = {
-        miniGames: process.env.PUBLIC_URL + '/videos/mini-games/mini-games.mp4',
-        mobile1: process.env.PUBLIC_URL + '/videos/mini-games/mini-games-mobile-1.mp4',
-        mobile2: process.env.PUBLIC_URL + '/videos/mini-games/mini-games-mobile-2.mp4',
-        mobile3: process.env.PUBLIC_URL + '/videos/mini-games/mini-games-mobile-3.mp4',
-    }
     const images = {
         button : process.env.PUBLIC_URL + "/images/mini-games/button.png",
     }
@@ -17,7 +11,7 @@ const MiniGames = () =>{
         <div className="mini-games">
             <span className="title-main">{t("miniGames.titleMain")}</span>
             <video autoPlay muted loop className="video hidden-mobile">
-                <source src={videos.miniGames} type="video/mp4"/>
+                <source src="https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/video/artw_ckk_minigame_web.mp4" type="video/mp4"/>
             </video>
 
             <div className="button button-hidden hidden-mobile"
@@ -35,7 +29,7 @@ const MiniGames = () =>{
 
             <div className="mobile-box hidden-pc">
                 <video autoPlay muted loop className="video">
-                    <source src={videos.mobile1} type="video/mp4"/>
+                    <source src="https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/video/artw_ckk_minigame_mobile_1.mp4" type="video/mp4"/>
                 </video>
                 <div className="button"
                      style={{backgroundImage:`url(${images.button}`}}>
@@ -44,7 +38,7 @@ const MiniGames = () =>{
             </div>
             <div className="mobile-box hidden-pc">
                 <video autoPlay muted loop className="video">
-                    <source src={videos.mobile2} type="video/mp4"/>
+                    <source src="https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/video/artw_ckk_minigame_mobile_2.mp4" type="video/mp4"/>
                 </video>
                 <div className="button"
                      style={{backgroundImage:`url(${images.button}`}}>
@@ -53,7 +47,7 @@ const MiniGames = () =>{
             </div>
             <div className="mobile-box hidden-pc">
                 <video autoPlay muted loop className="video">
-                    <source src={videos.mobile3} type="video/mp4"/>
+                    <source src="https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/video/artw_ckk_minigame_mobile_3.mp4" type="video/mp4"/>
                 </video>
                 <div className="button"
                      style={{backgroundImage:`url(${images.button}`}}>
