@@ -7,6 +7,10 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 56.5vw;
+  @media #{$info-phone} {
+    background-position: center;
+    height: 75vw;
+  }
   .introduce-content{
     position: absolute;
     background-position: left;
@@ -24,8 +28,15 @@
     }
     @media #{$info-tablet-horizontal} {
       left: 32%;
-      width: 466px;
+      width: 492px;
       height: 312px;
+    }
+    @media #{$info-phone} {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 95%;
+      height: 80%;
     }
     .introduce-text{
       position: absolute;
@@ -45,8 +56,17 @@
       }
       @media #{$info-tablet-horizontal} {
         line-height: inherit;
-        width: 380px;
+        width: 80%;
         font-size: 12px;
+      }
+      @media #{$info-phone} {
+        left: 49%;
+        width: 80%;
+        font-size: 0.62rem;
+        height: fit-content;
+      }
+      @media #{$info-nexus4} {
+        font-size: 0.5rem;
       }
       &-main{
         font-size: 1.7rem;

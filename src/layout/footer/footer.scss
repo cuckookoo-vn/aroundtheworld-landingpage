@@ -11,23 +11,34 @@
   @media #{$info-tablet-1399} {
    height: 28.5vw;
   }
+  @media #{$info-tablet-1399} {
+    height: 35vw;
+  }
 
   .box-logo{
     display: flex;
     width: 100%;
     height: 60%;
+    @media #{$info-phone} {
+      height: 50%;
+    }
     .logo-cuckookoo{
       width: 50%;
       display: flex;
       justify-content: right;
+      @media #{$info-phone} {
+        text-align: right;
+      }
       height: 100%;
       a{
-      height: fit-content;
         margin: auto 0;
         img{
           margin: auto;
           width: 80%;
           max-width: 250px;
+          @media #{$info-phone} {
+            width: 40%;
+          }
         }
       }
     }
@@ -42,6 +53,9 @@
           margin: auto;
           width: 60%;
           max-width: 250px;
+          @media #{$info-phone} {
+            width: 40%;
+          }
         }
       }
     }
@@ -58,12 +72,18 @@
       @media #{$info-tablet-1399} {
         font-size: 16px;
       }
+      @media #{$info-phone} {
+        font-size: 0.8rem;
+      }
     }
     &.email-footer{
       font-size: 1.2rem;
       color: $color-title-main;
       @media #{$info-tablet-1399} {
         font-size: 12px;
+      }
+      @media #{$info-phone} {
+        font-size: 0.62rem;
       }
     }
   }

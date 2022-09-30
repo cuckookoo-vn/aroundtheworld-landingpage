@@ -1,4 +1,5 @@
 import "./key-features-item.scss"
+import {Trans} from "react-i18next";
 
 const KeyFeaturesItem = ({titleMain, title}) =>{
     const images = {
@@ -7,8 +8,17 @@ const KeyFeaturesItem = ({titleMain, title}) =>{
     return(
         <div className="key-features-item"
              style={{backgroundImage: `url(${images.boxKeyFeatures})`}}>
-            <span className="title-key title-main-key">{titleMain}</span>
-            <span className="title-key title">{title}</span>
+            <div className="box-title">
+                <span className="title-key title-main-key">
+                    {titleMain}
+                </span>
+                <span className="title-key title">
+                    <Trans
+                        i18nKey="key-feature-title"
+                        defaults={title}
+                        components={{ nowrap: <span className="nowrap"></span>}}/>
+                </span>
+            </div>
         </div>
     )
 }

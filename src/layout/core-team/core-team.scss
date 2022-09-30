@@ -2,15 +2,27 @@
 .core-team{
   background-color: $bg-color;
   width: 100%;
+  @media #{$info-phone} {
+    padding-bottom: 25px;
+  }
   .title-main{
     margin: 5.5vw 0 3vw 0;
     @media #{$info-tablet-horizontal} {
       margin: 7vw 0 5vw 0;
     }
+    @media #{$info-phone} {
+      margin: 40px 0 20px 0;
+    }
   }
   .box-slide{
     position: relative;
     padding: 0 70px;
+    @media #{$info-tablet-1399} {
+      padding: 0 50px;
+    }
+    @media #{$info-phone} {
+      padding: 0;
+    }
 
     .box-member{
       display: flex;
@@ -48,24 +60,39 @@
       img{
         width: 70px;
         z-index: 2;
+        @media #{$info-tablet-1399} {
+          width: 50px;
+        }
       }
       &.icon-next{
-        left: -50px;
+        left: -40px;
+        @media #{$info-tablet-1399} {
+          left: -20px;
+        }
       }
       &.icon-pre{
-        right: -50px;
+        right: -40px;
+        @media #{$info-tablet-1399} {
+          right: -20px;
+        }
       }
     }
   }
+}
 
-  .swiper{
-    position: initial;
-    .swiper-pagination-bullet{
-      background: #00FFD1;
-    }
-    .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
-      bottom: -30px;
+#root{
+  .core-team{
+    .swiper{
+      position: initial;
+      .swiper-pagination-bullet{
+        background: #00FFD1;
+      }
+      .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+      .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+        @media #{$info-phone} {
+          bottom: -15px;
+        }
+      }
     }
   }
 }
