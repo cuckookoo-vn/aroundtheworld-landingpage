@@ -78,10 +78,32 @@ const Airports = () =>{
                 <div className="title-main">{t('airports.titleMain')}</div>
                 <div className="box-image hidden-mobile">
                     <Row>
-                        <Col xs={6} lg={6}><img src={incheon} alt="chales"/></Col>
-                        <Col xs={6} lg={6}><img src={kansai} alt="ap2"/></Col>
-                        <Col xs={6} lg={6}><img src={changi} alt="ap3"/></Col>
-                        <Col xs={6} lg={6}><img src={chales} alt="ap4"/></Col>
+                        <Col xs={6} lg={6}>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportKorea")}</span>
+                                <img src={incheon} alt="chales"/>
+                            </div>
+
+                        </Col>
+                        <Col xs={6} lg={6}>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportJapan")}</span>
+                                <img src={kansai} alt="ap2"/>
+                            </div>
+                        </Col>
+                        <Col xs={6} lg={6}>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportSingapore")}</span>
+                                <img src={changi} alt="ap3"/>
+                            </div>
+
+                        </Col>
+                        <Col xs={6} lg={6}>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportFrance")}</span>
+                                <img src={chales} alt="ap4"/>
+                            </div>
+                        </Col>
                     </Row>
                 </div>
                 <div className="box-image hidden-pc">
@@ -100,16 +122,28 @@ const Airports = () =>{
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <img src={incheon} alt="chales"/>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportKorea")}</span>
+                                <img src={incheon} alt="chales"/>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={kansai} alt="ap2"/>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportKorea")}</span>
+                                <img src={kansai} alt="ap2"/>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={changi} alt="ap3"/>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportKorea")}</span>
+                                <img src={changi} alt="ap3"/>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={chales} alt="ap4"/>
+                            <div className="box-item">
+                                <span>{t("airports.nameAirportKorea")}</span>
+                                <img src={chales} alt="ap4"/>
+                            </div>
                         </SwiperSlide>
 
                     </Swiper>

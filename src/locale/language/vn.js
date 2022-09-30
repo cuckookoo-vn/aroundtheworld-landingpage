@@ -48,8 +48,8 @@ const vn = {
             },
             items4: {
                 titleMain : "PHẦN THƯỞNG ĐA DẠNG",
-                title: "Thực phẩm, huy hiệu, trang phục truyền thống, phiếu mua hàng,… Sử dụng những " +
-                    "phần thưởng này trong hệ sinh thái metaverse của Cuckookoo & Chainos."
+                title: "Thực phẩm, huy hiệu, trang phục truyền thống, phiếu mua hàng,…\n" +
+                    "Sử dụng những phần thưởng này trong hệ sinh thái metaverse của Cuckookoo & Chainoss."
             },
             items5: {
                 titleMain : "TRÒ CHƠI ĐƠN GIẢN VÀ THÚ VỊ",
@@ -57,16 +57,20 @@ const vn = {
             },
             items6: {
                 titleMain : "QUẢNG CÁO 3D",
-                title: "ARTW là nền tảng để phát triển hình thức quảng cáo bảng quảng cáo 3D.\n" +
-                    "Cho phép người dùng tương tác với quảng cáo 3D (bao gồm tương tác, cảm xúc " +
-                    "của chủ thể trong quảng cáo 3D và người dùng)."
+                title: "ARTW là nền tảng để phát triển hình thức quảng cáo bảng quảng cáo 3D.\n " +
+                    "Cho phép người dùng tương tác với quảng cáo 3D bằng cách áp dụng AI (bao gồm tương tác, " +
+                    "cảm xúc của chủ thể trong quảng cáo 3D và người dùng)."
             },
         },
         character: {
             titleMain: "NHÂN VẬT"
         },
         airports: {
-            titleMain: "Sân Bay"
+            titleMain: "Sân Bay",
+            nameAirportKorea: "Incheon - Korea",
+            nameAirportJapan: "Kansai - Japan",
+            nameAirportSingapore: "Changi - Singapore",
+            nameAirportFrance: "Chales de gaulex - France",
         },
         roadMap:{
             titleMain: "LỘ TRÌNH",

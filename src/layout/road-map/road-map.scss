@@ -12,106 +12,126 @@
       margin: 55px 0 30px 0;
     }
   }
-  .rm-box1{
-    position: relative;
-    .rm1{
-      margin-top: 240px;
-      @media #{$info-tablet-1399} {
-        margin-top: 190px;
+  .rm-box{
+    display: flex;
+    flex-direction: row;
+    .year{
+      width: 50px;
+      color: #00FFFF;
+      position: relative;
+      display: flex;
+      align-items: end;
+      margin: 0 25px 10px 10px;
+      font-size: 1.4rem;
+    }
+    &.rm-box1{
+      position: relative;
+      .rm1{
+        margin-top: 240px;
+        @media #{$info-tablet-1399} {
+          margin-top: 190px;
+        }
+        @media #{$info-tablet-horizontal} {
+          margin-top: 131px;
+        }
       }
-      @media #{$info-tablet-horizontal} {
-        margin-top: 131px;
+      .text-rm1-1{
+        left: 21%;
+        top: 135px;
+        @media #{$info-tablet-1399} {
+          top: 121px;
+        }
+        @media #{$info-tablet-horizontal} {
+          left: 25%;
+          top: 77px;
+        }
+      }
+      .text-rm1-2{
+        left: 55%;
+        top: 56px;
+        @media #{$info-tablet-1399} {
+          top: 66px;
+        }
+        @media #{$info-tablet-horizontal} {
+          left: 54%;
+          top: 25px;
+        }
       }
     }
-    .text-rm1-1{
-      left: 23%;
-      top: 135px;
-      @media #{$info-tablet-1399} {
-        top: 121px;
+
+    &.rm-box2{
+      position: relative;
+      .rm2{
+        margin-top: 299px;
+        @media #{$info-tablet-1399} {
+          margin-top: 220px;
+          font-size: 12px;
+        }
+        @media #{$info-tablet-horizontal} {
+          margin-top: 180px;
+        }
       }
-      @media #{$info-tablet-horizontal} {
-        top: 77px;
+      .text-rm2-1{
+        left: 1.5vw;
+        top: 56px;
+        @media #{$info-tablet-horizontal} {
+          top: 42px;
+          left: 5vw;
+        }
+      }
+      .text-rm2-2{
+        left: 54%;
+        top: 108px;
+        @media #{$info-tablet-1399} {
+          top: 94px;
+          font-size: 12px;
+        }
+        @media #{$info-tablet-horizontal} {
+          top: 64px;
+        }
       }
     }
-    .text-rm1-2{
-      left: 51%;
-      top: 56px;
+
+    &.rm-box3{
+      position: relative;
+      .rm3{
+        margin-top: 137px;
+        @media #{$info-tablet-1399} {
+          margin-top: 115px;
+          font-size: 12px;
+        }
+        @media #{$info-tablet-horizontal} {
+          margin-top: 95px;
+        }
+      }
+      .text-rm3-1{
+        left: 13%;
+        top: 41px;
+        @media #{$info-tablet-1399} {
+          font-size: 12px;
+        }
+        @media #{$info-tablet-horizontal} {
+          top: 34px;
+        }
+      }
+    }
+
+    .text-rm{
+      color: #00E0FF;
+      position: absolute;
+      font-size: 1.2rem;
       @media #{$info-tablet-1399} {
-        top: 66px;
+        font-size: 12px;
       }
       @media #{$info-tablet-horizontal} {
-        top: 25px;
+        font-size: 11px;
       }
     }
   }
 
-  .rm-box2{
-    position: relative;
-    .rm2{
-      margin-top: 299px;
-      @media #{$info-tablet-1399} {
-        margin-top: 220px;
-        font-size: 12px;
-      }
-      @media #{$info-tablet-horizontal} {
-        margin-top: 180px;
-      }
-    }
-    .text-rm2-1{
-      left: -0.5vw;
-      top: 56px;
-    }
-    .text-rm2-2{
-      left: 51%;
-      top: 108px;
-      @media #{$info-tablet-1399} {
-        top: 94px;
-        font-size: 12px;
-      }
-      @media #{$info-tablet-horizontal} {
-        top: 72px;
-      }
-    }
-  }
-
-  .rm-box3{
-    position: relative;
-    .rm3{
-      margin-top: 137px;
-      @media #{$info-tablet-1399} {
-        margin-top: 115px;
-        font-size: 12px;
-      }
-      @media #{$info-tablet-horizontal} {
-        margin-top: 95px;
-      }
-    }
-    .text-rm3-1{
-      left: 8%;
-      top: 41px;
-      @media #{$info-tablet-1399} {
-        font-size: 12px;
-      }
-      @media #{$info-tablet-horizontal} {
-        top: 38px;
-      }
-    }
-  }
-
-  .text-rm{
-    color: #00E0FF;
-    position: absolute;
-    font-size: 1.2rem;
-    @media #{$info-tablet-1399} {
-      font-size: 12px;
-    }
-    @media #{$info-tablet-horizontal} {
-      font-size: 11px;
-    }
-  }
 
   img{
-    width: 100%;
+    width:calc(100% - 75px);
     &.rm3{
       width: 30%;
     }

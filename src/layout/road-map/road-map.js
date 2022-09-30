@@ -14,7 +14,7 @@ const RoadMap = () =>{
         <div className="road-map">
             <span className="title-main">{t("roadMap.titleMain")}</span>
             <Container className="hidden-mobile">
-                <div className="rm-box1">
+                <div className="rm-box1 rm-box">
                     <div className="text-rm1-1 text-rm">
                         <ul>
                             <li>{t('roadMap.rm11.title1')}</li>
@@ -32,10 +32,11 @@ const RoadMap = () =>{
                             <li>{t('roadMap.rm12.title6')}</li>
                         </ul>
                     </div>
+                    <span className="year">2022</span>
                     <img className="rm1" src={images.rm1} alt="rm1" />
                 </div>
 
-                <div className="rm-box2">
+                <div className="rm-box2 rm-box">
                     <div className="text-rm2-1 text-rm">
                         <ul>
                             <li>{t('roadMap.rm21.title1')}</li>
@@ -58,10 +59,11 @@ const RoadMap = () =>{
                             <li>{t('roadMap.rm22.title6')}</li>
                         </ul>
                     </div>
+                    <span className="year">2023</span>
                     <img className="rm2" src={images.rm2} alt="rm2" />
                 </div>
 
-                <div className="rm-box3">
+                <div className="rm-box3 rm-box">
                     <div className="text-rm3-1 text-rm">
                         <ul>
                             <li>{t('roadMap.rm31.title1')}</li>
@@ -69,6 +71,7 @@ const RoadMap = () =>{
                             <li>{t('roadMap.rm31.title3')}</li>
                         </ul>
                     </div>
+                    <span className="year">2024</span>
                     <img className="rm3" src={images.rm3} alt="rm3" />
                 </div>
             </Container>

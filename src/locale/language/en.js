@@ -49,7 +49,7 @@ const en = {
             items4: {
                 titleMain : "DIVERSE REWARDS",
                 title: "Foods, badges, costumes, vouchers, … \n" +
-                    "Use these rewards in Cuckookoo & Chainos metaverse ecosystem"
+                    "Use these rewards in Cuckookoo & Chaino’s metaverse ecosystem"
             },
             items5: {
                 titleMain : "SIMPLE & FUNNY GAMEPLAY",
@@ -57,16 +57,20 @@ const en = {
             },
             items6: {
                 titleMain : "3D ADVERTISING",
-                title: "ARTW is the platform to develop 3D billboard advertising. " +
-                    "Enable users to interact with 3D ads (including interaction, emotion " +
-                    "of subjects in 3D ads and users)."
+                title: "ARTW is the platform to develop 3D billboard advertising.\n" +
+                    "Enable users to interact with 3D ads by applying AI (including interaction, " +
+                    "emotion of subjects in 3D ads and users)."
             },
         },
         character: {
             titleMain: "Character"
         },
         airports: {
-            titleMain: "Airports"
+            titleMain: "Airports",
+            nameAirportKorea: "Incheon - Korea",
+            nameAirportJapan: "Kansai - Japan",
+            nameAirportSingapore: "Changi - Singapore",
+            nameAirportFrance: "Chales de gaulex - France",
         },
         roadMap:{
             titleMain: "Roadmap",
