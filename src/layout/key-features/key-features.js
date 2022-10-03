@@ -15,28 +15,35 @@ const KeyFeatures = () =>{
         {
             titleMain: t("keyFeatures.items1.titleMain"),
             title: t("keyFeatures.items1.title"),
+            delay: "0",
         },
         {
             titleMain: t("keyFeatures.items2.titleMain"),
             title: t("keyFeatures.items2.title"),
+            delay: "200",
         },
         {
             titleMain: t("keyFeatures.items3.titleMain"),
             title: t("keyFeatures.items3.title"),
+            delay: "400",
         },
         {
             titleMain: t("keyFeatures.items4.titleMain"),
             title: t("keyFeatures.items4.title"),
+            delay: "0",
         },
         {
             titleMain: t("keyFeatures.items5.titleMain"),
             title: t("keyFeatures.items5.title"),
+            delay: "4000",
         },
         {
             titleMain: t("keyFeatures.items6.titleMain"),
             title: t("keyFeatures.items6.title"),
+            delay: "400",
         }
     ]
+    console.log(featuresItem)
 
     return(
         <div className="key-features" style={{backgroundImage: `url(${images.bgKeyFeatures})`}}>
@@ -69,7 +76,7 @@ const KeyFeatures = () =>{
 
                         {featuresItem.map((element, index)=>
                             <SwiperSlide key={index}>
-                                <KeyFeaturesItem titleMain={element.titleMain} title={element.title}/>
+                                <KeyFeaturesItem titleMain={element.titleMain} title={element.title} delay={element.delay}/>
                             </SwiperSlide>
                         )}
                     </Swiper>

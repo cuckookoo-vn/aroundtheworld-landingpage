@@ -1,12 +1,16 @@
 import "./key-features-item.scss"
 import {Trans} from "react-i18next";
 
-const KeyFeaturesItem = ({titleMain, title}) =>{
+const KeyFeaturesItem = ({titleMain, title, delay}) =>{
     const images = {
         boxKeyFeatures: process.env.PUBLIC_URL + '/images/key-features/box-key-features.png',
     }
+    console.log(delay)
     return(
-        <div className="key-features-item"
+        <div data-aos="fade-left"
+             data-aos-anchor-placement="top-center"
+             data-aos-delay={delay}
+             className="key-features-item"
              style={{backgroundImage: `url(${images.boxKeyFeatures})`}}>
             <div className="box-title">
                 <span className="title-key title-main-key">
