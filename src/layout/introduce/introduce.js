@@ -14,7 +14,6 @@ const Introduce = () =>{
                 <Container>
                     <div
                         data-aos="fade-up"
-                        data-aos-anchor-placement="top-center"
                         className="introduce-content" style={{backgroundImage: `url(${images.introduceFrame})`}}>
                     <span className="introduce-text">
                         <span className="introduce-text-main">{t('introduce.titleMain')}</span>

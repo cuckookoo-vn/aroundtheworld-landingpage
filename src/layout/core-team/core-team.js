@@ -1,5 +1,5 @@
-import {useEffect, useRef, useState} from "react";
-
+import {useRef} from "react";
+import './core-team.scss';
 import {Container} from "react-bootstrap";
 import CoreTeamMember from "../../components/core-team-member/core-team-member";
 import {useTranslation} from "react-i18next";
@@ -7,24 +7,8 @@ import {useTranslation} from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 
-import {getWindowDimensions} from "../../mixins/window-dimensions";
-import './core-team.scss';
-
-const CoreTeam = () =>{
+const CoreTeam = ({windowDimensions}) =>{
     const {t} = useTranslation();
-    const [windowDimensions, setWindowDimensions] = useState(
-        getWindowDimensions()
-    );
-
-    useEffect(() => {
-        function handleResize() {
-            setWindowDimensions(getWindowDimensions());
-        }
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     const memberTeam = [
         {
             name: 'Paul Pham',
@@ -52,9 +36,9 @@ const CoreTeam = () =>{
             image: process.env.PUBLIC_URL + '/images/core-team/joy.png'
         },
         {
-            name: 'Richard Duong',
+            name: 'Henry Ho',
             position: 'Solution Architect',
-            image: process.env.PUBLIC_URL + '/images/core-team/richard.png'
+            image: process.env.PUBLIC_URL + '/images/core-team/henry.png'
         },
         {
             name: 'Johnny Le',

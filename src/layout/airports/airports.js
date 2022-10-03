@@ -7,7 +7,7 @@ import {useEffect, useRef, useState} from "react";
 import {Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 
-const Airports = () =>{
+const Airports = ({windowDimensions}) =>{
     const {t} = useTranslation();
 
     const images = {
@@ -77,82 +77,86 @@ const Airports = () =>{
         <div className="airports">
             <Container>
                 <div className="title-main">{t('airports.titleMain')}</div>
-                <div className="box-image hidden-mobile">
-                    <Row>
-                        <Col xs={6} lg={6}>
-                            <div className="box-item">
-                                <span>{t("airports.nameAirportKorea")}</span>
-                                <img src={incheon} alt="chales"/>
-                            </div>
+                {
+                    windowDimensions.width > 767.5 ?
+                        <div className="box-image hidden-mobile">
+                            <Row>
+                                <Col xs={6} lg={6}>
+                                    <div className="box-item">
+                                        <span>{t("airports.nameAirportKorea")}</span>
+                                        <img src={incheon} alt="chales"/>
+                                    </div>
 
-                        </Col>
-                        <Col xs={6} lg={6}>
-                            <div className="box-item">
-                                <span>{t("airports.nameAirportJapan")}</span>
-                                <img src={kansai} alt="ap2"/>
-                            </div>
-                        </Col>
-                        <Col xs={6} lg={6}>
-                            <div className="box-item">
-                                <span>{t("airports.nameAirportSingapore")}</span>
-                                <img src={changi} alt="ap3"/>
-                            </div>
+                                </Col>
+                                <Col xs={6} lg={6}>
+                                    <div className="box-item">
+                                        <span>{t("airports.nameAirportJapan")}</span>
+                                        <img src={kansai} alt="ap2"/>
+                                    </div>
+                                </Col>
+                                <Col xs={6} lg={6}>
+                                    <div className="box-item">
+                                        <span>{t("airports.nameAirportSingapore")}</span>
+                                        <img src={changi} alt="ap3"/>
+                                    </div>
 
-                        </Col>
-                        <Col xs={6} lg={6}>
-                            <div className="box-item">
-                                <span>{t("airports.nameAirportFrance")}</span>
-                                <img src={chales} alt="ap4"/>
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
-                <div className="box-image hidden-pc">
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        slidesPerGroup={1}
-                        autoplay={{
-                            delay: 6000,
-                            disableOnInteraction: false,
-                            pauseOnMouseEnter: true
-                        }}
-                        loop={true}
-                        loopFillGroupWithBlank={true}
-                        pagination={{
-                            clickable: true,
-                            dynamicBullets: true,
-                        }}
-                        modules={[Pagination, Navigation]}
-                        className="mySwiper"
-                    >
-                        <SwiperSlide>
-                            <div className="box-item">
-                                <span>{t("airports.nameAirportKorea")}</span>
-                                <img src={incheon} alt="chales"/>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="box-item">
-                                <span>{t("airports.nameAirportJapan")}</span>
-                                <img src={kansai} alt="ap2"/>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="box-item">
-                                <span>{t("airports.nameAirportSingapore")}</span>
-                                <img src={changi} alt="ap3"/>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="box-item">
-                                <span>{t("airports.nameAirportFrance")}</span>
-                                <img src={chales} alt="ap4"/>
-                            </div>
-                        </SwiperSlide>
+                                </Col>
+                                <Col xs={6} lg={6}>
+                                    <div className="box-item">
+                                        <span>{t("airports.nameAirportFrance")}</span>
+                                        <img src={chales} alt="ap4"/>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
+                        :
+                        <div className="box-image hidden-pc">
+                            <Swiper
+                                slidesPerView={1}
+                                spaceBetween={30}
+                                slidesPerGroup={1}
+                                autoplay={{
+                                    delay: 6000,
+                                    disableOnInteraction: false,
+                                    pauseOnMouseEnter: true
+                                }}
+                                loop={true}
+                                loopFillGroupWithBlank={true}
+                                pagination={{
+                                    clickable: true,
+                                    dynamicBullets: true,
+                                }}
+                                modules={[Pagination, Navigation]}
+                                className="mySwiper"
+                            >
+                                <SwiperSlide>
+                                    <div className="box-item">
+                                        <span>{t("airports.nameAirportKorea")}</span>
+                                        <img src={incheon} alt="chales"/>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="box-item">
+                                        <span>{t("airports.nameAirportJapan")}</span>
+                                        <img src={kansai} alt="ap2"/>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="box-item">
+                                        <span>{t("airports.nameAirportSingapore")}</span>
+                                        <img src={changi} alt="ap3"/>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="box-item">
+                                        <span>{t("airports.nameAirportFrance")}</span>
+                                        <img src={chales} alt="ap4"/>
+                                    </div>
+                                </SwiperSlide>
 
-                    </Swiper>
-                </div>
+                            </Swiper>
+                        </div>
+                }
             </Container>
         </div>
     )
