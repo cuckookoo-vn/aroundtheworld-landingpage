@@ -2,41 +2,29 @@ import "./download-mobile.scss";
 import { useTranslation } from 'react-i18next';
 import {Container} from "react-bootstrap";
 import {useState} from "react";
-import AlertNotification from "../../components/alert-notification/alert-notification";
+import ModalDownload from "../../components/modal-download/modal-download";
 
-let timeOut = null;
+
 const DownloadMobile = () =>{
     const {t} = useTranslation();
     const images = {
         comingSoonButton : process.env.PUBLIC_URL + "/images/header/coming-soon-button.png",
     };
-
-    const [alert, setAlert] = useState(false);
-    const setStatusAlert = () =>{
-        if(!alert){
-            setAlert(true);
-            timeOut = setTimeout(()=>{ setAlert(false)},2000);
-        }
-    }
-
-    const closeAlert = () =>{
-        setAlert(false);
-        clearTimeout(timeOut);
-    }
+    const [show, setShow] = useState(false);
 
     return(
         <>
             <div className="download-mobile hidden-pc">
                 <Container>
                     <div className="logo-coming-soon"
-                         onClick={()=>setStatusAlert()}
+                         onClick={()=>setShow(true)}
                          style={{backgroundImage:`url(${images.comingSoonButton}`}}>
                         <span>{t("header.button")}</span>
                     </div>
                 </Container>
             </div>
 
-            <AlertNotification alertStatus={alert} closeAlert={()=>closeAlert()} title={"Download Success"} />
+            <ModalDownload show={show} setShow={setShow}/>
         </>
     )
 }

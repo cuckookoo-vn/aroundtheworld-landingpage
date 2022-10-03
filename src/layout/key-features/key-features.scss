@@ -54,7 +54,7 @@
       .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
         bottom: -30px;
         @media #{$info-phone} {
-          bottom: 4px;
+          bottom: -3px;
         }
       }
     }

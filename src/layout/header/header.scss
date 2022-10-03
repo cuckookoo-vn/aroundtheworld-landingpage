@@ -36,10 +36,15 @@
     @media #{$info-tablet-1399} {
       margin-top: 16px;
     }
+    @media #{$info-phone} {
+      margin-right: 0;
+    }
     .drop-btn{
       text-align: left;
       color: #FFFFFF;
       font-size: 1.2rem;
+      display: flex;
+      align-items: center;
       border: none;
       cursor: pointer;
       padding: 5px 25px 5px 0;
@@ -54,7 +59,19 @@
         font-size: 0.6rem;
         padding: 5px 17px 5px 0;
       }
-      img{
+      .flag{
+        width: 35px;
+        margin-right: 10px;
+        @media #{$info-tablet-1399} {
+          width: 26px;
+          margin-right: 8px;
+        }
+        @media #{$info-phone} {
+          width: 23px;
+          margin-right: 8px;
+        }
+      }
+      .icon-select-header{
         position: absolute;
         width: 15px;
         bottom: 7px;
@@ -86,21 +103,33 @@
         cursor: pointer;
         text-decoration: none;
         display: block;
-        width: 150px;
+        width: 170px;
         padding: 22px 14px;
         border: none;
         @media #{$info-tablet-1399} {
           font-size: 12px;
-          width: 100px;
+          width: 120px;
           padding: 15px 10px;
         }
-        @media #{$info-tablet-1399} {
+        @media #{$info-phone} {
           font-size: 0.6rem;
         }
         &:first-child{
           margin-top: 17px;
           @media #{$info-tablet-1399} {
             margin-top: 10px;
+          }
+        }
+        .flag-option{
+          width: 35px;
+          margin-right: 10px;
+          @media #{$info-tablet-1399} {
+            width: 26px;
+            margin-right: 8px;
+          }
+          @media #{$info-phone} {
+            width: 23px;
+            margin-right: 8px;
           }
         }
       }
