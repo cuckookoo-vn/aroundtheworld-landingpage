@@ -112,6 +112,11 @@ const ko ={
         },
         items:{
             titleMain: "아이템",
+        },
+        advertising:{
+            titleMain: "3D 빌보드 광고",
+            title1:`“이 상품은 지마켓에서 구매 가능합니다”`,
+            title2:`“이 여행가방을 어디서 구매할 수 있어요 ?”`,
         }
     }
 }

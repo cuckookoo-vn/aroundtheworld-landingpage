@@ -1,83 +1,115 @@
 @import "src/scss/variables";
 
 .introduce{
-  position: relative;
-  background-position: left;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  min-height: 1068px;
   height: 56.5vw;
-  @media #{$info-phone} {
-    background-position: center;
-    height: 75vw;
+  max-height: 1900px;
+  @media #{$info-tablet-1399} {
+    min-height: 56.5vw;
   }
-  .introduce-content{
-    position: absolute;
-    background-position: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translate(-50%, -50%);
-    left: 30%;
-    top: 50%;
-    width: 820px;
-    height: 560px;
-    @media #{$info-tablet-1399} {
-      left: 32%;
-      width: 550px;
-      height: 380px;
-    }
-    @media #{$info-tablet-horizontal} {
-      left: 32%;
-      width: 492px;
-      height: 312px;
-    }
-    @media #{$info-phone} {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      width: 95%;
-      height: 80%;
-    }
-    .introduce-text{
+  @media #{$info-phone} {
+    height: 75vw;
+    min-height: inherit;
+  }
+  .container{
+    position: relative;
+    height: 100%;
+    .introduce-content{
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-48%, -50%);
-      width: 660px;
-      display: block;
-      color: #FFFFFF;
-      font-weight: inherit;
-      font-size: 1.2rem;
-      line-height: 2.2rem;
+      background-position: left;
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: 5%;
+      top: 33%;
+      width: 820px;
+      height: 560px;
       @media #{$info-tablet-1399} {
-        line-height: inherit;
-        width: 460px;
-        font-size: 14px;
+        top: 25%;
+        width: 550px;
+        height: 380px;
       }
       @media #{$info-tablet-horizontal} {
-        line-height: inherit;
-        width: 80%;
-        font-size: 12px;
+        width: 492px;
+        height: 312px;
+      }
+      @media #{$info-tablet-991} {
+        top: 18%;
       }
       @media #{$info-phone} {
-        left: 49%;
-        width: 80%;
-        font-size: 0.62rem;
-        height: fit-content;
+        background-size: cover;
+        top: 15%;
+        left: 5px;
+        right: 5px;
+        width: calc(100% - 10px);
+        height: 340px;
       }
-      @media #{$info-nexus4} {
-        font-size: 0.5rem;
+      @media #{$info-phone-576} {
+        left: 0;
+        background-size: cover;
+        top: 20px;
+        height: 87%;
       }
-      &-main{
-        font-size: 1.7rem;
-        font-weight: 600;
-        @media #{$info-tablet-horizontal} {
-          font-size: 25px;
+      .introduce-text{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-48%, -50%);
+        width: 660px;
+        display: block;
+        color: #FFFFFF;
+        font-weight: inherit;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        @media #{$info-tablet-1399} {
+          line-height: inherit;
+          width: 460px;
+          font-size: 14px;
         }
         @media #{$info-tablet-horizontal} {
-          font-size: 2.3vw;
+          line-height: inherit;
+          width: 80%;
+          font-size: 12px;
+        }
+        @media #{$info-phone} {
+          transform: translate(-50%, 0);
+          top: 16%;
+          left: 50%;
+          width: 80%;
+          font-size: 0.72rem;
+          height: fit-content;
+        }
+        @media #{$info-phone-576} {
+          font-size: 0.6rem;
+          line-height: 1rem;
+        }
+        @media #{$info-nexus4} {
+          left: 51%;
+          width: 85%;
+          font-size: 0.5rem;
+          line-height: 0.78rem;
+        }
+        @media #{$info-phone-330} {
+          left: 51%;
+          width: 85%;
+          font-size: 0.4rem;
+          line-height: 0.7rem;
+        }
+        &-main{
+          font-size: 1.7rem;
+          font-weight: 600;
+          @media #{$info-tablet-horizontal} {
+            font-size: 25px;
+          }
+          @media #{$info-tablet-horizontal} {
+            font-size: 2.3vw;
+          }
         }
       }
     }
   }
+
 }

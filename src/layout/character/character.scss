@@ -9,8 +9,7 @@
   }
   .title-main{
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
     top: -38px;
     @media #{$info-phone} {
       top: 20px;

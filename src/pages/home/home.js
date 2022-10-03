@@ -10,21 +10,39 @@ import RoadMap from "../../layout/road-map/road-map";
 import VideoIntroduce from "../../layout/video-introduce/video-introduce";
 import Items from "../../layout/items/items";
 import DownloadMobile from "../../layout/download-mobile/download-mobile";
+import {useEffect, useState} from "react";
+import {getWindowDimensions} from "../../mixins/window-dimensions";
+import Advertising from "../../layout/advertising/advertising";
 
 const Home = () =>{
+
+    const [windowDimensions, setWindowDimensions] = useState(
+        getWindowDimensions()
+    );
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return(
         <>
             <Header/>
             <VideoIntroduce/>
             <DownloadMobile/>
             <Introduce/>
-            <KeyFeatures/>
-            <Airports/>
-            <Character/>
-            <Items/>
-            <MiniGames/>
-            <RoadMap/>
-            <CoreTeam/>
+            <KeyFeatures windowDimensions={windowDimensions}/>
+            <Airports windowDimensions={windowDimensions}/>
+            <Character windowDimensions={windowDimensions}/>
+            <Items windowDimensions={windowDimensions}/>
+            <MiniGames windowDimensions={windowDimensions}/>
+            <Advertising windowDimensions={windowDimensions}/>
+            <RoadMap windowDimensions={windowDimensions}/>
+            <CoreTeam windowDimensions={windowDimensions}/>
             <Footer/>
         </>
     )

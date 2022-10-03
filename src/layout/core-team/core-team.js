@@ -1,5 +1,5 @@
-import {useEffect, useRef, useState} from "react";
-
+import {useRef} from "react";
+import './core-team.scss';
 import {Container} from "react-bootstrap";
 import CoreTeamMember from "../../components/core-team-member/core-team-member";
 import {useTranslation} from "react-i18next";
@@ -7,104 +7,89 @@ import {useTranslation} from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 
-import {getWindowDimensions} from "../../mixins/window-dimensions";
-import './core-team.scss';
-
-const CoreTeam = () =>{
+const CoreTeam = ({windowDimensions}) =>{
     const {t} = useTranslation();
-    const [windowDimensions, setWindowDimensions] = useState(
-        getWindowDimensions()
-    );
-
-    useEffect(() => {
-        function handleResize() {
-            setWindowDimensions(getWindowDimensions());
-        }
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
+    const urlImage = "https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/landingpage/lp-core-member/lp-core-member-"
     const memberTeam = [
         {
             name: 'Paul Pham',
             position: 'Product Owner',
-            image: process.env.PUBLIC_URL + '/images/core-team/paul.png'
+            image: urlImage+ "1.png"
         },
         {
             name: 'Felix Nguyen',
             position: 'Executive',
-            image: process.env.PUBLIC_URL + '/images/core-team/felix.png'
+            image: urlImage+ "2.png"
         },
         {
             name: 'Tony Quach',
             position: 'Executive',
-            image: process.env.PUBLIC_URL + '/images/core-team/tony.png'
+            image: urlImage+ "3.png"
         },
         {
             name: 'Julie Tran',
             position: 'Business Analysis',
-            image: process.env.PUBLIC_URL + '/images/core-team/julie.png'
+            image: urlImage+ "4.png"
         },
         {
             name: 'Joy Le',
             position: 'Artist Manager',
-            image: process.env.PUBLIC_URL + '/images/core-team/joy.png'
+            image: urlImage+ "5.png"
         },
         {
-            name: 'Richard Duong',
+            name: 'Henry Ho',
             position: 'Solution Architect',
-            image: process.env.PUBLIC_URL + '/images/core-team/richard.png'
+            image: urlImage+ "6.png"
         },
         {
             name: 'Johnny Le',
             position: 'Developer Leader',
-            image: process.env.PUBLIC_URL + '/images/core-team/johnny.png'
+            image: urlImage+ "7.png"
         },
         {
             name: 'Mr.Kan',
             position: 'AI Leader',
-            image: process.env.PUBLIC_URL + '/images/core-team/kan.png'
+            image: urlImage+ "8.png"
         },
         {
             name: 'Mr.Thinh',
             position: 'Blockchain Leader',
-            image: process.env.PUBLIC_URL + '/images/core-team/thinh.png'
+            image: urlImage+ "9.png"
         },
         {
             name: 'GiGi Le',
             position: 'Translator',
-            image: process.env.PUBLIC_URL + '/images/core-team/gigi.png'
+            image: urlImage+ "10.png"
         },
         {
             name: 'Ivy Pham',
             position: 'Quality Control Leader',
-            image: process.env.PUBLIC_URL + '/images/core-team/ivy.png'
+            image: urlImage+ "11.png"
         },
         {
             name: 'Leon Nguyen',
             position: 'Senior Artist',
-            image: process.env.PUBLIC_URL + '/images/core-team/leon.png'
+            image: urlImage+ "12.png"
         },
         {
             name: 'Leo Dinh',
             position: 'Developer',
-            image: process.env.PUBLIC_URL + '/images/core-team/leo.png'
+            image: urlImage+ "13.png"
         },
         {
             name: 'Finn Le',
             position: 'Developer',
-            image: process.env.PUBLIC_URL + '/images/core-team/finn.png'
+            image: urlImage+ "14.png"
         },
         {
             name: 'Link Ho',
             position: 'Developer',
-            image: process.env.PUBLIC_URL + '/images/core-team/linklee.png'
+            image: urlImage+ "15.png"
         },
         {
             name: 'Mr. Van',
             position: 'Blockchain',
-            image: process.env.PUBLIC_URL + '/images/core-team/van.png'
+            image: urlImage+ "16.png"
         },
     ]
     const images = {
@@ -117,7 +102,7 @@ const CoreTeam = () =>{
 
     return(
         <div className="core-team">
-            <span className="title-main">
+            <span className="title-main" data-aos="fade-up">
                 {t("coreTeam.titleMain")}
             </span>
 

@@ -113,6 +113,11 @@ const vn = {
         },
         items:{
             titleMain: "VẬT PHẨM",
+        },
+        advertising:{
+            titleMain: "3D Billboard Advertising",
+            title1:`“Sản phẩm này hiện đang được bán tại Gmarket.co.kr...”`,
+            title2:`“Tôi có thể mua chiếc vali này ở đâu?”`,
         }
     }
 }
