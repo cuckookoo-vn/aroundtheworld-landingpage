@@ -76,7 +76,7 @@ const Airports = ({windowDimensions}) =>{
     return(
         <div className="airports">
             <Container>
-                <div className="title-main">{t('airports.titleMain')}</div>
+                <div className="title-main" data-aos="fade-up">{t('airports.titleMain')}</div>
                 {
                     windowDimensions.width > 767.5 ?
                         <div className="box-image hidden-mobile">

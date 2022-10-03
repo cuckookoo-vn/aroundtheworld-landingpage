@@ -39,7 +39,7 @@ const Footer = () =>{
 
                 <Row>
                     <Col lg="12">
-                        <span className="title-footer title-main-footer">{t('footer.contactUs')}</span>
+                        <span  className="title-footer title-main-footer">{t('footer.contactUs')}</span>
                     </Col>
                     <Col lg="12">
                         <span className="title-footer email-footer">aroundtheworld@cuckookoo.vn</span>

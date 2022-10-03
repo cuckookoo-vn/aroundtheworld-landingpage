@@ -37,13 +37,13 @@ const ModalDownload = ({show,setShow}) =>{
                     <div className="modal-download-body">
                         <BsXCircle className="icon-close" onClick={()=>handleClose()} />
                         <Button variant="primary" onClick={handleDownload}>
-                            coming soon
+                            PC
                         </Button>
                         <Button variant="primary" onClick={handleDownload}>
-                            coming soon
+                            IOS
                         </Button>
                         <Button variant="primary" onClick={handleDownload}>
-                            coming soon
+                            Android
                         </Button>
                     </div>
                 </Modal.Body>

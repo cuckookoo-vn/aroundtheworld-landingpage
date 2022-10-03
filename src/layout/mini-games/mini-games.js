@@ -9,7 +9,7 @@ const MiniGames = ({windowDimensions}) =>{
 
     return(
         <div className="mini-games">
-            <span className="title-main">{t("miniGames.titleMain")}</span>
+            <span className="title-main" data-aos="fade-up">{t("miniGames.titleMain")}</span>
 
             {
                 windowDimensions.width > 767.5 ?

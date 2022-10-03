@@ -6,7 +6,7 @@ const Character = ({windowDimensions}) =>{
 
     return(
         <div className="character">
-            <span className="title-main">{t("character.titleMain")}</span>
+            <span className="title-main" data-aos="fade-up">{t("character.titleMain")}</span>
             {
                 windowDimensions.width > 767.5 ?
                     <video autoPlay muted loop className="video hidden-mobile">

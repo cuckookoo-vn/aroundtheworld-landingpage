@@ -12,7 +12,7 @@ const RoadMap = ({windowDimensions}) =>{
     }
     return(
         <div className="road-map">
-            <span className="title-main">{t("roadMap.titleMain")}</span>
+            <span className="title-main" data-aos="fade-up">{t("roadMap.titleMain")}</span>
             {
                 windowDimensions.width > 767.5 ?
                     <Container className="hidden-mobile">

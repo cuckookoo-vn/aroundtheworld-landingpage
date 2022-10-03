@@ -46,8 +46,8 @@ const KeyFeatures = ({windowDimensions}) =>{
 
     return(
         <div className="key-features" style={{backgroundImage: `url(${images.bgKeyFeatures})`}}>
+            <span className="title-main" data-aos="fade-up">{t("keyFeatures.titleMain")}</span>
             <Container>
-                <span className="title-main">{t("keyFeatures.titleMain")}</span>
                 {
                     windowDimensions.width > 767.5 ?
                         <div className="key-features-box hidden-mobile">
