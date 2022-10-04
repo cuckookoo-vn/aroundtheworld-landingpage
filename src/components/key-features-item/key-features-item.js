@@ -6,8 +6,8 @@ const KeyFeaturesItem = ({titleMain, title, delay}) =>{
         boxKeyFeatures: process.env.PUBLIC_URL + '/images/key-features/box-key-features.png',
     }
     return(
-        <div data-aos="fade-left"
-             data-aos-delay={delay}
+        <div data-aos={delay ? "fade-left" : null}
+             data-aos-delay={delay ? delay : null}
              className="key-features-item"
              style={{backgroundImage: `url(${images.boxKeyFeatures})`}}>
             <div className="box-title">

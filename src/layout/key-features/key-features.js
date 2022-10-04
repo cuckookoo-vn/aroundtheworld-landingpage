@@ -46,7 +46,11 @@ const KeyFeatures = ({windowDimensions}) =>{
 
     return(
         <div className="key-features" style={{backgroundImage: `url(${images.bgKeyFeatures})`}}>
-            <span className="title-main" data-aos="fade-up">{t("keyFeatures.titleMain")}</span>
+            <span className="title-main"
+                  data-aos="fade-up">
+                {t("keyFeatures.titleMain")}
+            </span>
+
             <Container>
                 {
                     windowDimensions.width > 767.5 ?
@@ -59,7 +63,9 @@ const KeyFeatures = ({windowDimensions}) =>{
                             )}
                         </div>
                         :
-                        <div className="key-features-box hidden-pc">
+                        <div data-aos="fade-up"
+                             data-aos-delay="300"
+                             className="key-features-box hidden-pc">
                             <Swiper
                                 slidesPerView={1}
                                 spaceBetween={30}
@@ -82,7 +88,7 @@ const KeyFeatures = ({windowDimensions}) =>{
                                     <SwiperSlide key={index}>
                                         <KeyFeaturesItem titleMain={element.titleMain}
                                                          title={element.title}
-                                                         delay={element.delay}
+                                                         delay={null}
                                         />
                                     </SwiperSlide>
                                 )}

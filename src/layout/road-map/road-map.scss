@@ -1,6 +1,7 @@
 @import "src/scss/variables";
 
 .road-map{
+  overflow-x: hidden;
   width: 100%;
   background-color: $bg-color;
   .title-main{

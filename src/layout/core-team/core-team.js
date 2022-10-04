@@ -107,7 +107,7 @@ const CoreTeam = ({windowDimensions}) =>{
             </span>
 
             <Container>
-                <div className="box-slide">
+                <div data-aos="fade-up" className="box-slide">
                     <Swiper
                         slidesPerView={windowDimensions.width >767 ? 4 : 3}
                         spaceBetween={windowDimensions.width >767 ? 30 : 5}
@@ -143,14 +143,17 @@ const CoreTeam = ({windowDimensions}) =>{
                                 </SwiperSlide>
                             )}
                         </div>
-                        <div ref={prevRef} className="icon-slide icon-next hidden-mobile">
+                        <div data-aos="fade-right"
+                             ref={prevRef}
+                             className="icon-slide icon-next hidden-mobile">
                             <img className="icon-next" src={images.pre} alt="pre"/>
                         </div>
-                        <div ref={nextRef} className="icon-slide icon-pre hidden-mobile">
+                        <div data-aos="fade-left"
+                             ref={nextRef}
+                             className="icon-slide icon-pre hidden-mobile">
                             <img src={images.next} alt="next"/>
                         </div>
                     </Swiper>
-
                 </div>
             </Container>
         </div>

@@ -5,7 +5,7 @@ import {useState} from "react";
 import ModalDownload from "../../components/modal-download/modal-download";
 
 
-const DownloadMobile = () =>{
+const DownloadMobile = ({windowDimensions}) =>{
     const {t} = useTranslation();
     const images = {
         comingSoonButton : process.env.PUBLIC_URL + "/images/header/coming-soon-button.png",
@@ -13,19 +13,23 @@ const DownloadMobile = () =>{
     const [show, setShow] = useState(false);
 
     return(
-        <>
-            <div className="download-mobile hidden-pc">
-                <Container>
-                    <div className="logo-coming-soon"
-                         onClick={()=>setShow(true)}
-                         style={{backgroundImage:`url(${images.comingSoonButton}`}}>
-                        <span>{t("header.button")}</span>
+            windowDimensions.width > 767.5 ?
+                <></>
+                :
+                <>
+                    <div className="download-mobile hidden-pc" >
+                        <Container>
+                            <div data-aos="zoom-in"
+                                 className="logo-coming-soon"
+                                 onClick={()=>setShow(true)}
+                                 style={{backgroundImage:`url(${images.comingSoonButton}`}}>
+                                <span>{t("header.button")}</span>
+                            </div>
+                        </Container>
                     </div>
-                </Container>
-            </div>
 
-            <ModalDownload show={show} setShow={setShow}/>
-        </>
+                    <ModalDownload show={show} setShow={setShow}/>
+                </>
     )
 }
 

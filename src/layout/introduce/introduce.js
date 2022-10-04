@@ -10,18 +10,21 @@ const Introduce = () =>{
         introduceFrame: process.env.PUBLIC_URL + '/images/introduce/introduce-frame.png'
     }
     return(
-            <div className="introduce" style={{backgroundImage: `url(${images.bgIntroduce})`}}>
-                <Container>
-                    <div
-                        data-aos="fade-up"
-                        className="introduce-content" style={{backgroundImage: `url(${images.introduceFrame})`}}>
+        <div className="introduce" style={{backgroundImage: `url(${images.bgIntroduce})`}}>
+            <Container>
+                <div data-aos="fade-up"
+                     className="introduce-content" style={{backgroundImage: `url(${images.introduceFrame})`}}>
                     <span className="introduce-text">
-                        <span className="introduce-text-main">{t('introduce.titleMain')}</span>
+                        <span className="introduce-text-main">
+                            {t('introduce.titleMain')}
+                        </span>
+
                         <Trans
                             i18nKey="introduce-title1"
                             defaults={t('introduce.title1')}
                             components={{ nowrap: <span className="nowrap"/>}}
                         />
+
                         <br/><br/>
                         <Trans
                             i18nKey="introduce-title1"
@@ -30,8 +33,8 @@ const Introduce = () =>{
                         />
                     </span>
                 </div>
-                </Container>
-            </div>
+            </Container>
+        </div>
     )
 }
 

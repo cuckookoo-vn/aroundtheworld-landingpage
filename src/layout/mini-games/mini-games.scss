@@ -13,14 +13,20 @@
   .video{
     width: 100%;
   }
-  .button{
+  .button-hidden-box{
     position: absolute;
+    left: 50%;
+    top: 11vw;
+    transform: translate(-50%, 0);
+  }
+  .button{
     cursor: pointer;
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
     width: 19vw;
     height: 7vw;
+    transition: transform .1s !important;
     span{
       font-size: 1.6vw;
       position: absolute;
@@ -32,36 +38,42 @@
       width: 19vw;
       transform: translate(-50%, -55%);
     }
-
-    &.button-hidden{
-      left: 50%;
-      top: 11vw;
-      transform: translate(-50%, 0);
-    }
     &.button-jigsaw{
+      position: absolute;
       bottom: 3vw;
       left: 10vw;
     }
     &.button-quiz{
+      position: absolute;
       bottom: 3vw;
       right: 10vw;
+    }
+    &:hover{
+      transform: scale(1.1) !important;
+    }
+    &:active{
+      transform: scale(1.1) translateY(2px) !important;
     }
   }
 
   .mobile-box{
     position: relative;
-    .button{
+    .button-mobile{
       top: 20%;
       left: 50%;
-      transform: translate(-50%, 0);
-      width: 200px;
-      height: 70px;
-      z-index: 1;
-      span{
-        width: 90%;
-        font-size: 15px;
+      transform: translate(-50%,0);
+      position: absolute;
+      .button{
+        top: 20%;
+        left: 50%;
+        width: 200px;
+        height: 70px;
+        z-index: 1;
+        span{
+          width: 90%;
+          font-size: 15px;
+        }
       }
     }
   }
-
 }

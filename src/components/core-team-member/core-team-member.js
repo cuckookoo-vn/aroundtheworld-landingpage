@@ -8,9 +8,10 @@ const CoreTeamMember = ({image, name ,position}) =>{
         <div className="core-team-member">
             <div className="core-team-member-box"
                  style={{backgroundImage:`url(${images.boxMember})`}}>
-                <img className="image-member" src={image} alt="member" />
+                <img className="image-member"
+                     src={image}
+                     alt="member" />
                 <span className="name-member">{name}</span>
-
             </div>
             <span className="position-member">{position}</span>
         </div>

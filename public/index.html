@@ -45,9 +45,16 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      let windowWidth = window.innerWidth;
       AOS.init({
-        mirror: true,
+        // mirror: true,
+        duration: 600,
+        // delay: 100,
+        offset: windowWidth > 767.5 ? 250 : 150,
+        debounceDelay: 100,
+        throttleDelay: 99,
         easing: 'ease-in-out',
+        anchorPlacement: 'top-bottom',
       });
     </script>
   </body>

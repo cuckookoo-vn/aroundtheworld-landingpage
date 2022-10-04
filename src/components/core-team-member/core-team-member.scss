@@ -1,6 +1,7 @@
 @import "src/scss/variables";
 .core-team-member{
   width: fit-content;
+
   .core-team-member-box{
     position: relative;
     background-position: left;
@@ -19,6 +20,7 @@
       width: 28.3vw;
       height: 32.5vw;
     }
+
     .image-member{
       position: absolute;
       width: 84%;
@@ -36,6 +38,7 @@
         top: 2.4vw;
       }
     }
+
     .name-member{
       position: absolute;
       color: $color-title-main;

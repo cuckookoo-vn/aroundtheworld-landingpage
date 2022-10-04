@@ -76,33 +76,39 @@ const Airports = ({windowDimensions}) =>{
     return(
         <div className="airports">
             <Container>
-                <div className="title-main" data-aos="fade-up">{t('airports.titleMain')}</div>
+                <div className="title-main"
+                     data-aos="fade-up">
+                    {t('airports.titleMain')}
+                </div>
                 {
                     windowDimensions.width > 767.5 ?
                         <div className="box-image hidden-mobile">
                             <Row>
                                 <Col xs={6} lg={6}>
-                                    <div className="box-item">
+                                    <div data-aos="flip-right"
+                                         className="box-item">
                                         <span>{t("airports.nameAirportKorea")}</span>
                                         <img src={incheon} alt="chales"/>
                                     </div>
-
                                 </Col>
                                 <Col xs={6} lg={6}>
-                                    <div className="box-item">
+                                    <div data-aos="flip-left"
+                                         className="box-item">
                                         <span>{t("airports.nameAirportJapan")}</span>
                                         <img src={kansai} alt="ap2"/>
                                     </div>
                                 </Col>
                                 <Col xs={6} lg={6}>
-                                    <div className="box-item">
+                                    <div data-aos="flip-right"
+                                         className="box-item">
                                         <span>{t("airports.nameAirportSingapore")}</span>
                                         <img src={changi} alt="ap3"/>
                                     </div>
 
                                 </Col>
                                 <Col xs={6} lg={6}>
-                                    <div className="box-item">
+                                    <div data-aos="flip-left"
+                                         className="box-item">
                                         <span>{t("airports.nameAirportFrance")}</span>
                                         <img src={chales} alt="ap4"/>
                                     </div>
@@ -110,7 +116,9 @@ const Airports = ({windowDimensions}) =>{
                             </Row>
                         </div>
                         :
-                        <div className="box-image hidden-pc">
+                        <div data-aos="fade-up"
+                             data-aos-delay="600"
+                             className="box-image hidden-pc">
                             <Swiper
                                 slidesPerView={1}
                                 spaceBetween={30}
@@ -153,7 +161,6 @@ const Airports = ({windowDimensions}) =>{
                                         <img src={chales} alt="ap4"/>
                                     </div>
                                 </SwiperSlide>
-
                             </Swiper>
                         </div>
                 }

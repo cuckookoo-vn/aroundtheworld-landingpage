@@ -6,21 +6,25 @@
     @media #{$info-phone} {
       margin: 15px auto;
     }
+
     .modal-body{
       padding: 25px;
     }
   }
+
   .modal-download-body{
     width: fit-content;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     .icon-close{
       position: absolute;
       top: 8px;
       right: 8px;
       cursor: pointer;
     }
+
     button{
       background-color: #2DABB3;
       border-color: #2DABB3;

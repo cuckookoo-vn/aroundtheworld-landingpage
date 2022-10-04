@@ -24,6 +24,10 @@
       top: 13px;
       width: 195px;
     }
+    @media #{$info-phone-330} {
+      top: 13px;
+      width: 155px;
+    }
   }
 
   .dropdown{
@@ -39,10 +43,13 @@
     @media #{$info-phone} {
       margin-right: 0;
     }
+    @media #{$info-phone-330} {
+      margin-top: 10px;
+    }
     .drop-btn{
       text-align: left;
       color: #FFFFFF;
-      font-size: 1.2rem;
+      font-size: 0.85rem;
       display: flex;
       align-items: center;
       border: none;
@@ -60,7 +67,7 @@
         padding: 5px 17px 5px 0;
       }
       .flag{
-        width: 35px;
+        width: 25px;
         margin-right: 10px;
         @media #{$info-tablet-1399} {
           width: 26px;
@@ -73,7 +80,7 @@
       }
       .icon-select-header{
         position: absolute;
-        width: 15px;
+        width: 13px;
         bottom: 7px;
         @media #{$info-tablet-1399} {
           width: 10px;
@@ -99,12 +106,12 @@
         background: rgba(0, 0, 0, 0);
         color: #FFFFFF;
         text-align: left;
-        font-size: 1.2rem;
+        font-size: 0.85rem;
         cursor: pointer;
         text-decoration: none;
         display: block;
         width: 170px;
-        padding: 22px 14px;
+        padding: 14px 14px;
         border: none;
         @media #{$info-tablet-1399} {
           font-size: 12px;
@@ -121,7 +128,7 @@
           }
         }
         .flag-option{
-          width: 35px;
+          width: 25px;
           margin-right: 10px;
           @media #{$info-tablet-1399} {
             width: 26px;
@@ -148,9 +155,9 @@
     background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 165px;
+    width: 155px;
     height: 72px;
-    margin: 8px 0 0 0;
+    margin: 0;
     @media #{$info-tablet-1399} {
       width: 145px;
       height: 57px;
@@ -160,7 +167,7 @@
       display: none;
     }
     span{
-      font-size: 1.2rem;
+      font-size: 0.85rem;
       position: absolute;
       left: 50%;
       top: 50%;
