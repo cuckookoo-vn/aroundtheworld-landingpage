@@ -7,6 +7,7 @@
   @media #{$info-phone} {
     padding-top: 25px;
   }
+
   .title-main{
     position: absolute;
     width: 100%;
@@ -15,6 +16,7 @@
       top: 20px;
     }
   }
+
   .video{
     width: 100%;
     &.hidden{

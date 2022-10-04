@@ -28,6 +28,7 @@
     transform: translateY(-10px);
     margin: 0;
   }
+
   .box-title{
     @media #{$info-phone} {
       position: relative;
@@ -35,6 +36,7 @@
       top: 23%;
       left: 10%;
     }
+
     .title-key{
       position: relative;
       width: 85%;
@@ -64,6 +66,7 @@
         line-height: 0.7rem;
       }
     }
+
     .title-main-key{
       padding: 45px 0 0 35px;
       width: 85%;
@@ -80,6 +83,7 @@
         margin: 20px 0 0 22px;
       }
     }
+
     .title{
       color: #FFFFFF;
       margin: 5px 0 0 38px;

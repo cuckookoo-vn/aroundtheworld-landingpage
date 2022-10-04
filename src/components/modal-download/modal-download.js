@@ -30,19 +30,23 @@ const ModalDownload = ({show,setShow}) =>{
     return(
         <>
             <Modal show={show} onHide={handleClose} className="modal-download">
-                {/*<Modal.Header className="modal-download-header">*/}
-                {/*    */}
-                {/*</Modal.Header>*/}
                 <Modal.Body>
                     <div className="modal-download-body">
-                        <BsXCircle className="icon-close" onClick={()=>handleClose()} />
-                        <Button variant="primary" onClick={handleDownload}>
+                        <BsXCircle className="icon-close"
+                                   onClick={()=>handleClose()} />
+
+                        <Button variant="primary"
+                                onClick={handleDownload}>
                             PC
                         </Button>
-                        <Button variant="primary" onClick={handleDownload}>
+
+                        <Button variant="primary"
+                                onClick={handleDownload}>
                             IOS
                         </Button>
-                        <Button variant="primary" onClick={handleDownload}>
+
+                        <Button variant="primary"
+                                onClick={handleDownload}>
                             Android
                         </Button>
                     </div>

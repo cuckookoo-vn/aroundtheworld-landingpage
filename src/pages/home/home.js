@@ -33,7 +33,7 @@ const Home = () =>{
         <>
             <Header/>
             <VideoIntroduce/>
-            <DownloadMobile/>
+            <DownloadMobile windowDimensions={windowDimensions}/>
             <Introduce/>
             <KeyFeatures windowDimensions={windowDimensions}/>
             <Airports windowDimensions={windowDimensions}/>

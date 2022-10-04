@@ -24,7 +24,7 @@ const Footer = () =>{
         <div className="footer"
              style={{backgroundImage:`url(${images.bgFooter})`}}>
             <Container>
-                <div className="box-logo">
+                <div className="box-logo" data-aos="fade-up">
                     <div className="logo-cuckookoo">
                         <a href="">
                             <img src={images.cuckookoo} alt="icon-cuckookoo"/>
@@ -39,10 +39,20 @@ const Footer = () =>{
 
                 <Row>
                     <Col lg="12">
-                        <span  className="title-footer title-main-footer">{t('footer.contactUs')}</span>
+                        <span data-aos="fade-up"
+                              data-aos-anchor-placement="top-bottom"
+                              delay="0"
+                              className="title-footer title-main-footer">
+                            {t('footer.contactUs')}
+                        </span>
                     </Col>
                     <Col lg="12">
-                        <span className="title-footer email-footer">aroundtheworld@cuckookoo.vn</span>
+                        <span data-aos="fade-up"
+                              data-aos-anchor-placement="top-bottom"
+                              delay="0"
+                              className="title-footer email-footer">
+                            aroundtheworld@cuckookoo.vn
+                        </span>
                     </Col>
                 </Row>
             </Container>

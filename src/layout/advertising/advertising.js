@@ -10,13 +10,23 @@ const Advertising = ({windowDimensions}) =>{
 
     return(
         <div className="advertising">
-            <span className="title-main" data-aos="fade-up">{t("advertising.titleMain")}</span>
-            <div className="advertising-image"
+            <span className="title-main"
+                  data-aos="fade-up">
+                {t("advertising.titleMain")}
+            </span>
+            <div data-aos="fade-up"
+                 className="advertising-image"
+                 data-aos-delay="400"
                  style={{backgroundImage:`url(${windowDimensions.width > 767.5 ?images.bgAdvertising : images.bgAdvertisingMobile})`}}>
-                <span className="title title-1">
+                <span data-aos="flip-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="title title-1">
                     {t("advertising.title1")}
                 </span>
-                <span className="title title-2">
+
+                <span data-aos="flip-up"
+                      data-aos-anchor-placement="bottom-bottom"
+                      className="title title-2">
                     {t("advertising.title2")}
                 </span>
             </div>

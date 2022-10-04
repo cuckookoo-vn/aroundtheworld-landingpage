@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import { useTranslation } from 'react-i18next';
 import i18next from "i18next";
 import {Container} from "react-bootstrap";
-import AlertNotification from "../../components/alert-notification/alert-notification";
 import ModalDownload from "../../components/modal-download/modal-download";
 
 
@@ -76,10 +75,13 @@ const Header = () =>{
     return(
         <>
             <div className="header"
+                 data-aos="fade-down"
+                 data-aos-anchor-placement="top-top"
                  style={{backgroundImage:`url(${bgHeader})`}}>
                 <img className="title-header"
                      src={images.titleHeader}
                      alt="title-header"/>
+
                 <Container>
                     <div className="logo-coming-soon"
                          onClick={()=>setShow(true)}

@@ -116,8 +116,8 @@ const en = {
         },
         advertising:{
             titleMain: "3D Billboard Advertising",
-            title1:`“This merohandise is ourrently available at Gmarket.co.kr...”`,
-            title2:`“How do I purchase this valise”`,
+            title1:`“This merchandise is ourrently available at Gmarket.co.kr...”`,
+            title2:`“How do I purchase this valise?”`,
         }
 
     }
