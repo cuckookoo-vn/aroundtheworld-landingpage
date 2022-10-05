@@ -38,13 +38,17 @@
       }
       .text-rm1-1{
         left: 21%;
-        top: 135px;
+        top: 0px;
+        height: 247px;
+        display: flex;
+        align-items: flex-end;
         @media #{$info-tablet-1399} {
-          top: 121px;
+          height: 14vw;
         }
         @media #{$info-tablet-horizontal} {
           left: 25%;
-          top: 77px;
+          height: 145px;
+          top: 0;
         }
       }
       .text-rm1-2{

@@ -26,9 +26,37 @@
     }
 
     button{
-      background-color: #2DABB3;
-      border-color: #2DABB3;
+      position: relative;
+      background-color: #000000;
+      border-color: #000000;
+      color: white;
       margin: 5px 5px;
+      border-radius: 7px;
+      padding: 5px 20px;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      &:hover span{
+        visibility: inherit;
+        background-color: rgba(0,0,0,0.7);
+        opacity: 1;
+      }
+      .icon{
+        margin-right: 5px;
+      }
+      span{
+        opacity: 0;
+        left: 0;
+        font-size: 10px;
+        visibility: hidden;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        position: absolute;
+        transition: opacity 0.6s;
+      }
     }
   }
 }

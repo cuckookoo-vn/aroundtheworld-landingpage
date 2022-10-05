@@ -85,6 +85,9 @@
         @media #{$info-tablet-1399} {
           width: 10px;
         }
+        @media #{$info-tablet-1399} {
+          bottom: 9px;
+        }
         right: 0;
         transition: transform 0.2s;
         &.rotate{

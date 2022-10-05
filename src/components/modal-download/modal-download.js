@@ -1,8 +1,9 @@
 import './modal-download.scss';
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import {BsXCircle} from "react-icons/bs";
+import { BsXCircle, BsApple } from "react-icons/bs";
+import { BiDesktop } from "react-icons/bi";
+import { DiAndroid } from "react-icons/di";
 import AlertNotification from "../alert-notification/alert-notification";
 
 let timeOut = null;
@@ -34,21 +35,23 @@ const ModalDownload = ({show,setShow}) =>{
                     <div className="modal-download-body">
                         <BsXCircle className="icon-close"
                                    onClick={()=>handleClose()} />
-
-                        <Button variant="primary"
-                                onClick={handleDownload}>
+                        <button onClick={handleDownload}>
+                            <BiDesktop className="icon"/>
                             PC
-                        </Button>
+                            <span>Coming soon...</span>
+                        </button>
 
-                        <Button variant="primary"
-                                onClick={handleDownload}>
-                            IOS
-                        </Button>
-
-                        <Button variant="primary"
-                                onClick={handleDownload}>
+                        <button onClick={handleDownload}>
+                            <DiAndroid className="icon"/>
                             Android
-                        </Button>
+                            <span>Coming soon...</span>
+                        </button>
+
+                        <button onClick={handleDownload}>
+                            <BsApple className="icon"/>
+                            IOS
+                            <span>Coming soon...</span>
+                        </button>
                     </div>
                 </Modal.Body>
             </Modal>
