@@ -33,7 +33,11 @@ const Home = () =>{
     return(
         <>
             <Header/>
-            {/*<TimelineVertical windowDimensions={windowDimensions}/>*/}
+            {windowDimensions.width > 767.5 ?
+                <TimelineVertical windowDimensions={windowDimensions}/>
+                :
+                <></>
+            }
             <VideoIntroduce/>
             <DownloadMobile windowDimensions={windowDimensions}/>
             <Introduce/>
