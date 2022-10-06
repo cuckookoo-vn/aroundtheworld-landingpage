@@ -24,7 +24,7 @@ const Footer = () =>{
         <div className="footer"
              style={{backgroundImage:`url(${images.bgFooter})`}}>
             <Container>
-                <div className="box-logo" data-aos="fade-up">
+                <div className="box-logo" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <div className="logo-cuckookoo">
                         <a href="">
                             <img src={images.cuckookoo} alt="icon-cuckookoo"/>

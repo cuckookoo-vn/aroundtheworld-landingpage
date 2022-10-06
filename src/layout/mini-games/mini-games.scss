@@ -12,6 +12,7 @@
   }
   .video{
     width: 100%;
+    margin-bottom: 6vw;
   }
   .button-hidden-box{
     position: absolute;
@@ -40,13 +41,13 @@
     }
     &.button-jigsaw{
       position: absolute;
-      bottom: 3vw;
-      left: 10vw;
+      bottom: 11vw;
+      left: 8vw;
     }
     &.button-quiz{
       position: absolute;
-      bottom: 3vw;
-      right: 10vw;
+      bottom: 11vw;
+      right: 8vw;
     }
     &:hover{
       transform: scale(1.1) !important;
@@ -63,6 +64,9 @@
       left: 50%;
       transform: translate(-50%,0);
       position: absolute;
+      @media #{$info-phone-330} {
+        top: 13%;
+      }
       .button{
         top: 20%;
         left: 50%;

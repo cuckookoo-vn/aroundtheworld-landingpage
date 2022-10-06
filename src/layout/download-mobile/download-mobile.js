@@ -11,6 +11,14 @@ const DownloadMobile = ({windowDimensions}) =>{
         comingSoonButton : process.env.PUBLIC_URL + "/images/header/coming-soon-button.png",
     };
     const [show, setShow] = useState(false);
+    const [statusButton, setStatusButton] = useState(true);
+
+    const setShowModal = () =>{
+        if(statusButton){
+            setShow(true);
+            setStatusButton(false);
+        }
+    }
 
     return(
             windowDimensions.width > 767.5 ?
@@ -21,14 +29,14 @@ const DownloadMobile = ({windowDimensions}) =>{
                         <Container>
                             <div data-aos="zoom-in"
                                  className="logo-coming-soon"
-                                 onClick={()=>setShow(true)}
+                                 onClick={()=>setShowModal()}
                                  style={{backgroundImage:`url(${images.comingSoonButton}`}}>
                                 <span>{t("header.button")}</span>
                             </div>
                         </Container>
                     </div>
 
-                    <ModalDownload show={show} setShow={setShow}/>
+                    <ModalDownload show={show} setShow={setShow} setStatusButton={setStatusButton}/>
                 </>
     )
 }

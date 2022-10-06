@@ -3,7 +3,7 @@
 .advertising{
   background-color: $bg-color;
   .title-main{
-    margin: 8vw 0 3vw 0;
+    margin: 3vw 0 3vw 0;
   }
 
   .advertising-image{
@@ -21,28 +21,28 @@
       font-size: 1.1vw;
       position: absolute;
       @media #{$info-phone} {
-        font-size: 1.8vw;
+        font-size: 1.7vw;
       }
     }
 
     .title-1{
-      width: 55vw;
-      left: 5vw;
+      width: 32vw;
+      left: 3.5vw;
       top: 37.8vw;
       @media #{$info-phone} {
-        left: 4vw;
+        left: 3.5vw;
         width: 49vw;
         top: 39vw;
       }
     }
 
     .title-2{
-      width: 21.5vw;
-      left: 59.5vw;
-      top: 49vw;
+      width: 18.5vw;
+      left: 63.5vw;
+      top: 47vw;
       @media #{$info-phone} {
         left: 64.7vw;
-        width: 30vw;
+        width: 28vw;
         top: 48vw;
       }
     }

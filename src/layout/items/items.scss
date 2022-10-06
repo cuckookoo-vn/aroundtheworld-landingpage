@@ -4,17 +4,19 @@
   position: relative;
   background-color: $bg-color;
   width: 100%;
+  display: flex;
   @media #{$info-phone} {
     padding-top: 25px;
   }
   .title-main{
     position: absolute;
-    top: 1vw;
+    top: 8vw;
     @media #{$info-phone} {
       top: 30px;
     }
   }
   .video{
+    margin-top: -2px;
     width: 100%;
   }
 }

@@ -24,7 +24,7 @@ const RoadMap = ({windowDimensions}) =>{
                                     <li>{t('roadMap.rm11.title3')}</li>
                                 </ul>
                             </div>
-                            <div data-aos="fade-left" className="text-rm1-2 text-rm">
+                            <div data-aos="fade-left" data-aos-delay="200" className="text-rm1-2 text-rm">
                                 <ul>
                                     <li>{t('roadMap.rm12.title1')}</li>
                                     <li>{t('roadMap.rm12.title2')}</li>
@@ -51,7 +51,7 @@ const RoadMap = ({windowDimensions}) =>{
                                     <li>{t('roadMap.rm21.title8')}</li>
                                 </ul>
                             </div>
-                            <div data-aos="fade-left" className="text-rm2-2 text-rm">
+                            <div data-aos="fade-left" data-aos-delay="200" className="text-rm2-2 text-rm">
                                 <ul>
                                     <li>{t('roadMap.rm22.title1')}</li>
                                     <li>{t('roadMap.rm22.title2')}</li>

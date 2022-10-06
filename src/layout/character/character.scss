@@ -2,6 +2,7 @@
 
 .character{
   position: relative;
+  display: flex;
   background-color: $bg-color;
   width: 100%;
   @media #{$info-phone} {
@@ -11,7 +12,7 @@
   .title-main{
     position: absolute;
     width: 100%;
-    top: -38px;
+    top: 3vw;
     @media #{$info-phone} {
       top: 20px;
     }
@@ -19,6 +20,7 @@
 
   .video{
     width: 100%;
+    margin-bottom: -2px;
     &.hidden{
       display: none;
     }

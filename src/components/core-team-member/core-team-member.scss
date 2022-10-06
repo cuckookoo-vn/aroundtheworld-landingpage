@@ -58,6 +58,10 @@
         bottom: 1.8vw;
         font-size: 0.5rem;
       }
+      @media #{$info-phone-330} {
+        bottom: 1.5vw;
+        font-size: 0.35rem;
+      }
     }
   }
   .position-member{
