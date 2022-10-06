@@ -1,24 +1,33 @@
 import './modal-download.scss';
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import {BsXCircle} from "react-icons/bs";
+import { BsXCircle, BsApple } from "react-icons/bs";
 import AlertNotification from "../alert-notification/alert-notification";
 
 let timeOut = null;
 let timeIn = null;
 
-const ModalDownload = ({show,setShow}) =>{
+const ModalDownload = ({show,setShow,setStatusButton}) =>{
+
+    const  images = {
+        pc: process.env.PUBLIC_URL + '/images/modal-download/pc.png',
+    }
 
     const handleDownload = () => {
         if(!alert){
             timeIn= setTimeout(()=>{ setAlert(true)},500);
-            timeOut = setTimeout(()=>{ setAlert(false)},2800);
+            timeOut = setTimeout(()=>{
+                setAlert(false);
+                setStatusButton(true);
+            },2800);
         }
         setShow(false);
     }
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setShow(false);
+        setStatusButton(true);
+    }
 
     const [alert, setAlert] = useState(false);
 
@@ -31,24 +40,25 @@ const ModalDownload = ({show,setShow}) =>{
         <>
             <Modal show={show} onHide={handleClose} className="modal-download">
                 <Modal.Body>
+                    <span className="modal-title">Select device to download</span>
                     <div className="modal-download-body">
                         <BsXCircle className="icon-close"
                                    onClick={()=>handleClose()} />
 
-                        <Button variant="primary"
-                                onClick={handleDownload}>
-                            PC
-                        </Button>
+                        <div className="button-download" onClick={handleDownload}>
+                            <img className="icon" src="https://metagear.game/img/appstore.webp" alt="app-store" />
+                            <span>Coming soon...</span>
+                        </div>
 
-                        <Button variant="primary"
-                                onClick={handleDownload}>
-                            IOS
-                        </Button>
+                        <div className="button-download" onClick={handleDownload}>
+                            <img className="icon" src="https://metagear.game/img/googleplay.webp" alt="google-play" />
+                            <span>Coming soon...</span>
+                        </div>
 
-                        <Button variant="primary"
-                                onClick={handleDownload}>
-                            Android
-                        </Button>
+                        <div className="button-download" onClick={handleDownload}>
+                            <img className="icon" src={images.pc} alt="pc" />
+                            <span>Coming soon...</span>
+                        </div>
                     </div>
                 </Modal.Body>
             </Modal>

@@ -3,8 +3,8 @@ import {useTranslation} from "react-i18next";
 
 const Advertising = ({windowDimensions}) =>{
     const images = {
-        bgAdvertising: "https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/artw_ckk_advertising_web.png",
-        bgAdvertisingMobile: "https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/artw_ckk_advertising_mobile.png",
+        bgAdvertising: "https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/artw_ckk_vali_web.png",
+        bgAdvertisingMobile: "https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/artw_ckk_vali_mobile.png",
     }
     const {t} = useTranslation();
 

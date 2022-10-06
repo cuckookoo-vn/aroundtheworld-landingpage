@@ -13,6 +13,7 @@ import DownloadMobile from "../../layout/download-mobile/download-mobile";
 import {useEffect, useState} from "react";
 import {getWindowDimensions} from "../../mixins/window-dimensions";
 import Advertising from "../../layout/advertising/advertising";
+import TimelineVertical from "../../layout/timeline-vertical/timeline-vertical";
 
 const Home = () =>{
 
@@ -32,6 +33,11 @@ const Home = () =>{
     return(
         <>
             <Header/>
+            {windowDimensions.width > 767.5 ?
+                <TimelineVertical/>
+                :
+                <></>
+            }
             <VideoIntroduce/>
             <DownloadMobile windowDimensions={windowDimensions}/>
             <Introduce/>

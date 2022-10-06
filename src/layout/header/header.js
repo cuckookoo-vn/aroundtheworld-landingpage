@@ -21,14 +21,19 @@ const Header = () =>{
 
     const [statusLang, setStatusLang] = useState(false);
     const [textLang, setTextLang] = useState('ENGLISH');
+    const [statusButton, setStatusButton] = useState(true);
 
     const [bgHeader , setBgHeader] = useState("");
     const [flag, setFlag] = useState(images.flagEngland);
 
     const [show, setShow] = useState(false);
 
-
-
+    const setShowModal = () =>{
+        if(statusButton){
+            setShow(true);
+            setStatusButton(false);
+        }
+    }
 
     const setStatusMenu = (status) =>{
         setStatusLang(!status);
@@ -84,7 +89,7 @@ const Header = () =>{
 
                 <Container>
                     <div className="logo-coming-soon"
-                         onClick={()=>setShow(true)}
+                         onClick={()=>setShowModal()}
                          style={{backgroundImage:`url(${images.comingSoonButton}`}}>
                         <span>{t("header.button")}</span>
                     </div>
@@ -118,7 +123,7 @@ const Header = () =>{
                     </div>
                 </Container>
             </div>
-            <ModalDownload show={show} setShow={setShow}/>
+            <ModalDownload show={show} setShow={setShow} setStatusButton={setStatusButton}/>
         </>
     )
 }
