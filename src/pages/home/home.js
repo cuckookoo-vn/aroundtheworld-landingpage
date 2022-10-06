@@ -34,7 +34,7 @@ const Home = () =>{
         <>
             <Header/>
             {windowDimensions.width > 767.5 ?
-                <TimelineVertical windowDimensions={windowDimensions}/>
+                <TimelineVertical/>
                 :
                 <></>
             }

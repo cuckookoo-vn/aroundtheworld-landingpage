@@ -1,7 +1,7 @@
 import './timeline-vertical.scss';
 import {useEffect, useState} from "react";
 
-const TimelineVertical = ({windowDimensions}) =>{
+const TimelineVertical = () =>{
 
     const [listOffsetTop, setListOffsetTop] = useState([]);
     const listClassSection = ["video-introduce","introduce","key-features","airports","character",
