@@ -51,6 +51,19 @@ const KeyFeatures = ({windowDimensions}) =>{
                 {t("keyFeatures.titleMain")}
             </span>
 
+            <div className="shooting-star">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                {/*<span></span>*/}
+            </div>
+
             <Container>
                 {
                     windowDimensions.width > 767.5 ?

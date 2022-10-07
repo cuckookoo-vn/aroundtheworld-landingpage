@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import {useEffect, useRef, useState} from "react";
 import {Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
+import {FaPlane} from "react-icons/fa";
 
 const Airports = ({windowDimensions}) =>{
     const {t} = useTranslation();
@@ -87,21 +88,27 @@ const Airports = ({windowDimensions}) =>{
                                 <Col xs={6} lg={6}>
                                     <div data-aos="flip-right"
                                          className="box-item">
-                                        <span>{t("airports.nameAirportKorea")}</span>
+                                        <span>
+                                            {t("airports.nameAirportKorea")}
+                                        </span>
                                         <img src={incheon} alt="chales"/>
                                     </div>
                                 </Col>
                                 <Col xs={6} lg={6}>
                                     <div data-aos="flip-left"
                                          className="box-item">
-                                        <span>{t("airports.nameAirportJapan")}</span>
+                                        <span>
+                                            {t("airports.nameAirportJapan")}
+                                        </span>
                                         <img src={kansai} alt="ap2"/>
                                     </div>
                                 </Col>
                                 <Col xs={6} lg={6}>
                                     <div data-aos="flip-right"
                                          className="box-item">
-                                        <span>{t("airports.nameAirportSingapore")}</span>
+                                        <span>
+                                            {t("airports.nameAirportSingapore")}
+                                        </span>
                                         <img src={changi} alt="ap3"/>
                                     </div>
 
@@ -109,7 +116,9 @@ const Airports = ({windowDimensions}) =>{
                                 <Col xs={6} lg={6}>
                                     <div data-aos="flip-left"
                                          className="box-item">
-                                        <span>{t("airports.nameAirportFrance")}</span>
+                                        <span>
+                                            {t("airports.nameAirportFrance")}
+                                        </span>
                                         <img src={chales} alt="ap4"/>
                                     </div>
                                 </Col>

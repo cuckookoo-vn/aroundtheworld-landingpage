@@ -43,7 +43,7 @@ const ko ={
                     "(함께 놀고, 채팅 등...)"
             },
             items3: {
-                titleMain : "우수한 그래픽스",
+                titleMain : "우수한 그래픽",
                 title: "플레이어에게 3D 그래픽으로 깊은 인상을 <nowrap>남깁니다.</nowrap>"
             },
             items4: {
@@ -51,7 +51,7 @@ const ko ={
                 title: "음식, 배지, 의상, 상품권 등은 Cuckookoo & Chainos 의 메타버스 생태계에서 활용됩니다."
             },
             items5: {
-                titleMain : "간단하고 재미 있는 게임 플레이",
+                titleMain : "간단하고 재미있는 게임 플레이",
                 title: "미니게임 하기: 직소퍼즐, 숨겨진 물건, 퀴즈 등…"
             },
             items6: {
@@ -115,8 +115,17 @@ const ko ={
         },
         advertising:{
             titleMain: "3D 빌보드 광고",
-            title1:`“이 상품은 지마켓에서 구매 가능합니다”`,
+            title1:`“이 상품은 Gmarket.co.kr에서 구매 가능합니다”`,
             title2:`“이 여행가방을 어디서 구매할 수 있어요 ?”`,
+        },
+        modalDownload:{
+            titleMain: "다운로드 디바이스를 선택하세요"
+        },
+        introduceVideo:{
+            titleMain: "소개 동영상"
+        },
+        introduceTitle:{
+            titleMain: "소개"
         }
     }
 }

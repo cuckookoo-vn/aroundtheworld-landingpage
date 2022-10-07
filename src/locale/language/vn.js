@@ -24,10 +24,10 @@ const vn = {
                 "v.v.\nHãy xách vali lên và đi du lịch Vòng quanh thế giới thôi nào!"
         },
         coreTeam: {
-            titleMain: "ĐỘI NGŨ PHÁT TRIỂN"
+            titleMain: "Đội Ngũ Phát Triển"
         },
         miniGames: {
-            titleMain: "TRÒ CHƠI",
+            titleMain: "Trò Chơi",
             buttonObject: "TÌM ĐỒ VẬT BỊ ẨN",
             buttonPuzzle: "GHÉP HÌNH",
             buttonQuiz: "CÂU ĐỐ"
@@ -63,7 +63,7 @@ const vn = {
             },
         },
         character: {
-            titleMain: "NHÂN VẬT"
+            titleMain: "Nhân Vật"
         },
         airports: {
             titleMain: "Sân Bay",
@@ -73,7 +73,7 @@ const vn = {
             nameAirportFrance: "Charles de Gaulle - Pháp",
         },
         roadMap:{
-            titleMain: "LỘ TRÌNH",
+            titleMain: "Lộ Trình",
             rm11:{
                 title1: "Lên ý tưởng cho ARTW",
                 title2: "Hoàn thiện thiết kế cho Giai đoạn 1 (Alpha)",
@@ -112,12 +112,21 @@ const vn = {
             }
         },
         items:{
-            titleMain: "VẬT PHẨM",
+            titleMain: "Vât Phẩm",
         },
         advertising:{
             titleMain: "Quảng cáo 3D Billboard",
             title1:`“Sản phẩm này hiện đang được bán tại Gmarket.co.kr...”`,
             title2:`“Tôi có thể mua chiếc vali này ở đâu?”`,
+        },
+        modalDownload:{
+            titleMain: "Lựa chọn thiết bị"
+        },
+        introduceVideo:{
+            titleMain: "Video Giới Thiệu"
+        },
+        introduceTitle:{
+            titleMain: "Giới Thiệu"
         }
     }
 }

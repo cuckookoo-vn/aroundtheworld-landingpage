@@ -118,8 +118,16 @@ const en = {
             titleMain: "3D Billboard Advertising",
             title1:`“This merchandise is ourrently available at Gmarket.co.kr...”`,
             title2:`“How do I purchase this valise?”`,
+        },
+        modalDownload:{
+            titleMain: "Select device to download"
+        },
+        introduceVideo:{
+            titleMain: "Introduce Video"
+        },
+        introduceTitle:{
+            titleMain: "Introduce"
         }
-
     }
 }
 export default en;

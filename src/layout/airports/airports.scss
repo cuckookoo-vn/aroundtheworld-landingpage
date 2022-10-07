@@ -1,6 +1,8 @@
 @import "src/scss/variables";
 
 .airports{
+  position: relative;
+  z-index: 2;
   background-color: $bg-color;
   @media #{$info-phone} {
     padding-bottom: 6vw;
@@ -22,15 +24,28 @@
     }
     .box-item{
       width: 100%;
+      .plan-box{
+
+      }
       span{
-        width: 100%;
+        background-image:
+                linear-gradient(to right, #00F0FF,#FFED77,#00F0FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow-animation 500s;
         display: block;
+        width: 100%;
+        margin-bottom: 10px;
         text-align: center;
+        font-weight: bold;
         color: #00FFFF;
-        margin-bottom: 6px;
         font-size: 1.2rem;
         @media #{$info-tablet-1399} {
-          font-size: 14px;
+          font-size: 19px;
+        }
+        .icon-plan{
+          margin: 0 10px;
+          color: #990000;
         }
       }
       img{
@@ -41,5 +56,11 @@
         }
       }
     }
+  }
+}
+
+@keyframes rainbow-animation {
+  to {
+    background-position: 4500vh;
   }
 }

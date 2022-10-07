@@ -11,6 +11,9 @@
   .title-main{
     position: absolute;
     top: 8vw;
+    @media #{$info-tablet-1399} {
+      top: 7vw;
+    }
     @media #{$info-phone} {
       top: 30px;
     }

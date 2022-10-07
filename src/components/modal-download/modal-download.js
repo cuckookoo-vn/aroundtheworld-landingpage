@@ -1,13 +1,16 @@
 import './modal-download.scss';
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { BsXCircle, BsApple } from "react-icons/bs";
+import { BsXCircle } from "react-icons/bs";
 import AlertNotification from "../alert-notification/alert-notification";
+import {useTranslation} from "react-i18next";
 
 let timeOut = null;
 let timeIn = null;
 
 const ModalDownload = ({show,setShow,setStatusButton}) =>{
+
+    const {t} = useTranslation();
 
     const  images = {
         pc: process.env.PUBLIC_URL + '/images/modal-download/pc.png',
@@ -40,7 +43,7 @@ const ModalDownload = ({show,setShow,setStatusButton}) =>{
         <>
             <Modal show={show} onHide={handleClose} className="modal-download">
                 <Modal.Body>
-                    <span className="modal-title">Select device to download</span>
+                    <span className="modal-title">{t("modalDownload.titleMain")}</span>
                     <div className="modal-download-body">
                         <BsXCircle className="icon-close"
                                    onClick={()=>handleClose()} />

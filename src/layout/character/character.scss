@@ -13,6 +13,9 @@
     position: absolute;
     width: 100%;
     top: 3vw;
+    @media #{$info-tablet-1399} {
+      top: 1vw;
+    }
     @media #{$info-phone} {
       top: 20px;
     }

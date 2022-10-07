@@ -7,7 +7,8 @@
   .title-main{
     margin-top: 3.5vw;
     @media #{$info-phone} {
-      margin-top: 20px;
+      position: absolute;
+      top: 15vw;
     }
   }
   .video{
@@ -27,7 +28,6 @@
     background-repeat: no-repeat;
     width: 19vw;
     height: 7vw;
-    transition: transform .1s !important;
     span{
       font-size: 1.6vw;
       position: absolute;
@@ -48,12 +48,6 @@
       position: absolute;
       bottom: 11vw;
       right: 8vw;
-    }
-    &:hover{
-      transform: scale(1.1) !important;
-    }
-    &:active{
-      transform: scale(1.1) translateY(2px) !important;
     }
   }
 
