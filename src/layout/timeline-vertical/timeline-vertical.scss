@@ -27,7 +27,7 @@
       height: 6px;
       cursor: pointer;
       z-index: 1;
-      transition:color 1s ,transform 0.3s;
+      transition: transform 0.3s;
       &.active{
         transform: scale(1.2);
         border: 1px solid #00E0FF;
@@ -53,7 +53,7 @@
         top: -10px;
         position: absolute;
         width: max-content;
-        transition:opacity 1s;
+        transition:color .1s;
       }
     }
   }
