@@ -112,7 +112,7 @@ const vn = {
             }
         },
         items:{
-            titleMain: "Vât Phẩm",
+            titleMain: "Vật Phẩm",
         },
         advertising:{
             titleMain: "Quảng cáo 3D Billboard",

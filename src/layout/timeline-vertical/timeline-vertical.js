@@ -54,43 +54,73 @@ const TimelineVertical = () =>{
     return(
         <div className="timeline-vertical">
             <ul>
-                <li data-aos="fade-right" data-aos-delay="300" className="vertical-timeline vertical-video"
+                <li data-aos="fade-right"
+                    data-aos-delay="300"
+                    className="vertical-timeline vertical-video"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[0])}>
                     <span>{t("introduceVideo.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="600" className="vertical-timeline vertical-introduce"
+                <li data-aos="fade-right"
+                    data-aos-delay="600"
+                    className="vertical-timeline vertical-introduce"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[1])}>
                     <span>{t("introduceTitle.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="900" className="vertical-timeline vertical-key-features"
+                <li data-aos="fade-right"
+                    data-aos-delay="900"
+                    className="vertical-timeline vertical-key-features"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[2])}>
                     <span>{t("keyFeatures.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="1200" className="vertical-timeline vertical-airport"
+                <li data-aos="fade-right"
+                    data-aos-delay="1200"
+                    className="vertical-timeline vertical-airport"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[3])}>
                     <span>{t("airports.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="1500" className="vertical-timeline vertical-character"
+                <li data-aos="fade-right"
+                    data-aos-delay="1500"
+                    className="vertical-timeline vertical-character"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[4])}>
                     <span>{t("character.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="1800" className="vertical-timeline vertical-item"
+                <li data-aos="fade-right"
+                    data-aos-delay="1800"
+                    className="vertical-timeline vertical-item"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[5])}>
                     <span>{t("items.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="2100" className="vertical-timeline vertical-mini-game"
+                <li data-aos="fade-right"
+                    data-aos-delay="2100"
+                    className="vertical-timeline vertical-mini-game"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[6])}>
                     <span>{t("miniGames.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="2400" className="vertical-timeline vertical-3d"
+                <li data-aos="fade-right"
+                    data-aos-delay="2400"
+                    className="vertical-timeline vertical-3d"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[7])}>
                     <span>{t("advertising.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="2700" className="vertical-timeline vertical-roadmap"
+                <li data-aos="fade-right"
+                    data-aos-delay="2700"
+                    className="vertical-timeline vertical-roadmap"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[8])}>
                     <span>{t("roadMap.titleMain")}</span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="3000" className="vertical-timeline vertical-core-team"
+                <li data-aos="fade-right"
+                    data-aos-delay="3000"
+                    className="vertical-timeline vertical-core-team"
+                    data-aos-anchor-placement="bottom-bottom"
                     onClick={()=>scrollCLick(listClassSection[9])}>
                     <span>{t("coreTeam.titleMain")}</span>
                 </li>
