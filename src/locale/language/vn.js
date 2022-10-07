@@ -120,7 +120,7 @@ const vn = {
             title2:`“Tôi có thể mua chiếc vali này ở đâu?”`,
         },
         modalDownload:{
-            titleMain: "Lựa chọn thiết bị"
+            titleMain: "Chọn thiết bị tải về"
         },
         introduceVideo:{
             titleMain: "Video Giới Thiệu"
