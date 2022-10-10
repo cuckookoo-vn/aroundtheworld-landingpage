@@ -36,7 +36,7 @@
       }
       @media #{$info-tablet-horizontal} {
         width: 492px;
-        height: 312px;
+        height: 322px;
       }
       @media #{$info-tablet-991} {
         top: 18%;
@@ -47,7 +47,7 @@
         left: 5px;
         right: 5px;
         width: calc(100% - 10px);
-        height: 340px;
+        height: 345px;
       }
       @media #{$info-phone-576} {
         left: 0;
@@ -111,7 +111,199 @@
           }
         }
       }
+
+      .introduce-light{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        position: absolute;
+        @media #{$info-tablet-1399} {
+          width: 10px;
+          height: 10px;
+        }
+        &::after{
+          content: "";
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          z-index: 1;
+          border-radius: 50%;
+          box-shadow: 0 0 5px 5px #A2FEFF ;
+          background-color: #fff;
+          @media #{$info-tablet-horizontal} {
+            width: 10px;
+            height: 10px;
+          }
+        }
+        &.introduce-light-1{
+          box-shadow: 0 0 35px 17.5px #766eff;
+          animation-name: light1;
+          top: 27px;
+          left: 78.5%;
+          z-index: 1;
+          @media #{$info-tablet-1399} {
+            top: 15px;
+            left: 79.5%;
+          }
+          @media #{$info-tablet-horizontal} {
+            animation-name: light1-tablet-horizontal;
+            box-shadow: 0 0 20px 10px #766EFF;
+            top: 10px;
+            left: 79.5%;
+          }
+          @media #{$info-phone} {
+            top: 9px;
+          }
+          @media #{$info-phone-576} {
+            top: 7px;
+          }
+        }
+
+        &.introduce-light-2{
+          box-shadow: 0 0 35px 17.5px #fff1bb;
+          animation-name:light2;
+          top: 48%;
+          left: 32px;
+          @media #{$info-tablet-1399} {
+            top: 48%;
+            left: 19px;
+          }
+          @media #{$info-tablet-horizontal} {
+            animation-name: light2-tablet-horizontal;
+            box-shadow: 0 0 20px 10px #fff1bb;
+            top: 48%;
+            left: 18.5px;
+          }
+          @media #{$info-phone} {
+            left: 20.5px;
+          }
+          @media #{$info-phone-576} {
+            left: 3.7vw;
+          }
+        }
+
+        &.introduce-light-3{
+          //animation-delay: 3s;
+          box-shadow: 0 0 35px 17.5px #ffa6a6;
+          animation-name: light3;
+          bottom: 28px;
+          left: 54.2%;
+          @media #{$info-tablet-1399} {
+            bottom: 22px;
+            left: 54.2%;
+          }
+          @media #{$info-tablet-horizontal} {
+            animation-name: light3-tablet-horizontal;
+            box-shadow: 0 0 20px 10px #ffa6a6;
+            bottom: 9px;
+            left: 53.2%;
+          }
+          @media #{$info-phone-576} {
+            bottom: 2.5vw;
+          }
+        }
+      }
     }
   }
+}
 
+
+@keyframes light1{
+  0%{
+    box-shadow: 0 0 20px 10px #766EFF;
+  }
+  16.6%{
+    box-shadow: 0 0 80px 40px #766EFF;
+  }
+  33.3%{
+    box-shadow: 0 0 20px 10px #766EFF;
+  }
+  100% {
+    box-shadow: 0 0 20px 10px #766EFF;
+  }
+}
+
+@keyframes light2{
+  0%{
+    box-shadow: 0 0 20px 10px #fff1bb;
+  }
+  33.3%{
+    box-shadow: 0 0 20px 10px #fff1bb;
+  }
+  49.9%{
+    box-shadow: 0 0 80px 40px #fff1bb;
+  }
+  66.6%{
+    box-shadow: 0 0 20px 10px #fff1bb;
+  }
+  100% {
+    box-shadow: 0 0 20px 10px #fff1bb;
+  }
+}
+
+@keyframes light3{
+  0%{
+    box-shadow: 0 0 20px 10px #ffa6a6;
+  }
+  66.6% {
+    box-shadow: 0 0 20px 10px #ffa6a6;
+  }
+  83.6%{
+    box-shadow: 0 0 90px 45px #ffa6a6;
+  }
+  100%{
+    box-shadow: 0 0 20px 10px #ffa6a6;
+  }
+}
+
+@keyframes light1-tablet-horizontal{
+  0%{
+    box-shadow: 0 0 20px 10px #766EFF;
+  }
+  16.6%{
+    box-shadow: 0 0 50px 25px #766EFF;
+  }
+  33.3%{
+    box-shadow: 0 0 20px 10px #766EFF;
+  }
+  100% {
+    box-shadow: 0 0 20px 10px #766EFF;
+  }
+}
+
+@keyframes light2-tablet-horizontal{
+  0%{
+    box-shadow: 0 0 20px 10px #fff1bb;
+  }
+  33.3%{
+    box-shadow: 0 0 20px 10px #fff1bb;
+  }
+  49.9%{
+    box-shadow: 0 0 50px 25px #fff1bb;
+  }
+  66.6%{
+    box-shadow: 0 0 20px 10px #fff1bb;
+  }
+  100% {
+    box-shadow: 0 0 20px 10px #fff1bb;
+  }
+}
+
+@keyframes light3-tablet-horizontal{
+  0%{
+    box-shadow: 0 0 20px 10px #ffa6a6;
+  }
+  66.6%{
+    box-shadow: 0 0 20px 10px #ffa6a6;
+  }
+  83.6%{
+    box-shadow: 0 0 50px 25px #ffa6a6;
+  }
+  100% {
+    box-shadow: 0 0 20px 10px #ffa6a6;
+  }
 }

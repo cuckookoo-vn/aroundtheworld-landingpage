@@ -36,7 +36,7 @@ const vn = {
             titleMain: "Đặc Trưng",
             items1: {
                 titleMain : "DU LỊCH",
-                title: "Mang đến cho người chơi trải nghiệm Du lịch vòng quanh thế giới."
+                title: "Mang đến cho người chơi trải nghiệm du lịch vòng quanh thế giới."
             },
             items2: {
                 titleMain : "KẾT NỐI TOÀN CẦU",
@@ -57,7 +57,7 @@ const vn = {
             },
             items6: {
                 titleMain : "QUẢNG CÁO 3D",
-                title: "ARTW là nền tảng để phát triển hình thức quảng cáo bảng quảng cáo 3D.\n " +
+                title: "ARTW là nền tảng để phát triển hình thức quảng cáo bảng quảng cáo 3D.\n" +
                     "Cho phép người dùng tương tác với quảng cáo 3D bằng cách áp dụng AI (bao gồm tương tác, " +
                     "cảm xúc của chủ thể trong quảng cáo 3D và người dùng)."
             },

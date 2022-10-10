@@ -40,16 +40,16 @@ const en = {
             },
             items2: {
                 titleMain : "GLOBAL CONNECT",
-                title: "Make friends & connect with friends all over the world (Play together, chat, …)"
+                title: "Make friends & connect with friends all over the world (Play together, chat, …)."
             },
             items3: {
                 titleMain : "BRILLIANT GRAPHICS",
-                title: "Impress players with 3D graphics"
+                title: "Impress players with 3D graphics."
             },
             items4: {
                 titleMain : "DIVERSE REWARDS",
                 title: "Foods, badges, costumes, vouchers, … \n" +
-                    "Use these rewards in Cuckookoo & Chainos metaverse ecosystem"
+                    "Use these rewards in Cuckookoo & Chainos metaverse ecosystem."
             },
             items5: {
                 titleMain : "SIMPLE & FUNNY GAMEPLAY",
@@ -103,7 +103,7 @@ const en = {
                 title3: "Develop phase 3",
                 title4: "Run advertising in app (focus F&B)",
                 title5: "Build the ecosystem",
-                title6: "Continue the communication and market campaigns",
+                title6: "Continue communications and social marketing campaigns",
             },
             rm31:{
                 title1: "Upgrade AI, Blockchain and UI",
@@ -116,7 +116,7 @@ const en = {
         },
         advertising:{
             titleMain: "3D Billboard Advertising",
-            title1:`“This merchandise is ourrently available at Gmarket.co.kr...”`,
+            title1:`“This merchandise is currently available at Gmarket.co.kr...”`,
             title2:`“How do I purchase this valise?”`,
         },
         modalDownload:{

@@ -27,7 +27,7 @@ const ko ={
         },
         miniGames: {
             titleMain: "미니 게임",
-            buttonObject: "숨겨진 물건",
+            buttonObject: "숨은 물건 찾기",
             buttonPuzzle: "직소퍼즐",
             buttonQuiz: "퀴즈"
         },
@@ -35,12 +35,12 @@ const ko ={
             titleMain: "주요 기능",
             items1: {
                 titleMain : "여행",
-                title: "플레이어들에게 전 세계를 여행하는 경험을 <nowrap>제공합니다.</nowrap>"
+                title: "플레이어에게 세계 여행하는 체험을 <nowrap>제공합니다.</nowrap>"
             },
             items2: {
                 titleMain : "글로벌 연결",
                 title: "전 세계의 사람들과 연결 가능하고 친구를 <nowrap>사귑니다.</nowrap>\n " +
-                    "(함께 놀고, 채팅 등...)"
+                    "(함께 놀고, 채팅 등...)."
             },
             items3: {
                 titleMain : "우수한 그래픽",
