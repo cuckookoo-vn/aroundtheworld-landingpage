@@ -32,6 +32,10 @@ const Introduce = () =>{
                             components={{ nowrap: <span className="nowrap"/>}}
                         />
                     </span>
+
+                    <div className="introduce-light introduce-light-1"></div>
+                    <div className="introduce-light introduce-light-2"></div>
+                    <div className="introduce-light introduce-light-3"></div>
                 </div>
             </Container>
         </div>

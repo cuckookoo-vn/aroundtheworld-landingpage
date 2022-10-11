@@ -2,6 +2,7 @@
 
 .road-map{
   overflow: hidden;
+  position: relative;
   width: 100%;
   background-color: $bg-color;
   .title-main{
@@ -92,7 +93,7 @@
           font-size: 12px;
         }
         @media #{$info-tablet-horizontal} {
-          top: 64px;
+          top: 54px;
         }
       }
     }
@@ -101,12 +102,20 @@
       position: relative;
       .rm3{
         margin-top: 137px;
+        width: 28%;
         @media #{$info-tablet-1399} {
           margin-top: 115px;
           font-size: 12px;
         }
+        @media only screen and (max-width : 1199.5px){
+          width: 27.1%;
+        }
         @media #{$info-tablet-horizontal} {
           margin-top: 95px;
+          width: 26.4%;
+        }
+        @media #{$info-phone} {
+          width: 22%;
         }
       }
       .text-rm3-1{
@@ -135,11 +144,234 @@
   }
 
   img{
-    width:calc(100% - 75px);
-    &.rm3{
-      width: 30%;
+    width:calc(100% - 85px);
+  }
+  /* start icon now month */
+  .icon-now-month{
+    font-size: 20px;
+    color: #FFED77;
+    position: absolute;
+    bottom: 15px;
+    z-index: 100;
+    animation-name: icon-now;
+    animation-duration: .5s ;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    @media #{$info-tablet-1399} {
+      animation-name: icon-now-1399;
+    }
+    @media only screen and (max-width : 1199.5px){
+      animation-name: icon-now-1200;
+    }
+    @media #{$info-tablet-991}{
+      font-size: 14px;
+      animation-name: icon-now-991;
+    }
+
+    &.month-01{
+      right: 90.7%;
+      @media #{$info-tablet-1399} {
+        right: 89.9%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 88%;
+      }
+      @media #{$info-tablet-991}{
+        right: 85%;
+      }
+    }
+    &.month-02{
+      right: 82.6%;
+      @media #{$info-tablet-1399} {
+        right: 81.5%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 80%;
+      }
+      @media #{$info-tablet-991}{
+        right: 77.5%;
+      }
+    }
+    &.month-03{
+      right: 74.5%;
+      @media #{$info-tablet-1399} {
+        right: 73.5%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 72.2%;
+      }
+      @media #{$info-tablet-991}{
+        right: 69.7%;
+      }
+    }
+    &.month-04{
+      right: 66.2%;
+      @media #{$info-tablet-1399} {
+        right: 65.5%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 64.3%;
+      }
+      @media #{$info-tablet-991}{
+        right: 62%;
+      }
+    }
+    &.month-05{
+      right: 58.2%;
+      @media #{$info-tablet-1399} {
+        right: 57.4%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 56.3%;
+      }
+      @media #{$info-tablet-991}{
+        right: 54.5%;
+      }
+    }
+    &.month-06{
+      right: 50%;
+      @media #{$info-tablet-1399} {
+        right: 49.4%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 48.3%;
+      }
+      @media #{$info-tablet-991}{
+        right: 46.7%;
+      }
+    }
+    &.month-07{
+      right: 41.5%;
+      @media #{$info-tablet-1399} {
+        right: 41%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 40.3%;
+      }
+      @media #{$info-tablet-991}{
+        right: 38.7%;
+      }
+    }
+    &.month-08{
+      right: 33.6%;
+      @media #{$info-tablet-1399} {
+        right: 33%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 32.5%;
+      }
+      @media #{$info-tablet-991}{
+        right: 31.3%;
+      }
+    }
+    &.month-09{
+      right: 25.4%;
+      @media #{$info-tablet-1399} {
+        right: 25%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 24.5%;
+      }
+      @media #{$info-tablet-991}{
+        right: 23.7%;
+      }
+    }
+    &.month-10{
+      right: 17.3%;
+      @media #{$info-tablet-1399} {
+        right: 17%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 16.6%;
+      }
+      @media #{$info-tablet-991}{
+        right: 16%;
+      }
+    }
+    &.month-11{
+      right: 9.2%;
+      @media #{$info-tablet-1399} {
+        right: 8.9%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 8.6%;
+      }
+      @media #{$info-tablet-991}{
+        right: 8.4%;
+      }
+    }
+    &.month-12{
+      right: 1%;
+      @media #{$info-tablet-1399} {
+        right: 0.9%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        right: 0.6%;
+      }
+      @media #{$info-tablet-991}{
+        right: 0.6%;
+      }
     }
   }
+
+  .rm-box.rm-box2{
+    .icon-now-month.month-01{
+      animation-name: icon-now-color;
+      bottom: 53px;
+      right: 88.4%;
+      @media #{$info-tablet-1399} {
+        bottom: 46px;
+        right: 86.9%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        bottom: 36px;
+        right: 85.5%;
+      }
+      @media #{$info-tablet-991}{
+        bottom: 25px;
+        right: 82.5%;
+      }
+    }
+    .icon-now-month.month-07{
+      animation-name: icon-now-color;
+      bottom: 53px;
+      right: 39.3%;
+      @media #{$info-tablet-1399} {
+        bottom: 46px;
+        right: 38.5%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        bottom: 36px;
+        right: 37.8%;
+      }
+      @media #{$info-tablet-991}{
+        bottom: 25px;
+        right: 36.5%;
+      }
+    }
+  }
+
+  .rm-box.rm-box3{
+    .icon-now-month.month-02{
+      animation-name: icon-now-color;
+      bottom: 53px;
+      right: 80.2%;
+      @media #{$info-tablet-1399} {
+        bottom: 46px;
+        right: 78.8%;
+      }
+      @media only screen and (max-width : 1199.5px){
+        bottom: 36px;
+        right: 77.8%;
+      }
+      @media #{$info-tablet-991}{
+        bottom: 26px;
+        right: 74.9%;
+      }
+    }
+  }
+  /* end icon now month */
 
   .roadmap-mobile{
     width: 100%;
@@ -194,7 +426,52 @@
           left: 0;
         }
       }
-
     }
+  }
+}
+
+
+@keyframes icon-now {
+  0%{
+    bottom: 66px;
+  }
+  100%{
+    bottom: 60px;
+  }
+}
+
+@keyframes icon-now-1399 {
+  0%{
+    bottom: 55px;
+  }
+  100%{
+    bottom: 50px;
+  }
+}
+
+@keyframes icon-now-1200 {
+  0%{
+    bottom: 41px;
+  }
+  100%{
+    bottom: 37px;
+  }
+}
+
+@keyframes icon-now-991 {
+  0%{
+    bottom: 33px;
+  }
+  100%{
+    bottom: 29px;
+  }
+}
+
+@keyframes icon-now-color {
+  0%{
+    transform: rotate(45deg) translate(0 ,-7px);
+  }
+  100%{
+    transform: rotate(45deg) translate(0 ,0);
   }
 }

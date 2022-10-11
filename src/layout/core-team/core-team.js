@@ -28,7 +28,7 @@ const CoreTeam = ({windowDimensions}) =>{
         },
         {
             name: 'Julie Tran',
-            position: 'Business Analysis',
+            position: 'Business Analyst',
             image: urlImage+ "4.png"
         },
         {
