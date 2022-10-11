@@ -1,8 +1,15 @@
 import './road-map.scss';
 import {Container} from "react-bootstrap";
 import {useTranslation} from "react-i18next";
+import moment from "moment";
+import {BsCaretDownFill} from "react-icons/bs";
 
 const RoadMap = ({windowDimensions}) =>{
+    const timeMonthYear = {
+        month : moment().format("MM"),
+        year : moment().format("YYYY")
+    }
+
     const {t} = useTranslation();
     const images = {
         rm1: process.env.PUBLIC_URL + '/images/road-map/rm-1.png',
@@ -36,6 +43,12 @@ const RoadMap = ({windowDimensions}) =>{
                             </div>
                             <span className="year">2022</span>
                             <img className="rm1" src={images.rm1} alt="rm1" />
+                            {
+                                timeMonthYear.year === "2022" ?
+                                    <BsCaretDownFill className={"icon-now-month" + " month-" + timeMonthYear.month}/>
+                                    :
+                                    ""
+                            }
                         </div>
 
                         <div className="rm-box2 rm-box">
@@ -63,6 +76,12 @@ const RoadMap = ({windowDimensions}) =>{
                             </div>
                             <span className="year">2023</span>
                             <img className="rm2" src={images.rm2} alt="rm2" />
+                            {
+                                timeMonthYear.year === "2023" ?
+                                    <BsCaretDownFill className={"icon-now-month" + " month-" + timeMonthYear.month}/>
+                                    :
+                                    ""
+                            }
                         </div>
 
                         <div className="rm-box3 rm-box">
@@ -75,6 +94,12 @@ const RoadMap = ({windowDimensions}) =>{
                             </div>
                             <span className="year">2024</span>
                             <img className="rm3" src={images.rm3} alt="rm3" />
+                            {
+                                timeMonthYear.year === "2024" ?
+                                    <BsCaretDownFill className={"icon-now-month" + " month-" + timeMonthYear.month}/>
+                                    :
+                                    ""
+                            }
                         </div>
                     </Container>
                     :
