@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import {useEffect, useRef, useState} from "react";
 import {Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {FaPlane} from "react-icons/fa";
 
 const Airports = ({windowDimensions}) =>{
     const {t} = useTranslation();
@@ -30,6 +29,7 @@ const Airports = ({windowDimensions}) =>{
         kansai3: process.env.PUBLIC_URL + '/images/airports/kansai-3.png',
     }
 
+    const [fadeProp, setFadeProp] = useState({ fade: 'fade-in' })
     const [incheon, setIncheon] = useState(images.incheon);
     const [kansai, setKansai] = useState(images.kansai);
     const [changi, setChangi] = useState(images.changi);
@@ -37,7 +37,17 @@ const Airports = ({windowDimensions}) =>{
     const numberRef = useRef(1);
 
     useEffect(() => {
-       const image = setInterval(() => {
+        const fade = setInterval(() => {
+            fadeProp.fade === 'fade-in' ? setFadeProp({ fade: 'fade-out' }) : setFadeProp({ fade: 'fade-in' })
+        }, 3000);
+
+        return () => {
+            clearInterval(fade);
+        };
+    },[fadeProp]);
+
+    useEffect(() => {
+        if(fadeProp.fade === 'fade-in'){
             if(numberRef.current === 1){
                 setIncheon(images.incheon)
                 setKansai(images.kansai)
@@ -67,12 +77,9 @@ const Airports = ({windowDimensions}) =>{
                 numberRef.current = 1
                 return;
             }
-        }, 3000);
+        }
 
-        return () => {
-            clearInterval(image);
-        };
-    },[]);
+    },[fadeProp]);
 
     return(
         <div className="airports">
@@ -86,40 +93,40 @@ const Airports = ({windowDimensions}) =>{
                         <div className="box-image hidden-mobile">
                             <Row>
                                 <Col xs={6} lg={6}>
-                                    <div data-aos="flip-right"
+                                    <div data-aos="fade-up-right"
                                          className="box-item">
                                         <span>
                                             {t("airports.nameAirportKorea")}
                                         </span>
-                                        <img src={incheon} alt="chales"/>
+                                        <img className={fadeProp.fade} src={incheon} alt="chales"/>
                                     </div>
                                 </Col>
                                 <Col xs={6} lg={6}>
-                                    <div data-aos="flip-left"
+                                    <div data-aos="fade-up-left"
                                          className="box-item">
                                         <span>
                                             {t("airports.nameAirportJapan")}
                                         </span>
-                                        <img src={kansai} alt="ap2"/>
+                                        <img className={fadeProp.fade} src={kansai} alt="ap2"/>
                                     </div>
                                 </Col>
                                 <Col xs={6} lg={6}>
-                                    <div data-aos="flip-right"
+                                    <div data-aos="fade-up-right"
                                          className="box-item">
                                         <span>
                                             {t("airports.nameAirportSingapore")}
                                         </span>
-                                        <img src={changi} alt="ap3"/>
+                                        <img className={fadeProp.fade} src={changi} alt="ap3"/>
                                     </div>
 
                                 </Col>
                                 <Col xs={6} lg={6}>
-                                    <div data-aos="flip-left"
+                                    <div data-aos="fade-up-left"
                                          className="box-item">
                                         <span>
                                             {t("airports.nameAirportFrance")}
                                         </span>
-                                        <img src={chales} alt="ap4"/>
+                                        <img className={fadeProp.fade} src={chales} alt="ap4"/>
                                     </div>
                                 </Col>
                             </Row>
@@ -133,7 +140,7 @@ const Airports = ({windowDimensions}) =>{
                                 spaceBetween={30}
                                 slidesPerGroup={1}
                                 autoplay={{
-                                    delay: 6000,
+                                    delay: 24000,
                                     disableOnInteraction: false,
                                     pauseOnMouseEnter: true
                                 }}
@@ -149,25 +156,25 @@ const Airports = ({windowDimensions}) =>{
                                 <SwiperSlide>
                                     <div className="box-item">
                                         <span>{t("airports.nameAirportKorea")}</span>
-                                        <img src={incheon} alt="chales"/>
+                                        <img className={fadeProp.fade} src={incheon} alt="chales"/>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className="box-item">
                                         <span>{t("airports.nameAirportJapan")}</span>
-                                        <img src={kansai} alt="ap2"/>
+                                        <img className={fadeProp.fade} src={kansai} alt="ap2"/>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className="box-item">
                                         <span>{t("airports.nameAirportSingapore")}</span>
-                                        <img src={changi} alt="ap3"/>
+                                        <img className={fadeProp.fade} src={changi} alt="ap3"/>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className="box-item">
                                         <span>{t("airports.nameAirportFrance")}</span>
-                                        <img src={chales} alt="ap4"/>
+                                        <img className={fadeProp.fade} src={chales} alt="ap4"/>
                                     </div>
                                 </SwiperSlide>
                             </Swiper>

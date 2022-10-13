@@ -50,14 +50,56 @@
       }
       img{
         width: 100%;
+        opacity: 0;
         margin-bottom: 1.6rem;
         @media #{$info-phone} {
           margin-bottom: 0;
+        }
+        &.fade-in{
+          animation-name: fadeIn;
+          animation-timing-function: ease-in-out;
+          animation-duration: 3s;
+        }
+        &.fade-out{
+          animation-name: fadeOut;
+          animation-timing-function: ease-in-out;
+          animation-duration: 3s;
         }
       }
     }
   }
 }
+
+@keyframes fadeOut {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  70%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  30%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 @keyframes rainbow-animation {
   to {

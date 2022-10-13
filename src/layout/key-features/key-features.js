@@ -61,7 +61,6 @@ const KeyFeatures = ({windowDimensions}) =>{
                 <span></span>
                 <span></span>
                 <span></span>
-                {/*<span></span>*/}
             </div>
 
             <Container>
