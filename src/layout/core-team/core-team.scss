@@ -1,7 +1,7 @@
 @import "src/scss/variables";
 .core-team{
-  background-color: $bg-color;
   width: 100%;
+  background-color: rgba(0,0,0,0);
   @media #{$info-phone} {
     padding-bottom: 25px;
   }

@@ -34,7 +34,7 @@ const Airports = ({windowDimensions}) =>{
     const [kansai, setKansai] = useState(images.kansai);
     const [changi, setChangi] = useState(images.changi);
     const [chales, setChales] = useState(images.chales);
-    const numberRef = useRef(1);
+    const numberRef = useRef(2);
 
     useEffect(() => {
         const fade = setInterval(() => {
@@ -139,11 +139,6 @@ const Airports = ({windowDimensions}) =>{
                                 slidesPerView={1}
                                 spaceBetween={30}
                                 slidesPerGroup={1}
-                                autoplay={{
-                                    delay: 24000,
-                                    disableOnInteraction: false,
-                                    pauseOnMouseEnter: true
-                                }}
                                 loop={true}
                                 loopFillGroupWithBlank={true}
                                 pagination={{

@@ -2,7 +2,7 @@ import './road-map.scss';
 import {Container} from "react-bootstrap";
 import {useTranslation} from "react-i18next";
 import moment from "moment";
-import {BsCaretDownFill} from "react-icons/bs";
+import {BsGeoAlt} from "react-icons/bs";
 
 const RoadMap = ({windowDimensions}) =>{
     const timeMonthYear = {
@@ -45,7 +45,7 @@ const RoadMap = ({windowDimensions}) =>{
                             <img className="rm1" src={images.rm1} alt="rm1" />
                             {
                                 timeMonthYear.year === "2022" ?
-                                    <BsCaretDownFill className={"icon-now-month" + " month-" + timeMonthYear.month}/>
+                                    <BsGeoAlt className={"icon-now-month" + " month-" + timeMonthYear.month}/>
                                     :
                                     ""
                             }
@@ -78,7 +78,7 @@ const RoadMap = ({windowDimensions}) =>{
                             <img className="rm2" src={images.rm2} alt="rm2" />
                             {
                                 timeMonthYear.year === "2023" ?
-                                    <BsCaretDownFill className={"icon-now-month" + " month-" + timeMonthYear.month}/>
+                                    <BsGeoAlt className={"icon-now-month" + " month-" + timeMonthYear.month}/>
                                     :
                                     ""
                             }
@@ -96,7 +96,7 @@ const RoadMap = ({windowDimensions}) =>{
                             <img className="rm3" src={images.rm3} alt="rm3" />
                             {
                                 timeMonthYear.year === "2024" ?
-                                    <BsCaretDownFill className={"icon-now-month" + " month-" + timeMonthYear.month}/>
+                                    <BsGeoAlt className={"icon-now-month" + " month-" + timeMonthYear.month}/>
                                     :
                                     ""
                             }

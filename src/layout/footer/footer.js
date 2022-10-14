@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Container} from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
-const Footer = () =>{
+const Footer = ({windowDimensions}) =>{
     const { t } = useTranslation();
 
     const images = {
@@ -21,8 +21,7 @@ const Footer = () =>{
     }
 
     return(
-        <div className="footer"
-             style={{backgroundImage:`url(${images.bgFooter})`}}>
+        <div className="footer" style={{backgroundImage:`url(${images.bgFooter})`}}>
             <Container>
                 <div className="box-logo" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <div className="logo-cuckookoo">
@@ -38,24 +37,57 @@ const Footer = () =>{
                 </div>
 
                 <Row>
-                    <Col lg="12">
-                        <span data-aos="fade-up"
-                              data-aos-anchor-placement="top-bottom"
-                              delay="0"
-                              className="title-footer title-main-footer">
-                            {t('footer.contactUs')}
-                        </span>
-                    </Col>
-                    <Col lg="12">
-                        <span data-aos="fade-up"
-                              data-aos-anchor-placement="top-bottom"
-                              delay="0"
-                              className="title-footer email-footer">
-                            aroundtheworld@cuckookoo.vn
-                        </span>
-                    </Col>
+
+                    {
+                        windowDimensions.width > 768.5 ?
+                            <>
+                                <Col lg="12">
+                                    <span data-aos="fade-up"
+                                          data-aos-anchor-placement="top-bottom"
+                                          delay="0"
+                                          className="title-footer title-main-footer">
+                                        {t('footer.contactUs')}
+                                    </span>
+                                </Col>
+                                <Col lg="12">
+                                    <span data-aos="fade-up"
+                                          data-aos-anchor-placement="top-bottom"
+                                          delay="0"
+                                          className="title-footer email-footer">
+                                        aroundtheworld@cuckookoo.vn
+                                    </span>
+                                </Col>
+                            </>
+                            :
+                            <>
+                                <Col lg="12">
+                                    <span className="title-footer title-main-footer">
+                                        {t('footer.contactUs')}
+                                    </span>
+                                </Col>
+                                <Col lg="12">
+                                    <span className="title-footer email-footer">
+                                        aroundtheworld@cuckookoo.vn
+                                    </span>
+                                </Col>
+                            </>
+                    }
+
                 </Row>
             </Container>
+
+            <ul className="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
     )
 }

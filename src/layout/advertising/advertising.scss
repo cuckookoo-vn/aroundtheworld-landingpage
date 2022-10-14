@@ -2,6 +2,8 @@
 
 .advertising{
   background-color: $bg-color;
+  position: relative;
+  z-index: 1;
   .title-main{
     margin: 3vw 0 3vw 0;
   }

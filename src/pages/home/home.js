@@ -50,7 +50,7 @@ const Home = () =>{
             <Advertising windowDimensions={windowDimensions}/>
             <RoadMap windowDimensions={windowDimensions}/>
             <CoreTeam windowDimensions={windowDimensions}/>
-            <Footer/>
+            <Footer windowDimensions={windowDimensions}/>
         </>
     )
 }

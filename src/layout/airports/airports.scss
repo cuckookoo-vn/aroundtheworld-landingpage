@@ -59,11 +59,17 @@
           animation-name: fadeIn;
           animation-timing-function: ease-in-out;
           animation-duration: 3s;
+          @media #{$info-phone}{
+            animation-name: fadeInMobile;
+          }
         }
         &.fade-out{
           animation-name: fadeOut;
           animation-timing-function: ease-in-out;
           animation-duration: 3s;
+          @media #{$info-phone}{
+            animation-name: fadeOutMobile;
+          }
         }
       }
     }
@@ -91,6 +97,44 @@
     opacity: 0;
   }
   30%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutMobile {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  60%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes fadeInMobile {
+  0%{
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  10%{
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  40%{
     transform: scale(1);
     opacity: 1;
   }
