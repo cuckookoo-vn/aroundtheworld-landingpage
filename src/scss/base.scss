@@ -1,5 +1,9 @@
 @import "variables";
 
+body{
+  background-color: $bg-color !important;
+}
+
 .title-main{
   display: inline-block;
   text-shadow: 3px -0.2px 3px #990000;
