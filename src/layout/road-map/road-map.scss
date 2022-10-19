@@ -112,7 +112,10 @@
         }
         @media #{$info-tablet-horizontal} {
           margin-top: 95px;
-          width: 26.4%;
+          width: 27%;
+        }
+        @media #{$info-tablet-991} {
+          width: 26.5%;
         }
         @media #{$info-phone} {
           width: 22%;
@@ -206,7 +209,7 @@
       }
     }
     &.month-04{
-      right: 66.2%;
+      right: 66.35%;
       @media #{$info-tablet-1399} {
         right: 65.5%;
       }
