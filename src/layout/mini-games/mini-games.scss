@@ -10,6 +10,9 @@
       position: absolute;
       top: 15vw;
     }
+    @media #{$info-phone-330} {
+      top: 8vw;
+    }
   }
   .video{
     width: 100%;
