@@ -87,8 +87,8 @@ const CoreTeam = ({windowDimensions}) =>{
             image: urlImage+ "15.png"
         },
         {
-            name: 'Mr. Van',
-            position: 'Blockchain',
+            name: 'Keng Nguyen',
+            position: 'Developer',
             image: urlImage+ "16.png"
         },
     ]
