@@ -5,6 +5,7 @@
   display: flex;
   background-color: $bg-color;
   width: 100%;
+  overflow: hidden;
   @media #{$info-phone} {
     padding-top: 25px;
   }

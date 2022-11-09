@@ -1,4 +1,4 @@
-import {useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import './core-team.scss';
 import {Container} from "react-bootstrap";
 import CoreTeamMember from "../../components/core-team-member/core-team-member";
@@ -92,6 +92,42 @@ const CoreTeam = ({windowDimensions}) =>{
             image: urlImage+ "16.png"
         },
     ]
+
+    // check width set data slide
+    const checkWidthWindowSetSlideData = () =>{
+        let slideDataTemp = {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            slidesPerGroup: 4,
+        };
+
+        if(windowDimensions.width > 1399.5){
+            slideDataTemp.slidesPerView = 4;
+            slideDataTemp.spaceBetween = 30;
+            slideDataTemp.slidesPerGroup = 4;
+
+        }else if(windowDimensions.width > 860 && windowDimensions.width < 992){
+            slideDataTemp.slidesPerView = 2;
+            slideDataTemp.spaceBetween = 15;
+            slideDataTemp.slidesPerGroup = 2;
+        }else if(windowDimensions.width > 768){
+            slideDataTemp.slidesPerView = 3;
+            slideDataTemp.spaceBetween = 15;
+            slideDataTemp.slidesPerGroup = 3;
+        }else{
+            slideDataTemp.slidesPerView = 2;
+            slideDataTemp.spaceBetween = 15;
+            slideDataTemp.slidesPerGroup = 2;
+        }
+        return slideDataTemp;
+    };
+
+    const [slideData, setSlideData] = useState(checkWidthWindowSetSlideData)
+
+    useEffect(()=>{
+        setSlideData(checkWidthWindowSetSlideData)
+    },[windowDimensions.width])
+
     const images = {
         next: process.env.PUBLIC_URL + '/images/template/next.png',
         pre: process.env.PUBLIC_URL + '/images/template/pre.png'
@@ -109,9 +145,9 @@ const CoreTeam = ({windowDimensions}) =>{
             <Container>
                 <div data-aos="fade-up" className="box-slide">
                     <Swiper
-                        slidesPerView={windowDimensions.width >767 ? 4 : 3}
-                        spaceBetween={windowDimensions.width >767 ? 30 : 5}
-                        slidesPerGroup={windowDimensions.width >767 ? 4 : 3}
+                        slidesPerView={slideData.slidesPerView}
+                        spaceBetween={slideData.spaceBetween}
+                        slidesPerGroup={slideData.slidesPerGroup}
                         autoplay={{
                             delay: 3000,
                             disableOnInteraction: false,

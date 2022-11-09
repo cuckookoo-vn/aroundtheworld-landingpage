@@ -2,7 +2,7 @@ import Alert from "react-bootstrap/Alert";
 import "./alert-notification.scss";
 import {BsCheck2All} from "react-icons/bs";
 
-const AlertNotification = ({alertStatus, closeAlert, title}) =>{
+const AlertNotification = ({alertStatus, title}) =>{
     return(
         <Alert className="alert-notification-download"
                show={alertStatus}

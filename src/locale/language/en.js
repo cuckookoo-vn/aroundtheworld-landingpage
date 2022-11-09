@@ -4,7 +4,9 @@ const en = {
             vn: "VIỆT NAM",
             en: "ENGLISH",
             ko: "한국어",
-            button: "DOWNLOAD"
+            button: "DOWNLOAD",
+            buttonMobile: "Download",
+            buttonLang: "Languages"
         },
         menu: {
             docs: 'docs'

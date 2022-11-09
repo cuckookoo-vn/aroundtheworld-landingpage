@@ -4,7 +4,9 @@ const ko ={
             vn: "VIỆT NAM",
             en: "ENGLISH",
             ko: "한국어",
-            button: "다운로드"
+            button: "다운로드",
+            buttonMobile: "다운로드",
+            buttonLang: "언어"
         },
         menu: {
             docs: '문서'
