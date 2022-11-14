@@ -12,7 +12,19 @@ const ko ={
             docs: '문서'
         },
         footer: {
-            contactUs: '연락처'
+            contactUs: '연락처',
+            form: {
+                title: "지원 받기",
+                name: "이름:",
+                email: "이메일:",
+                message: "메시지:",
+                button: "보내기"
+            },
+            validate: {
+                required: "이 필드는 필수입니다.",
+                email: "이메일을 잘못 입력하셨습니다."
+            },
+            address: "주소: (베트남) 호치민 시 Go Vap군 10동 82호 ( Citiland Park Hills)"
         },
         introduce: {
             titleMain: `"Around the world"`,

@@ -12,7 +12,19 @@ const vn = {
             docs: 'Tài Liệu'
         },
         footer: {
-            contactUs: 'Liên hệ với chúng tôi'
+            contactUs: 'Liên hệ với chúng tôi',
+            form: {
+                title: "Hỗ trợ",
+                name: "TÊN:",
+                email: "EMAIL:",
+                message: "THÔNG ĐIỆP:",
+                button: "Gửi"
+            },
+            validate: {
+                required: "This field is required",
+                email: "Email type is wrong"
+            },
+            address: "Địa chỉ: Số 82 Đường số 6, Khu dân cư City Land Park Hills, Phường 10, Quận Gò Vấp, TP.HCM"
         },
         introduce: {
             titleMain: `"Around the world"`,

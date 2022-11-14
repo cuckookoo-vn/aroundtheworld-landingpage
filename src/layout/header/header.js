@@ -274,7 +274,7 @@ const Header = ({windowDimensions}) =>{
                         </button>
                         <button onClick={()=>changeLang('ko')}>
                             <img src={images.flagKorean} alt="korean" />
-                            Korean
+                            한국어
                         </button>
                         <button onClick={()=>changeLang('vn')}>
                             <img src={images.flagVietnam} alt="vietnam" />

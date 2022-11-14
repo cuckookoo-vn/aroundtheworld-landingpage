@@ -12,7 +12,19 @@ const en = {
             docs: 'docs'
         },
         footer: {
-            contactUs: 'Contact Us'
+            contactUs: 'Contact Us',
+            form: {
+                title: "Support",
+                name: "NAME:",
+                email: "EMAIL:",
+                message: "MESSAGE:",
+                button: "Submit"
+            },
+            validate: {
+                required: "This field is required",
+                email: "Email type is wrong"
+            },
+            address: "Address: No.82 Street 6, City Land Park Hills Residential Area, Ward 10, Go Vap District, Ho Chi Minh City"
         },
         introduce: {
             titleMain: `"Around the world"`,

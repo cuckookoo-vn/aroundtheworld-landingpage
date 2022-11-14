@@ -1,8 +1,8 @@
 import './footer.scss';
-import Row from 'react-bootstrap/Row';
 import {Container} from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 import {useForm} from "react-hook-form";
+import {useEffect} from "react";
 const Footer = ({windowDimensions}) =>{
     const { t } = useTranslation();
 
@@ -30,13 +30,13 @@ const Footer = ({windowDimensions}) =>{
     } = useForm();
 
     const onSubmit = (data) => {
-        alert(JSON.stringify(data));
+        alert("email đã được gửi");
     };
 
     return(
-        <div className="footer" style={{backgroundImage:`url(${images.bgFooter})`}}>
+        <div className="footer">
             <Container>
-                <div className="box-logo" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div className="box-logo" data-aos="fade-up">
                     <div className="logo-cuckookoo">
                         <a href="">
                             <img src={images.cuckookoo} alt="icon-cuckookoo"/>
@@ -51,58 +51,74 @@ const Footer = ({windowDimensions}) =>{
             </Container>
             <div className="contract-form-footer" >
                 <form className="contract-form"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="bottom-bottom"
                       style={{backgroundImage:`url(${images.bgForm})`}}
                       onSubmit={handleSubmit(onSubmit)}>
-                    <span className="title">Support</span>
+                    <span className="title">{t("footer.form.title")}</span>
 
                     <div className="form-input">
-                        <span className="title-input">NAME:</span>
+                        <span className="title-input">{t("footer.form.name")}</span>
                         <input
                             {...register("name", {
                                 required: true,
                             })}
                         />
                         {errors?.name?.type === "required" &&
-                            <p className="text-error">This field is required</p>
+                            <p className="text-error">{t("footer.validate.required")}</p>
                         }
                     </div>
 
                     <div className="form-input">
-                        <span className="title-input">EMAIL:</span>
+                        <span className="title-input">{t("footer.form.email")}</span>
                         <input
                             {...register("email", {
                                 required: true,
+                                pattern: {
+                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                }
                             })}
                         />
+                        {errors?.email?.type === "required" &&
+                            <p className="text-error">{t("footer.validate.required")}</p>
+                        }
+                        {errors?.email?.type === "pattern" &&
+                            <p className="text-error">{t("footer.validate.email")}</p>
+                        }
                     </div>
 
                     <div className="form-input">
-                        <span className="title-input">MESSAGE:</span>
-                        <textarea/>
+                        <span className="title-input">{t("footer.form.message")}</span>
+                        <textarea {...register("message", {
+                            required: true,
+                        })}/>
+                        {errors?.message?.type === "required" &&
+                            <p className="text-error">{t("footer.validate.required")}</p>
+                        }
                     </div>
 
                     <button type="submit"
                             className="button-submit"
                             style={{backgroundImage:`url(${images.buttonForm})`}}>
-                        Submit
+                        {t("footer.form.button")}
                     </button>
                 </form>
             </div>
 
-            <div className="contract">
-                <div className="contract-box">
+            <div className="contract"
+                 style={{backgroundImage:`url(${images.bgFooter})`}}>
+                <div className="contract-box"
+                     data-aos="fade-up">
                     <div className="google-map">
                         <iframe
                             className="map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6873595234088!2d106.66678431524116!3d10.835220361067488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a9e817e8db%3A0xc5f7b6893d7a3ec6!2zODIgxJAuIFPhu5EgNiwgUGjGsOG7nW5nIDEwLCBHw7IgVuG6pXAsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1667975602005!5m2!1svi!2s"
                             allowFullScreen="" loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        <span className="title">Address: No.82 Street 6, City Land Park Hills Residential Area, Ward 10, Go Vap District, Ho Chi Minh City</span>
+                        <span className="title">{t("footer.address")}</span>
                     </div>
 
-                    <div className="contract-title-box"
-                         data-aos={windowDimensions.width > 768.5 ? "fade-up" : ""}
-                         data-aos-anchor-placement={windowDimensions.width > 768.5 ? "top-bottom" : ""}>
+                    <div className="contract-title-box">
                         <span className="title-footer title-main-footer">
                             {t('footer.contactUs')}
                         </span>
