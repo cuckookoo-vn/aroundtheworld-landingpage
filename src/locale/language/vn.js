@@ -26,7 +26,7 @@ const vn = {
                 maxLength355: " tối đa 350 ký tự"
             },
             address: "Địa chỉ: Số 82 Đường số 6, Khu dân cư City Land Park Hills, Phường 10, Quận Gò Vấp, TP.HCM",
-            phoneNumber: "Sđt"
+            phoneNumber: "Số điện thoại"
         },
         introduce: {
             titleMain: `"Around the world"`,
