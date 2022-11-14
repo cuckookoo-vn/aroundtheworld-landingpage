@@ -36,7 +36,7 @@ const Footer = ({windowDimensions}) =>{
     return(
         <div className="footer">
             <Container>
-                <div className="box-logo" data-aos="fade-up">
+                <div className="box-logo">
                     <div className="logo-cuckookoo">
                         <a href="">
                             <img src={images.cuckookoo} alt="icon-cuckookoo"/>
@@ -51,14 +51,16 @@ const Footer = ({windowDimensions}) =>{
             </Container>
             <div className="contract-form-footer" >
                 <form className="contract-form"
-                      data-aos="fade-up"
                       data-aos-anchor-placement="bottom-bottom"
                       style={{backgroundImage:`url(${images.bgForm})`}}
                       onSubmit={handleSubmit(onSubmit)}>
                     <span className="title">{t("footer.form.title")}</span>
 
                     <div className="form-input">
-                        <span className="title-input">{t("footer.form.name")}</span>
+                        <span className="title-input">
+                            {t("footer.form.name")}
+                            <span>*</span>:
+                        </span>
                         <input
                             {...register("name", {
                                 required: true,
@@ -70,7 +72,10 @@ const Footer = ({windowDimensions}) =>{
                     </div>
 
                     <div className="form-input">
-                        <span className="title-input">{t("footer.form.email")}</span>
+                        <span className="title-input">
+                            {t("footer.form.email")}
+                            <span>*</span>:
+                        </span>
                         <input
                             {...register("email", {
                                 required: true,
@@ -88,12 +93,20 @@ const Footer = ({windowDimensions}) =>{
                     </div>
 
                     <div className="form-input">
-                        <span className="title-input">{t("footer.form.message")}</span>
+                        <span className="title-input">
+                            {t("footer.form.message")}
+                            <span>*</span>:
+                        </span>
+
                         <textarea {...register("message", {
                             required: true,
+                            maxLength: 350
                         })}/>
                         {errors?.message?.type === "required" &&
                             <p className="text-error">{t("footer.validate.required")}</p>
+                        }
+                        {errors?.message?.type === "maxLength" &&
+                            <p className="text-error">{t('footer.validate.maxLength355')}</p>
                         }
                     </div>
 
@@ -107,8 +120,7 @@ const Footer = ({windowDimensions}) =>{
 
             <div className="contract"
                  style={{backgroundImage:`url(${images.bgFooter})`}}>
-                <div className="contract-box"
-                     data-aos="fade-up">
+                <div className="contract-box">
                     <div className="google-map">
                         <iframe
                             className="map"
@@ -124,6 +136,9 @@ const Footer = ({windowDimensions}) =>{
                         </span>
                         <span className="title-footer email-footer">
                             aroundtheworld@cuckookoo.vn
+                        </span>
+                        <span className="title-footer email-footer">
+                            {t("footer.phoneNumber")}: 0336 111 248
                         </span>
                     </div>
                 </div>

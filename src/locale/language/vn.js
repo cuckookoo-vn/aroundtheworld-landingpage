@@ -15,16 +15,18 @@ const vn = {
             contactUs: 'Liên hệ với chúng tôi',
             form: {
                 title: "Hỗ trợ",
-                name: "TÊN:",
-                email: "EMAIL:",
-                message: "THÔNG ĐIỆP:",
+                name: "TÊN",
+                email: "EMAIL",
+                message: "THÔNG ĐIỆP",
                 button: "Gửi"
             },
             validate: {
                 required: "This field is required",
-                email: "Email type is wrong"
+                email: "Email type is wrong",
+                maxLength355: " tối đa 350 ký tự"
             },
-            address: "Địa chỉ: Số 82 Đường số 6, Khu dân cư City Land Park Hills, Phường 10, Quận Gò Vấp, TP.HCM"
+            address: "Địa chỉ: Số 82 Đường số 6, Khu dân cư City Land Park Hills, Phường 10, Quận Gò Vấp, TP.HCM",
+            phoneNumber: "Sđt"
         },
         introduce: {
             titleMain: `"Around the world"`,

@@ -5,11 +5,23 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: fixed;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 65px;
   z-index: 1000;
   @media #{$info-tablet-1399} {
     height: 50px;
+  }
+  @media #{$info-phone} {
+    justify-content: end;
+  }
+  .header-box{
+    max-width: 1320px;
+    width: 100%;
+    @media #{$info-tablet-1399} {
+      width: 100%;
+    }
   }
   .button-menu{
     font-size: 1.2rem;
@@ -19,18 +31,24 @@
     text-decoration: none;
     float: left;
     width: fit-content;
-    margin-top: 21px;
+    margin-top: 20px;
     @media #{$info-tablet-1399} {
       margin-top: 17px;
     }
     &.button-cuckookoo{
-      margin-left: 410px;
+      margin-left: 60px;
+      @media only screen and (max-width : 2000px) {
+        margin-left: 15vw;
+      }
+      @media only screen and (max-width : 1600px) {
+        margin-left: 25vw;
+      }
       @media #{$info-tablet-1399} {
-        margin-left: 340px;
+        margin-left: 390px;
         font-size: 15px;
       }
       @media #{$info-tablet-991} {
-        margin-left: 330px;
+        margin-left: 350px;
       }
       @media #{$info-phone} {
         font-size: 0.6rem;
@@ -71,7 +89,7 @@
     position: relative;
     display: inline-block;
     line-height: 0;
-    margin-top: 21px;
+    margin-top: 24px;
     float: right;
     margin-right: 40px;
     @media #{$info-tablet-1399} {
@@ -81,9 +99,9 @@
       margin-right: 20px;
     }
     &.dropdown-download{
-      margin-right: 80px;
+      margin-right: 60px;
       @media #{$info-tablet-991} {
-        margin-right: 60px;
+        margin-right: 40px;
       }
     }
 
@@ -137,21 +155,48 @@
       &.show{
         display: block;
       }
+      &.dropdown-content-download{
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
       .drop-option{
         background: rgba(0, 0, 0, 0);
         color: #FFFFFF;
         text-align: left;
         font-size: 0.85rem;
         cursor: pointer;
+        position: relative;
         text-decoration: none;
         display: block;
         width: 170px;
         padding: 14px 14px;
         border: none;
+        &.drop-option-download{
+          padding: 6px 0;
+        }
         @media #{$info-tablet-1399} {
           font-size: 12px;
           width: 120px;
           padding: 15px 10px;
+        }
+        &:hover > .coming-soon{
+          opacity: 1;
+        }
+        .coming-soon{
+          display: flex;
+          justify-content: center;
+          transition: .3s ease-in-out opacity;
+          opacity: 0;
+          border-radius: 6px;
+          align-items: center;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 100%;
+          height: calc(100% - 12px);
+          background: rgba(0,0,0,.8);
+          transform: translate(-50%,-50%);
         }
         &:first-child{
           margin-top: 17px;
@@ -171,10 +216,8 @@
 
       &.dropdown-content-download{
         .drop-option{
-          padding: 7.5px 0;
           &:first-child{
-            padding: 0 0 7.5px 0;
-            margin-top: 23px;
+            margin-top: 17px;
           }
           .device{
             width: 100%;

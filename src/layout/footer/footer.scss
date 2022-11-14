@@ -142,6 +142,9 @@
             font-size: 1.9vw;
             margin: 1.85vw 0 0 2vw;
           }
+          span{
+            color: #c72020;
+          }
         }
 
         input{
@@ -175,7 +178,7 @@
           display: flex;
           justify-content: center;
           border: none;
-          padding: 10px 10px 10px 5px;
+          padding: 12px 12px 12px 5px;
           width: -webkit-fill-available;
           @media #{$info-tablet-1399} {
             padding: .7vw .7vw .7vw 5px;

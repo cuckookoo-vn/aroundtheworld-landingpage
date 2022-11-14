@@ -154,7 +154,7 @@ const Header = ({windowDimensions}) =>{
 
                 {
                     windowDimensions.width > 767.5 ?
-                        <>
+                        <div className="header-box">
                             <a href=""
                                className="button-cuckookoo button-menu">Cuckookoo</a>
 
@@ -170,16 +170,19 @@ const Header = ({windowDimensions}) =>{
 
                                 <div className={"dropdown-content dropdown-content-download" + (statusDownload ? " show": "")}>
                                     <button onClick={()=>downloadAround()}
-                                            className="drop-option">
+                                            className="drop-option drop-option-download">
                                         <img className="device" src={images.appStore} alt="app-store"/>
+                                        <span className="coming-soon">Coming soon</span>
                                     </button>
                                     <button onClick={()=>downloadAround()}
-                                            className="drop-option">
+                                            className="drop-option drop-option-download">
                                         <img className="device" src={images.googlePlay} alt="google-play"/>
+                                        <span className="coming-soon">Coming soon</span>
                                     </button>
                                     <button onClick={()=>downloadAround()}
-                                            className="drop-option">
+                                            className="drop-option drop-option-download">
                                         <img className="device" src={images.pc} alt="pc"/>
+                                        <span className="coming-soon">Coming soon</span>
                                     </button>
                                 </div>
                             </div>
@@ -211,7 +214,7 @@ const Header = ({windowDimensions}) =>{
                                     </button>
                                 </div>
                             </div>
-                        </>
+                        </div>
                         :
                         <BsList onClick={()=>openMenuMobile()} className="icon-menu" />
                 }

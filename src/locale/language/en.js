@@ -15,16 +15,18 @@ const en = {
             contactUs: 'Contact Us',
             form: {
                 title: "Support",
-                name: "NAME:",
-                email: "EMAIL:",
-                message: "MESSAGE:",
+                name: "Name",
+                email: "Email",
+                message: "Message",
                 button: "Submit"
             },
             validate: {
                 required: "This field is required",
-                email: "Email type is wrong"
+                email: "Email type is wrong",
+                maxLength355: "up to 350 characters"
             },
-            address: "Address: No.82 Street 6, City Land Park Hills Residential Area, Ward 10, Go Vap District, Ho Chi Minh City"
+            address: "Address: No.82 Street 6, City Land Park Hills Residential Area, Ward 10, Go Vap District, Ho Chi Minh City",
+            phoneNumber: "Phone number"
         },
         introduce: {
             titleMain: `"Around the world"`,
