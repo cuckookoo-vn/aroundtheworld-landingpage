@@ -2,9 +2,16 @@ import './footer.scss';
 import {Container} from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 import {useForm} from "react-hook-form";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 const Footer = ({windowDimensions}) =>{
     const { t } = useTranslation();
+
+    const [valueTextarea, setValueTextarea] = useState('');
+    const lengthTextarea = 350;
+
+    const changeValueTextarea = (e) =>{
+        setValueTextarea(e.target.value);
+    }
 
     const images = {
         chainos: process.env.PUBLIC_URL + '/images/footer/chainos.png',
@@ -56,7 +63,7 @@ const Footer = ({windowDimensions}) =>{
                       onSubmit={handleSubmit(onSubmit)}>
                     <span className="title">{t("footer.form.title")}</span>
 
-                    <div className="form-input">
+                    <div className="form-input first">
                         <span className="title-input">
                             {t("footer.form.name")}
                             <span>*</span>:
@@ -99,15 +106,19 @@ const Footer = ({windowDimensions}) =>{
                         </span>
 
                         <textarea {...register("message", {
+                            onChange:(e)=>changeValueTextarea(e),
                             required: true,
                             maxLength: 350
                         })}/>
                         {errors?.message?.type === "required" &&
                             <p className="text-error">{t("footer.validate.required")}</p>
                         }
-                        {errors?.message?.type === "maxLength" &&
-                            <p className="text-error">{t('footer.validate.maxLength355')}</p>
+                        {errors?.message?.type === "maxLength" || valueTextarea.length > lengthTextarea ?
+                            <p className="text-error">{t('footer.validate.maxLength355')}</p>:
+                            null
                         }
+
+                        <span className="count-text">{valueTextarea.length}/{lengthTextarea}</span>
                     </div>
 
                     <button type="submit"
