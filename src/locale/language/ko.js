@@ -25,8 +25,10 @@ const ko ={
                 email: "이메일을 잘못 입력하셨습니다.",
                 maxLength355: "최대 350자",
             },
-            address: "주소: (베트남) 호치민 시 Go Vap군 10동 82호 ( Citiland Park Hills)",
-            phoneNumber: "전화 번호"
+            titleAddress:"주소",
+            address: "(베트남) 호치민 시 Go Vap군 10동 82호 ( Citiland Park Hills)",
+            phoneNumber: "전화 번호",
+            email: "이메일"
         },
         introduce: {
             titleMain: `"Around the world"`,

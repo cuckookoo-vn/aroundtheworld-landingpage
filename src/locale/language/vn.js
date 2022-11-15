@@ -1,6 +1,7 @@
-const vn = {
+let vn;
+vn = {
     translation: {
-        header:{
+        header: {
             vn: "VIỆT NAM",
             en: "ENGLISH",
             ko: "한국어",
@@ -25,8 +26,10 @@ const vn = {
                 email: "Email type is wrong",
                 maxLength355: " tối đa 350 ký tự"
             },
-            address: "Địa chỉ: Số 82 Đường số 6, Khu dân cư City Land Park Hills, Phường 10, Quận Gò Vấp, TP.HCM",
-            phoneNumber: "Số điện thoại"
+            titleAddress: "Địa chỉ",
+            address: "Số 82 Đường số 6, Khu dân cư City Land Park Hills, Phường 10, Quận Gò Vấp, TP.HCM",
+            phoneNumber: "Số điện thoại",
+            email: "Email"
         },
         introduce: {
             titleMain: `"Around the world"`,
@@ -51,28 +54,28 @@ const vn = {
         keyFeatures: {
             titleMain: "Đặc Trưng",
             items1: {
-                titleMain : "DU LỊCH",
+                titleMain: "DU LỊCH",
                 title: "Mang đến cho người chơi trải nghiệm du lịch vòng quanh thế giới."
             },
             items2: {
-                titleMain : "KẾT NỐI TOÀN CẦU",
+                titleMain: "KẾT NỐI TOÀN CẦU",
                 title: "Kết bạn và kết nối với bạn bè trên khắp thế giới (Chơi cùng nhau, trò chuyện,…)."
             },
             items3: {
-                titleMain : "ĐỒ HỌA ẤN TƯỢNG",
+                titleMain: "ĐỒ HỌA ẤN TƯỢNG",
                 title: "Gây ấn tượng với người chơi bằng đồ họa 3D."
             },
             items4: {
-                titleMain : "PHẦN THƯỞNG ĐA DẠNG",
+                titleMain: "PHẦN THƯỞNG ĐA DẠNG",
                 title: "Thực phẩm, huy hiệu, trang phục truyền thống, phiếu mua hàng,…\n" +
                     "Sử dụng những phần thưởng này trong hệ sinh thái metaverse của Cuckookoo & Chainos."
             },
             items5: {
-                titleMain : "TRÒ CHƠI ĐƠN GIẢN VÀ THÚ VỊ",
+                titleMain: "TRÒ CHƠI ĐƠN GIẢN VÀ THÚ VỊ",
                 title: "Hoàn thành các trò chơi: trò chơi ghép hình, tìm đồ vật bị ẩn, câu đố,…"
             },
             items6: {
-                titleMain : "QUẢNG CÁO 3D",
+                titleMain: "QUẢNG CÁO 3D",
                 title: "ARTW là nền tảng để phát triển hình thức quảng cáo bảng quảng cáo 3D.\n" +
                     "Cho phép người dùng tương tác với quảng cáo 3D bằng cách áp dụng AI (bao gồm tương tác, " +
                     "cảm xúc của chủ thể trong quảng cáo 3D và người dùng)."
@@ -88,14 +91,14 @@ const vn = {
             nameAirportSingapore: "Changi - Singapore",
             nameAirportFrance: "Charles de Gaulle - Pháp",
         },
-        roadMap:{
+        roadMap: {
             titleMain: "Lộ Trình",
-            rm11:{
+            rm11: {
                 title1: "Lên ý tưởng cho ARTW",
                 title2: "Hoàn thiện thiết kế cho Giai đoạn 1 (Alpha)",
                 title3: "Sắp xếp nhân lực và khởi động dự án"
             },
-            rm12:{
+            rm12: {
                 title1: "Quyết định đồ họa cho giai đoạn 1",
                 title2: "Phát triển ARTW giai đoạn 1 (iOS, Android)",
                 title3: "Phát triển P2P (~ 10.000 người chơi)",
@@ -103,7 +106,7 @@ const vn = {
                 title5: "Ra mắt trang web",
                 title6: "Chuẩn bị cho giai đoạn 2 (Beta)",
             },
-            rm21:{
+            rm21: {
                 title1: "Phát hành phiên bản Alpha",
                 title2: "Quyết định đồ họa cho giai đoạn 2",
                 title3: "Phát triển ARTW giai đoạn 2 (Metaverse)",
@@ -113,7 +116,7 @@ const vn = {
                 title7: "Thực hiện Quảng cáo 3D",
                 title8: "Kêu gọi vốn đầu tư"
             },
-            rm22:{
+            rm22: {
                 title1: "Kiểm thử và phát hành phiên bản thứ 2 (Beta)",
                 title2: "Quyết định đồ họa cho giai đoạn 3",
                 title3: "Phát triển giai đoạn 3",
@@ -121,29 +124,29 @@ const vn = {
                 title5: "Xây dựng hệ sinh thái",
                 title6: "Tiếp tục các chiến dịch truyền thông và thị trường",
             },
-            rm31:{
+            rm31: {
                 title1: "Nâng cấp AI, Blockchain và giao diện người dùng",
                 title2: "Kiểm thử và phát hành phiên bản thứ 3",
                 title3: "Vận hành ứng dụng (phiên bản đầu tiên trên Metaverse)"
             }
         },
-        items:{
+        items: {
             titleMain: "Vật Phẩm",
         },
-        advertising:{
+        advertising: {
             titleMain: "Quảng cáo 3D Billboard",
-            title1:`“Sản phẩm này hiện đang được bán tại Gmarket.co.kr...”`,
-            title2:`“Tôi có thể mua chiếc vali này ở đâu?”`,
+            title1: `“Sản phẩm này hiện đang được bán tại Gmarket.co.kr...”`,
+            title2: `“Tôi có thể mua chiếc vali này ở đâu?”`,
         },
-        modalDownload:{
+        modalDownload: {
             titleMain: "Chọn thiết bị tải về"
         },
-        introduceVideo:{
+        introduceVideo: {
             titleMain: "Video Giới Thiệu"
         },
-        introduceTitle:{
+        introduceTitle: {
             titleMain: "Giới Thiệu"
         }
     }
-}
+};
 export default vn;

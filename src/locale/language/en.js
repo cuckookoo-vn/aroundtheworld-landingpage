@@ -25,8 +25,10 @@ const en = {
                 email: "Email type is wrong",
                 maxLength355: "up to 350 characters"
             },
-            address: "Address: No.82 Street 6, City Land Park Hills Residential Area, Ward 10, Go Vap District, Ho Chi Minh City",
-            phoneNumber: "Phone number"
+            titleAddress:"Address ",
+            address: "No.82 Street 6, City Land Park Hills Residential Area, Ward 10, Go Vap District, Ho Chi Minh City",
+            phoneNumber: "Phone number",
+            email: "Email"
         },
         introduce: {
             titleMain: `"Around the world"`,
