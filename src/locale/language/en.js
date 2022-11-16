@@ -4,13 +4,31 @@ const en = {
             vn: "VIỆT NAM",
             en: "ENGLISH",
             ko: "한국어",
-            button: "DOWNLOAD"
+            button: "DOWNLOAD",
+            buttonMobile: "Download",
+            buttonLang: "Languages"
         },
         menu: {
             docs: 'docs'
         },
         footer: {
-            contactUs: 'Contact Us'
+            contactUs: 'Contact Us',
+            form: {
+                title: "Support",
+                name: "Name",
+                email: "Email",
+                message: "Message",
+                button: "Submit"
+            },
+            validate: {
+                required: "This field is required",
+                email: "Email type is wrong",
+                maxLength355: "up to 350 characters"
+            },
+            titleAddress:"Address ",
+            address: "No.82 Street 6, City Land Park Hills Residential Area, Ward 10, Go Vap District, Ho Chi Minh City",
+            phoneNumber: "Phone number",
+            email: "Email"
         },
         introduce: {
             titleMain: `"Around the world"`,

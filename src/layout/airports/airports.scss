@@ -4,6 +4,7 @@
   position: relative;
   z-index: 2;
   background-color: $bg-color;
+  overflow: hidden;
   @media #{$info-phone} {
     padding-bottom: 6vw;
   }

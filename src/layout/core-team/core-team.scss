@@ -1,7 +1,9 @@
 @import "src/scss/variables";
 .core-team{
+  overflow: hidden;
   width: 100%;
   background-color: rgba(0,0,0,0);
+  padding-bottom: 70px;
   @media #{$info-phone} {
     padding-bottom: 25px;
   }
@@ -66,6 +68,7 @@
   }
 }
 
+
 #root{
   .core-team{
     .swiper{
@@ -78,6 +81,14 @@
         @media #{$info-phone} {
           bottom: -15px;
         }
+      }
+    }
+    .swiper-slide{
+      margin-left: 15px !important;
+      margin-right: 15px !important;
+      @media #{$info-tablet-1399} {
+        margin-left: 7.5px !important;
+        margin-right: 7.5px !important;
       }
     }
   }

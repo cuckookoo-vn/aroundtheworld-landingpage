@@ -4,13 +4,31 @@ const ko ={
             vn: "VIỆT NAM",
             en: "ENGLISH",
             ko: "한국어",
-            button: "다운로드"
+            button: "다운로드",
+            buttonMobile: "다운로드",
+            buttonLang: "언어"
         },
         menu: {
             docs: '문서'
         },
         footer: {
-            contactUs: '연락처'
+            contactUs: '연락처',
+            form: {
+                title: "지원 받기",
+                name: "이름",
+                email: "이메일",
+                message: "메시지",
+                button: "보내기"
+            },
+            validate: {
+                required: "이 필드는 필수입니다.",
+                email: "이메일을 잘못 입력하셨습니다.",
+                maxLength355: "최대 350자",
+            },
+            titleAddress:"주소",
+            address: "(베트남) 호치민 시 Go Vap군 10동 82호 ( Citiland Park Hills)",
+            phoneNumber: "전화 번호",
+            email: "이메일"
         },
         introduce: {
             titleMain: `"Around the world"`,

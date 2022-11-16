@@ -10,7 +10,6 @@ import Airports from "../../layout/airports/airports";
 import RoadMap from "../../layout/road-map/road-map";
 import VideoIntroduce from "../../layout/video-introduce/video-introduce";
 import Items from "../../layout/items/items";
-import DownloadMobile from "../../layout/download-mobile/download-mobile";
 import {useEffect, useState} from "react";
 import {getWindowDimensions} from "../../mixins/window-dimensions";
 import Advertising from "../../layout/advertising/advertising";
@@ -33,14 +32,13 @@ const Home = () =>{
 
     return(
         <>
-            <Header/>
+            <Header windowDimensions={windowDimensions}/>
             {windowDimensions.width > 767.5 ?
                 <TimelineVertical/>
                 :
                 <></>
             }
             <VideoIntroduce/>
-            <DownloadMobile windowDimensions={windowDimensions}/>
             <Introduce/>
             <KeyFeatures windowDimensions={windowDimensions}/>
             <Airports windowDimensions={windowDimensions}/>
