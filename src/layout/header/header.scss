@@ -79,9 +79,9 @@
       top: 13px;
       width: 195px;
     }
-    @media #{$info-phone-330} {
-      top: 13px;
-      width: 155px;
+    @media #{$info-phone-380} {
+      top: 18px;
+      width: 135px;
     }
   }
 
@@ -97,6 +97,10 @@
     }
     @media #{$info-tablet-991} {
       margin-right: 20px;
+    }
+    @media #{$info-phone} {
+      margin-top: 12px;
+      margin-right: 15px;
     }
     &.dropdown-download{
       margin-right: 60px;
