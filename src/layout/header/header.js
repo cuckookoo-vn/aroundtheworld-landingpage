@@ -216,7 +216,39 @@ const Header = ({windowDimensions}) =>{
                             </div>
                         </div>
                         :
-                        <BsList onClick={()=>openMenuMobile()} className="icon-menu" />
+                        <div>
+
+                            <BsList onClick={()=>openMenuMobile()} className="icon-menu" />
+
+                            <div className="dropdown dropdown-lang">
+                                <button className="drop-btn drop-btn-lang"
+                                        onClick={()=>setStatusMenu(statusLang)}>
+                                    <img className="flag" src={flag} alt="flag-england"/>
+                                    {textLang}
+                                    <img className={"icon-select-header" + (statusLang ? " rotate": "")}
+                                         src={images.iconSelect} alt="icon-select"/>
+                                </button>
+
+                                <div className={"dropdown-content dropdown-content-lang" + (statusLang ? " show": "")}>
+                                    <button onClick={()=>changeLang('en')}
+                                            className="drop-option">
+                                        <img className="flag-option" src={images.flagEngland} alt="flag-english"/>
+                                        {t("header.en")}
+                                    </button>
+                                    <button onClick={()=>changeLang('ko')}
+                                            className="drop-option">
+                                        <img className="flag-option" src={images.flagKorean} alt="flag-korean"/>
+                                        {t("header.ko")}
+                                    </button>
+                                    <button onClick={()=>changeLang('vn')}
+                                            className="drop-option">
+                                        <img className="flag-option" src={images.flagVietnam} alt="flag-vietnam"/>
+                                        {t("header.vn")}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
                 }
             </div>
 
@@ -250,10 +282,10 @@ const Header = ({windowDimensions}) =>{
                             <CgChevronDown className="icon-down" />
                         </button>
 
-                        <button onClick={()=>clickLangMobile()}>
-                            {t("header.buttonLang")}
-                            <CgChevronDown className="icon-down" />
-                        </button>
+                        {/*<button onClick={()=>clickLangMobile()}>*/}
+                        {/*    {t("header.buttonLang")}*/}
+                        {/*    <CgChevronDown className="icon-down" />*/}
+                        {/*</button>*/}
                     </div>
 
                     <div className={"body-mobile-download" + (statusDownloadMobile ? " show" : "")}>
@@ -270,20 +302,20 @@ const Header = ({windowDimensions}) =>{
                              alt="pc"/>
                     </div>
 
-                    <div className={"body-mobile-lang" + (statusLangMobile ? " show" : "")}>
-                        <button onClick={()=>changeLang('en')}>
-                            <img src={images.flagEngland} alt="england" />
-                            English
-                        </button>
-                        <button onClick={()=>changeLang('ko')}>
-                            <img src={images.flagKorean} alt="korean" />
-                            한국어
-                        </button>
-                        <button onClick={()=>changeLang('vn')}>
-                            <img src={images.flagVietnam} alt="vietnam" />
-                            Việt Nam
-                        </button>
-                    </div>
+                    {/*<div className={"body-mobile-lang" + (statusLangMobile ? " show" : "")}>*/}
+                    {/*    <button onClick={()=>changeLang('en')}>*/}
+                    {/*        <img src={images.flagEngland} alt="england" />*/}
+                    {/*        English*/}
+                    {/*    </button>*/}
+                    {/*    <button onClick={()=>changeLang('ko')}>*/}
+                    {/*        <img src={images.flagKorean} alt="korean" />*/}
+                    {/*        한국어*/}
+                    {/*    </button>*/}
+                    {/*    <button onClick={()=>changeLang('vn')}>*/}
+                    {/*        <img src={images.flagVietnam} alt="vietnam" />*/}
+                    {/*        Việt Nam*/}
+                    {/*    </button>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </>
