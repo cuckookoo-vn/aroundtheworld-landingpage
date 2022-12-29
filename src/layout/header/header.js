@@ -224,7 +224,6 @@ const Header = ({windowDimensions}) =>{
                                 <button className="drop-btn drop-btn-lang"
                                         onClick={()=>setStatusMenu(statusLang)}>
                                     <img className="flag" src={flag} alt="flag-england"/>
-                                    {textLang}
                                     <img className={"icon-select-header" + (statusLang ? " rotate": "")}
                                          src={images.iconSelect} alt="icon-select"/>
                                 </button>
